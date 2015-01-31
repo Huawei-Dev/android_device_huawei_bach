@@ -110,9 +110,6 @@ on boot
     # enable camera read sensors data
     setprop persist.camera.gyro.disable 0
 
-    # Remove SUID bit for iproute2 ip tool
-    chmod 0755 /system/bin/ip
-
     setprop net.tcp.2g_init_rwnd 10
 
     # Assign TCP buffer thresholds to be ceiling value of technology maximums
