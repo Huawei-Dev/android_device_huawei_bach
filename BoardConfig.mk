@@ -199,6 +199,10 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib64/hw/fingerprint.hw.ex.so|libshim_fps.so
 
+# Shims camera
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib/hw/camera.msm8937.so|libshims_sensorlistener.so
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-08-01
 

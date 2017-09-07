@@ -81,7 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    libshims_sensorlistener
 
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
