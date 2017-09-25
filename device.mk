@@ -81,6 +81,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
+    libshim_camera \
     libshims_sensorlistener
 
 PRODUCT_PACKAGES += \
