@@ -48,6 +48,14 @@ on fs
     mkdir /mnt/vendor/persist/time 0770 system system
     restorecon_recursive /mnt/vendor/persist
 
+on init
+    write /dev/stune/foreground/schedtune.sched_boost_no_override 1
+    write /dev/stune/top-app/schedtune.sched_boost_no_override 1
+    write /dev/stune/schedtune.colocate 0
+    write /dev/stune/background/schedtune.colocate 0
+    write /dev/stune/foreground/schedtune.colocate 0
+    write /dev/stune/top-app/schedtune.colocate 1
+
 on post-fs
     start vendor.qseecomd
 
@@ -135,7 +143,7 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
     group radio diag inet log
     writepid /dev/cpuset/system-background/tasks
 
-on property:vendor.ims.DATA_DAEMON_STATUS=1
+on property:vendor.ims.DATA_DAEMON_STATUS=1bfad6c45d5fb1b753991a67cdf91f1f0ba16b067
     restart vendor.ims_rtp_daemon
 
 on charger
