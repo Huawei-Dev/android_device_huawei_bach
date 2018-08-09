@@ -1,2 +1,7 @@
 # Allow binder calls to fingerprintd
 binder_call(system_app, fingerprintd)
+
+allow system_app sysfs_torch:file rw_file_perms;
+allow system_app sysfs_torch:dir search;
+allow system_app sysfs_vibrator:file rw_file_perms;
+allow system_app sysfs_vibrator:dir search;
