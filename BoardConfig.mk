@@ -89,6 +89,9 @@ QCOM_BT_USE_SMD_TTY := true
 USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+	/system/bin/mediaserver=24 \
+	/vendor/bin/mm-qcamera-daemon=24
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
