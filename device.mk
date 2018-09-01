@@ -94,6 +94,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libFaceDetection
 
+PRODUCT_COPY_FILES += \
+    $(VENDOR_PATH)/prebuilts/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
