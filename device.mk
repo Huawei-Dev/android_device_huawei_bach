@@ -22,6 +22,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(VENDOR_PATH)/overlay \
     $(VENDOR_PATH)/overlay-lineage
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += device/huawei/bach
+
 # AAPT
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
