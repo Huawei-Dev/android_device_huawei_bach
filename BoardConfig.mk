@@ -190,6 +190,9 @@ TARGET_USES_OLD_MNC_FORMAT := true
 # Telephony
 TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
+# Root
+BOARD_ROOT_EXTRA_FOLDERS := persist
+
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
