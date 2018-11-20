@@ -66,6 +66,9 @@ WITH_DEXPREOPT := true
 # FONTS
 EXTENDED_FONT_FOOTPRINT := true
 
+# Fstab
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
+
 # GPS
 USE_DEVICE_SPECIFIC_GPS := true
 
