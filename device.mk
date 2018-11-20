@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# FPS
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/fingerprint.idc:vendor/usr/idc/fingerprint.idc
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8937 \
@@ -71,6 +75,28 @@ PRODUCT_COPY_FILES += \
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/sec_config:vendor/etc/sec_config
+
+# Key
+PRODUCT_COPY_FILES += \
+    fingerprint.kl \
+    ft5x06_ts.kl \
+    gpio-keys.kl \
+    synaptics_dsx.kl \
+    synaptics_rmi4_i2c.kl \
+    usbaudio.kl
+
+# Media 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/media_codecs.xml:vendor/etc/media_codecs.xml \
+    $(LOCAL_PATH)/prebuilts/media_codecs_8956.xml:vendor/etc/media_codecs_8956.xml \
+    $(LOCAL_PATH)/prebuilts/media_codecs_performance.xml:vendorm/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/prebuilts/media_profiles.xml:vendor/etc/media_profiles.xml \
+    $(LOCAL_PATH)/prebuilts/media_profiles_8956.xml:vendor/etc/media_profiles_8956.xml
+
+PRODUCT_COPY_FILES += \
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:vendor/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:vendor/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:vendor/etc/media_codecs_google_video.xml
 
 # OMX
 PRODUCT_PACKAGES += \
