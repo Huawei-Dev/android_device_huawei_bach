@@ -35,6 +35,14 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvoiceprocessing
 
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_5.1.txt:vendor/etc/drc/drc_cfg_5.1.txt \
+    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_AZ.txt:vendor/etc/drc/drc_cfg_AZ.txt
+
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_5.1.cfg:vendor/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
+    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_AZ.cfg:vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
@@ -173,8 +181,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:vendor/etc/thermal-engine.conf \
-    $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:vendor/etc/thermal_sensor_config.xml
+    $(LOCAL_PATH)/prebuilts/sensors/thermal-engine.conf:vendor/etc/thermal-engine.conf \
+    $(LOCAL_PATH)/prebuilts/sensors/thermal_sensor_config.xml:vendor/etc/thermal_sensor_config.xml
 
 # USB
 PRODUCT_PACKAGES += \
