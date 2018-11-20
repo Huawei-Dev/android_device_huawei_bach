@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<thermal_sensor_mapping version="1.0">
+	<sensor_mapping hisi_type="0"  hisi_name="cpu" mapped_node="/sys/module/qpnp_adc_voltage/parameters/therm_cpu"/>
+	<sensor_mapping hisi_type="1"  hisi_name="pa" mapped_node="/sys/module/qpnp_adc_voltage/parameters/therm_pa"/>
+	<sensor_mapping hisi_type="2"  hisi_name="chg" mapped_node="/sys/module/qpnp_adc_voltage/parameters/therm_chg"/>
+	<sensor_mapping hisi_type="9"  hisi_name="battery" mapped_node="/sys/class/power_supply/battery/temp"/>
+</thermal_sensor_mapping>

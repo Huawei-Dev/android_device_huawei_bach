@@ -16,6 +16,79 @@
 
 $(call inherit-product, vendor/huawei/bach/bach-vendor.mk)
 
+# ANT
+PRODUCT_PACKAGES += \
+    AntHalService \
+    com.dsi.ant.antradio_library \
+    libantradio
+
+# Audio
+PRODUCT_PACKAGES += \
+    audiod \
+    audio.a2dp.default \
+    audio.usb.default \
+    audio.r_submix.default \
+    audio.primary.msm8937 \
+    libaudio-resampler \ \
+    tinymix \
+    libqcomvisualizer \
+    libqcompostprocbundle \
+    libqcomvoiceprocessing
+
+# Display
+PRODUCT_PACKAGES += \
+    copybit.msm8937 \
+    gralloc.msm8937 \
+    hwcomposer.msm8937 \
+    memtrack.msm8937 \
+    liboverlay \
+    libtinyxml
+
+# Ebtables
+PRODUCT_PACKAGES += \
+    ebtables \
+    ethertypes \
+    libebtc
+
+# GPS
+PRODUCT_PACKAGES += \
+    gps.msm8937 \
+    libcurl \
+    libgnsspps
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/gps/etc/flp.conf:vendor/etc/flp.conf \
+    $(LOCAL_PATH)/gps/etc/gps.conf:vendor/etc/gps.conf \
+    $(LOCAL_PATH)/gps/etc/izat.conf:vendor/etc/izat.conf \
+    $(LOCAL_PATH)/gps/etc/lowi.conf:vendor/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/etc/sap.conf:vendor/etc/sap.conf \
+    $(LOCAL_PATH)/gps/etc/xtwifi.conf:vendor/etc/xtwifi.conf
+
+# IRQ
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/msm_irqbalance.conf:vendor/etc/msm_irqbalance.conf
+
+# IRSC
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/sec_config:vendor/etc/sec_config
+
+# OMX
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
+    libc2dcolorconvert \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxSwVencHevc \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefrighthw
+
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
@@ -43,18 +116,38 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.app_widgets.xml:system/etc/permissions/android.software.app_widgets.xml \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
-# Overlay
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+# Power
+PRODUCT_PACKAGES += \
+    power.msm8937
 
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom
+
+# RIL
+PRODUCT_PACKAGES += \
+    librmnetctl \
+    libcnefeatureconfig \
+    libxml2
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_TAGS += dalvik.gc.type-precise
+
+# Sensors
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/hals.conf:vendor/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/prebuilts/sensor_def_qcomdev.conf:vendor/etc/sensors/sensor_def_qcomdev.conf
+
+PRODUCT_PACKAGES += \
+    sensors.msm8937
+
+# Thermal
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:vendor/etc/thermal-engine.conf \
+    $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:vendor/etc/thermal_sensor_config.xml
 
 # Wifi
 PRODUCT_PACKAGES += \
