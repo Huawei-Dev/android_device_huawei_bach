@@ -173,16 +173,16 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/hals.conf:vendor/etc/sensors/hals.conf \
-    $(LOCAL_PATH)/prebuilts/sensor_def_qcomdev.conf:vendor/etc/sensors/sensor_def_qcomdev.conf
+    $(LOCAL_PATH)/prebuilts/sensors/hals.conf:vendor/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:vendor/etc/sensors/sensor_def_qcomdev.conf
 
 PRODUCT_PACKAGES += \
     sensors.msm8937
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/sensors/thermal-engine.conf:vendor/etc/thermal-engine.conf \
-    $(LOCAL_PATH)/prebuilts/sensors/thermal_sensor_config.xml:vendor/etc/thermal_sensor_config.xml
+    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:vendor/etc/thermal-engine.conf \
+    $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:vendor/etc/thermal_sensor_config.xml
 
 # USB
 PRODUCT_PACKAGES += \
