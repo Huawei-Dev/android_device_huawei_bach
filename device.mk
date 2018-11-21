@@ -202,6 +202,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:vendor/etc/sensors/sensor_def_qcomdev.conf
 
 PRODUCT_PACKAGES += \
+    calmodule.cfg \
     sensors.msm8937
 
 # Thermal
