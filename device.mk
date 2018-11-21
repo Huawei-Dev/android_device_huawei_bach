@@ -190,6 +190,11 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libxml2
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/data/dsi_config.xml:vendor/etc/data/dsi_config.xml \
+    $(LOCAL_PATH)/prebuilts/data/netmgr_config.xml:vendor/etc/data/netmgr_config.xml \
+    $(LOCAL_PATH)/prebuilts/data/qmi_config.xml:vendor/etc/data/qmi_config.xml
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
