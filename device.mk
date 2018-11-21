@@ -43,6 +43,31 @@ PRODUCT_PACKAGES += \
     $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_5.1.cfg:vendor/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
     $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_AZ.cfg:vendor/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
+PRODUCT_PACKAGES += \
+    $(LOCAL_PATH)/prebuilts/aanc_tuning_mixer.txt:vendor/etc/aanc_tuning_mixer.txt \
+    $(LOCAL_PATH)/prebuilts/audio_effects.conf:vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/prebuilts/audio_output_policy.conf:vendor/etc/audio_output_policy.conf \
+    $(LOCAL_PATH)/prebuilts/audio_platform_info.xml:vendor/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/prebuilts/audio_platform_info_extcodec.xml:vendor/etc/audio_platform_info_extcodec.xml \
+    $(LOCAL_PATH)/prebuilts/audio_policy.conf:vendor/etc/audio_policy.conf \
+    $(LOCAL_PATH)/prebuilts/mixer_paths.xml:vendor/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_mtp.xml:vendor/etc/mixer_paths_mtp.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuh.xml:vendor/etc/mixer_paths_qrd_skuh.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuhf.xml:vendor/etc/mixer_paths_qrd_skuhf.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skui.xml:vendor/etc/mixer_paths_qrd_skui.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skum.xml:vendor/etc/mixer_paths_qrd_skum.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skun.xml:vendor/etc/mixer_paths_qrd_skun.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_skuk.xml:vendor/etc/mixer_paths_skuk.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9306.xml:vendor/etc/mixer_paths_wcd9306.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9326.xml:vendor/etc/mixer_paths_wcd9326.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9330.xml:vendor/etc/mixer_paths_wcd9330.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9335.xml:vendor/etc/mixer_paths_wcd9335.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths.xml:vendor/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9306.xml:vendor/etc/sound_trigger_mixer_paths_wcd9306.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9330.xml:vendor/etc/sound_trigger_mixer_paths_wcd9330.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9335.xml:vendor/etc/sound_trigger_mixer_paths_wcd9335.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_platform_info.xml:vendor/etc/sound_trigger_platform_info.xml
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
