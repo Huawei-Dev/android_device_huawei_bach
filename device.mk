@@ -201,6 +201,11 @@ PRODUCT_AAPT_PREF_CONFIG := hdpi
 PRODUCT_CHARACTERISTICS := tablet
 PRODUCT_TAGS += dalvik.gc.type-precise
 
+# Scripts
+PRODUCT_PACKAGES += \
+    init.qcom.bt.sh \
+    init.qcom.post_boot.sh
+
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/sensors/hals.conf:$(TARGET_OUT_VENDOR_ETC)/sensors/hals.conf \
