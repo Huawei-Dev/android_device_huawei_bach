@@ -182,7 +182,32 @@ PRODUCT_PACKAGES += \
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.qcom
+    fstab.qcom \
+    init.carrier.rc \
+    init.class_main.sh \
+    init.huawei.audio.rc \
+    init.huawei.camera.rc \
+    init.huawei.charger.rc \
+    init.huawei.cpu_set.sh \
+    init.huawei.device.rc \
+    init.huawei.os.rc \
+    init.huawei.power.rc \
+    init.huawei.rc \
+    init.huawei.target.rc \
+    init.huawei.wcnss.rc \
+    init.hw.debug.rc \
+    init.mdm.sh \
+    init.msm.usb.configfs.rc \
+    init.qcom.class_core.sh \
+    init.qcom.early_boot.sh \
+    init.qcom.factory.rc \
+    init.qcom.rc \
+    init.qcom.sensors.sh \
+    init.qcom.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
+    init.target.rc \
+    ueventd.qcom.rc
 
 # RIL
 PRODUCT_PACKAGES += \

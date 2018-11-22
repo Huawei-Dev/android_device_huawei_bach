@@ -1,0 +1,218 @@
+## This file contains the different modes and permissions of Huawei Debug
+##
+
+# SSR logic in ro.final_release=false build, if you care you
+# subsystem to fulldump in  ro.final_release=false , you
+# need remove your subsystem name from  persist.sys.ssr.restart_level
+on property:ro.runmode=normal && property:ro.final_release=false
+    setprop persist.sys.ssr.restart_level "venus modem adsp"
+
+#enable all subsystem SSR in final_release build
+on property:ro.runmode=normal && property:ro.final_release=true
+    setprop persist.sys.ssr.restart_level "ALL_ENABLE"
+
+on property:ro.runmode=factory
+    setprop persist.sys.huawei.debug.on 1
+    setprop persist.sys.ssr.restart_level "N/A"
+
+    mkdir /data/log/fac_log 0755 system system
+    copy /log/GetAdblog.bat /data/log/fac_log/GetAdblog.bat
+    chmod 0664 /data/log/fac_log/GetAdblog.bat
+    chown system system /data/log/fac_log/GetAdblog.bat
+    copy /log/GetAdblog-part.bat /data/log/fac_log/GetAdblog-part.bat
+    chmod 0664 /data/log/fac_log/GetAdblog-part.bat
+    chown system system /data/log/fac_log/GetAdblog-part.bat
+    chmod 0777 /data/misc/camera
+
+# Start ssr_ramdump and other debug services only if persist.sys.huawei.debug.on is set to 1
+on property:persist.sys.huawei.debug.on=1
+    start fingerprint_log
+    setprop persist.sys.ssr.enable_ramdumps 1
+#    setprop persist.sys.jankenable true
+#    start janklogcat
+    write  /sys/kernel/debug/tracing/saved_cmdlines_size 2048
+
+# Start ssr_ramdump and other debug services only if:oba.debug_on is set to 1 for OBA
+on property:ro.oba.debug_on=1
+    mount debugfs debugfs /sys/kernel/debug
+    start qxdm_mdlogs
+    start fingerprint_log
+    write /sys/module/lowmemorykiller/parameters/debug_dumpmem_adj 0
+    write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
+    write /proc/sys/kernel/print-fatal-signals 1
+    write /sys/kernel/debug/tracing/saved_cmdlines_size 2048
+#   write /sys/class/power_supply/battery/device/enable_timer 0
+
+# Stop ssr_ramdump and other debug services if persist.sys.huawei.debug.on is set to 0
+on property:persist.sys.huawei.debug.on=0
+    stop fingerprint_log
+#    stop janklogcat
+#commerical version disable full dump feature and still start ssr_ramdump sevice enable mini dump function
+    setprop persist.sys.ssr.enable_ramdumps 2
+
+service logctl_service /sbin/logctl_service -m 1
+    class late_start
+    user root
+    group system
+    oneshot
+    seclabel u:r:hwlogcat:s0
+
+service logcat_service /sbin/logctl_service -m 1 -t 1
+    class late_start
+    user root
+    group system
+    oneshot
+    seclabel u:r:hwlogcat:s0
+
+service fac_log_service /vendor/bin/factory_log_service -m 1
+    class late_start
+    group system
+    disabled
+    oneshot
+    seclabel u:r:hwlogcat:s0
+
+on property:persist.sys.huawei.debug.on=*
+    restart logcat_service
+
+# applogcat is triggered by projectmenu or setprop
+service applogcat /system/bin/logcat -v threadtime -r 4096 -z 10 -n 5 -f /data/log/android_logs/applogcat-log
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:hwlogcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+service rillogcat /system/bin/logcat -v threadtime -b radio -r 4096 -z 5 -n 5 -f /data/log/android_logs/rillogcat-log
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:hwlogcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+service eventslogcat /system/bin/logcat -v threadtime -b events -r 4096 -z 2 -n 2 -f /data/log/android_logs/eventslogcat-log
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:hwlogcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+service kmsglogcat /sbin/kmsgcat -r 4096 -z 5 -n 5 -f /data/log/android_logs/kmsgcat-log
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:kmsgcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+service sleeplogcat /vendor/bin/sleeplogcat -t 1 -p /data/log/sleeplog/ -f /vendor/etc/pwrlog.cfg
+    class late_start
+    user root
+    group system
+    disabled
+    seclabel u:r:sleeplogcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+# inputlogcat is triggered by projectmenu or setprop
+service inputlogcat /vendor/bin/eventcat -lrt -k 1024 -z 5 -m 5 -f /data/log/input-log/input-log
+    class late_start
+    disabled
+    seclabel u:r:eventcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+# chargelogcat is triggered by projectmenu or setprop
+service chargelogcat /system/vendor/bin/chargelogcat -r 4096 -n 5 -z 4 -t 5 -p /data/log/charge-log/
+    user system
+    group system
+    disabled
+    seclabel u:r:chargelogcat:s0
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+# bugreport is triggered by the KEY_VOLUMEUP and KEY_VOLUMEDOWN keycodes or triggered by projectmenu
+service bugreport /system/bin/dumpstate -d -v -o /data/log/android_logs/bugreport
+    class late_start
+    user root
+    disabled
+    oneshot
+    keycodes 115 114
+
+service dumptool /system/bin/dumptool
+    class main
+    group system
+    oneshot
+    disabled
+
+on property:sys.time.inited=1
+    start dumptool
+
+service mapper /system/bin/sh /vendor/bin/mappersh
+    class late_start
+    user root
+    group system
+    disabled
+
+service logserver /system/bin/logserver
+    class late_start
+    socket logservice stream 0660 system system
+    oneshot
+    seclabel u:r:logserver:s0
+
+#service jankservice /system/bin/jankservice
+#    class main
+#    disabled
+ #   oneshot
+
+#on property:persist.sys.jankenable=true
+#       start jankservice
+
+#on property:persist.sys.jankenable=false
+#       stop jankservice
+
+# add kmemleak debug log
+service kmemleak_debug /system/bin/sh /system/etc/kmemleak.debug.sh
+    class late_start
+    user root
+    disabled
+    oneshot
+
+service hw_dmd_server /system/bin/device_monitor
+    class main
+    user root
+    group system
+    oneshot
+
+service goldeneye /system/bin/goldeneye
+    class main
+    user root
+    group root
+
+on property:persist.sys.kmemleak.debug=1
+    start kmemleak_debug
+
+on property:persist.sys.google.dump.enable=*
+    start ramdump
+
+service ramdump /vendor/bin/ramdump
+    class late_start
+    disabled
+    group system root
+    oneshot
+    seclabel u:r:uncrypt:s0
+
+on property:sys.userdata_is_ready=1
+    start rphone
+
+on boot
+    start rphone_early
+
+service rphone_early /system/bin/sh /log/rphone/boot.sh
+    class core
+    oneshot
+    disabled
+
+service rphone /system/bin/sh /data/rphone/boot.sh
+    class core
+    oneshot
+    disabled

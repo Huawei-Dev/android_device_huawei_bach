@@ -1,0 +1,62 @@
+service fingerprint_log  /system/vendor/bin/fingerprint_log
+    class late_start
+    user system
+    group system
+    oneshot
+    disabled
+    writepid /dev/cpuset/system-background/tasks /dev/cpuctl/tasks
+
+service fingerprintd /system/bin/fingerprintd
+    class late_start
+    user system
+    group input
+
+on boot
+#add for fingerprint
+    chmod  0660  /dev/fingerprint
+    chown  system  system  /dev/fingerprint
+    chmod  0660  /sys/devices/platform/fingerprint/irq
+    chown  system  system  /sys/devices/platform/fingerprint/irq
+    chmod  0660  /sys/devices/platform/fingerprint/result
+    chown  system  system  /sys/devices/platform/fingerprint/result
+    chown  system  system  /sys/devices/platform/fingerprint/fingerprint_chip_info
+    chmod  0660  /sys/devices/platform/fingerprint/read_image_flag
+    chown  system  system  /sys/devices/platform/fingerprint/read_image_flag
+    chmod  0660  /sys/devices/platform/fingerprint/nav
+    chown  system  system  /sys/devices/platform/fingerprint/nav
+
+    # change the limition below for sensor-hub
+    chown system system /sys/devices/soc0/huawei_product
+    chmod 0664 /sys/devices/soc0/huawei_product
+    chown system system /sys/devices/platform/huawei_tp_color/tp_color_info
+    chmod 0664 /sys/devices/platform/huawei_tp_color/tp_color_info
+
+
+    chown system system /sys/devices/platform/huawei_ts_kit_color/ts_kit_color_info
+
+    chown system system /sys/devices/12c.hw-dev-detect/dev_flag
+
+    chown system system /dev/deviceboxID
+    chmod 0660 /dev/deviceboxID
+    chown system system /dev/tas_calib
+    chmod 0660 /dev/tas_calib
+on post-fs-data
+    chown system system /sys/devices/platform/huawei_touch/roi_data
+    chown system system /sys/devices/platform/huawei_touch/roi_enable
+    chown system system /sys/devices/platform/huawei_touch/roi_data_debug
+    chown system system /sys/devices/platform/huawei_touch/touch_chip_info
+    chown system system /data/misc/sensors
+    restorecon /data/misc/sensors
+
+service knuckle /system/bin/sensors_qcom
+    class late_start
+    user system
+    group system
+
+on boot
+    chown system system /sys/class/leds/torch-light0/brightness
+    chown system system /sys/class/leds/torch-light1/brightness
+    chmod 0664 /sys/class/leds/torch-light0/brightness
+    chmod 0664 /sys/class/leds/torch-light1/brightness
+    swapon_all fstab.qcom
+
