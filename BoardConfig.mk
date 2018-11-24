@@ -160,5 +160,8 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_P2P := "p2p"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
+# write vendor modules to vendor
+TARGET_COPY_OUT_VENDOR := vendor
+
 # inherit from the proprietary version
 -include vendor/huawei/bach/BoardConfigVendor.mk
