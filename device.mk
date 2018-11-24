@@ -36,37 +36,37 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_5.1.txt:$(TARGET_OUT_VENDOR_ETC)/drc/drc_cfg_5.1.txt \
-    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_AZ.txt:$(TARGET_OUT_VENDOR_ETC)/drc/drc_cfg_AZ.txt
+    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_5.1.txt:$(TARGET_COPY_OUT_VENDOR)/etc/drc/drc_cfg_5.1.txt \
+    $(LOCAL_PATH)/prebuilts/drc/drc_cfg_AZ.txt:$(TARGET_COPY_OUT_VENDOR)/etc/drc/drc_cfg_AZ.txt
 
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_5.1.cfg:$(TARGET_OUT_VENDOR_ETC)/surround_sound_3mic/surround_sound_rec_5.1.cfg \
-    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_AZ.cfg:$(TARGET_OUT_VENDOR_ETC)/surround_sound_3mic/surround_sound_rec_AZ.cfg
+    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_5.1.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/surround_sound_3mic/surround_sound_rec_5.1.cfg \
+    $(LOCAL_PATH)/prebuilts/surround_sound_3mic/surround_sound_rec_AZ.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 
 PRODUCT_PACKAGES += \
-    $(LOCAL_PATH)/prebuilts/aanc_tuning_mixer.txt:$(TARGET_OUT_VENDOR_ETC)/aanc_tuning_mixer.txt \
-    $(LOCAL_PATH)/prebuilts/audio_effects.conf:$(TARGET_OUT_VENDOR_ETC)/audio_effects.conf \
-    $(LOCAL_PATH)/prebuilts/audio_output_policy.conf:$(TARGET_OUT_VENDOR_ETC)/audio_output_policy.conf \
-    $(LOCAL_PATH)/prebuilts/audio_platform_info.xml:$(TARGET_OUT_VENDOR_ETC)/audio_platform_info.xml \
-    $(LOCAL_PATH)/prebuilts/audio_platform_info_extcodec.xml:$(TARGET_OUT_VENDOR_ETC)/audio_platform_info_extcodec.xml \
-    $(LOCAL_PATH)/prebuilts/audio_policy.conf:$(TARGET_OUT_VENDOR_ETC)/audio_policy.conf \
-    $(LOCAL_PATH)/prebuilts/mixer_paths.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_mtp.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_mtp.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuh.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_qrd_skuh.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuhf.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_qrd_skuhf.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skui.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_qrd_skui.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skum.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_qrd_skum.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skun.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_qrd_skun.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_skuk.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_skuk.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9306.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_wcd9306.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9326.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_wcd9326.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9330.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_wcd9330.xml \
-    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9335.xml:$(TARGET_OUT_VENDOR_ETC)/mixer_paths_wcd9335.xml \
-    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths.xml:$(TARGET_OUT_VENDOR_ETC)/sound_trigger_mixer_paths.xml \
-    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9306.xml:$(TARGET_OUT_VENDOR_ETC)/sound_trigger_mixer_paths_wcd9306.xml \
-    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_OUT_VENDOR_ETC)/sound_trigger_mixer_paths_wcd9330.xml \
-    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9335.xml:$(TARGET_OUT_VENDOR_ETC)/sound_trigger_mixer_paths_wcd9335.xml \
-    $(LOCAL_PATH)/prebuilts/sound_trigger_platform_info.xml:$(TARGET_OUT_VENDOR_ETC)/sound_trigger_platform_info.xml
+    $(LOCAL_PATH)/prebuilts/aanc_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/aanc_tuning_mixer.txt \
+    $(LOCAL_PATH)/prebuilts/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf \
+    $(LOCAL_PATH)/prebuilts/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
+    $(LOCAL_PATH)/prebuilts/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
+    $(LOCAL_PATH)/prebuilts/audio_platform_info_extcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_extcodec.xml \
+    $(LOCAL_PATH)/prebuilts/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf \
+    $(LOCAL_PATH)/prebuilts/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuh.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skuhf.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuhf.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skui.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skum.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skum.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_qrd_skun.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skun.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_skuk.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_skuk.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9306.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9306.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9326.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9326.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9330.xml \
+    $(LOCAL_PATH)/prebuilts/mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_wcd9335.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9306.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9306.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9330.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9330.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_mixer_paths_wcd9335.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_mixer_paths_wcd9335.xml \
+    $(LOCAL_PATH)/prebuilts/sound_trigger_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/sound_trigger_platform_info.xml
 
 # Display
 PRODUCT_PACKAGES += \
@@ -85,7 +85,7 @@ PRODUCT_PACKAGES += \
 
 # FPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/fingerprint.idc:$(TARGET_OUT_VENDOR)/usr/idc/fingerprint.idc
+    $(LOCAL_PATH)/prebuilts/fingerprint.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fingerprint.idc
 
 # GPS
 PRODUCT_PACKAGES += \
@@ -94,42 +94,42 @@ PRODUCT_PACKAGES += \
     libgnsspps
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_OUT_VENDOR_ETC)/flp.conf \
-    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_OUT_VENDOR_ETC)/gps.conf \
-    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_OUT_VENDOR_ETC)/izat.conf \
-    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_OUT_VENDOR_ETC)/lowi.conf \
-    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_OUT_VENDOR_ETC)/sap.conf \
-    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_OUT_VENDOR_ETC)/xtwifi.conf
+    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
+    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
+    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_COPY_OUT_VENDOR)/etc/izat.conf \
+    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf \
+    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sap.conf \
+    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/xtwifi.conf
 
 # IRQ
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/msm_irqbalance.conf:$(TARGET_OUT_VENDOR_ETC)/msm_irqbalance.conf
+    $(LOCAL_PATH)/prebuilts/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
 
 # IRSC
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/sec_config:$(TARGET_OUT_VENDOR_ETC)/sec_config
+    $(LOCAL_PATH)/prebuilts/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 # Key
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/fingerprint.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/fingerprint.kl \
-    $(LOCAL_PATH)/prebuilts/ft5x06_ts.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/ft5x06_ts.kl \
-    $(LOCAL_PATH)/prebuilts/gpio-keys.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
-    $(LOCAL_PATH)/prebuilts/synaptics_dsx.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl \
-    $(LOCAL_PATH)/prebuilts/synaptics_rmi4_i2c.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/synaptics_rmi4_i2c.kl \
-    $(LOCAL_PATH)/prebuilts/usbaudio.kl:$(TARGET_OUT_VENDOR)/usr/keylayout/usbaudio.kl
+    $(LOCAL_PATH)/prebuilts/fingerprint.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/fingerprint.kl \
+    $(LOCAL_PATH)/prebuilts/ft5x06_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/ft5x06_ts.kl \
+    $(LOCAL_PATH)/prebuilts/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/prebuilts/synaptics_dsx.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_dsx.kl \
+    $(LOCAL_PATH)/prebuilts/synaptics_rmi4_i2c.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/synaptics_rmi4_i2c.kl \
+    $(LOCAL_PATH)/prebuilts/usbaudio.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/usbaudio.kl
 
 # Media 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/media_codecs.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs.xml \
-    $(LOCAL_PATH)/prebuilts/media_codecs_8956.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs_8956.xml \
-    $(LOCAL_PATH)/prebuilts/media_codecs_performance.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs_performance.xml \
-    $(LOCAL_PATH)/prebuilts/media_profiles.xml:$(TARGET_OUT_VENDOR_ETC)/media_profiles.xml \
-    $(LOCAL_PATH)/prebuilts/media_profiles_8956.xml:$(TARGET_OUT_VENDOR_ETC)/media_profiles_8956.xml
+    $(LOCAL_PATH)/prebuilts/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
+    $(LOCAL_PATH)/prebuilts/media_codecs_8956.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_8956.xml \
+    $(LOCAL_PATH)/prebuilts/media_codecs_performance.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_performance.xml \
+    $(LOCAL_PATH)/prebuilts/media_profiles.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles.xml \
+    $(LOCAL_PATH)/prebuilts/media_profiles_8956.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_8956.xml
 
 PRODUCT_COPY_FILES += \
-    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs_google_audio.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs_google_telephony.xml \
-    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_OUT_VENDOR_ETC)/media_codecs_google_video.xml
+    frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
+    frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -150,31 +150,31 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/com.dsi.ant.antradio_library.xml \
-    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.bluetooth.xml \
-    frameworks/native/data/etc/android.hardware.camera.external.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.camera.external.xml \
-    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.camera.flash-autofocus.xml \
-    frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.camera.front.xml \
-    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.camera.xml \
-    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.software.midi.xml \
-    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.location.gps.xml \
-    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.telephony.gsm.xml \
-    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.telephony.cdma.xml \
-    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
-    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.usb.accessory.xml \
-    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.usb.host.xml \
-    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.wifi.xml \
-    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.wifi.direct.xml \
-    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.software.sip.voip.xml \
-    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.accelerometer.xml \
-    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.compass.xml \
-    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.gyroscope.xml \
-    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.light.xml \
-    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.proximity.xml \
-    frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.sensor.stepcounter.xml \
-    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.hardware.opengles.aep.xml \
-    frameworks/native/data/etc/android.software.app_widgets.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/android.software.app_widgets.xml \
-    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_OUT_VENDOR_ETC)/permissions/handheld_core_hardware.xml
+    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml \
+    frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
+    frameworks/native/data/etc/android.hardware.camera.external.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.external.xml \
+    frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+    frameworks/native/data/etc/android.hardware.camera.front.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.front.xml \
+    frameworks/native/data/etc/android.hardware.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.xml \
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
+    frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
+    frameworks/native/data/etc/android.hardware.usb.accessory.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.accessory.xml \
+    frameworks/native/data/etc/android.hardware.usb.host.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.usb.host.xml \
+    frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml \
+    frameworks/native/data/etc/android.hardware.wifi.direct.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.direct.xml \
+    frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml \
+    frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.accelerometer.xml \
+    frameworks/native/data/etc/android.hardware.sensor.compass.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.compass.xml \
+    frameworks/native/data/etc/android.hardware.sensor.gyroscope.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.gyroscope.xml \
+    frameworks/native/data/etc/android.hardware.sensor.light.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/native/data/etc/android.hardware.sensor.proximity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.proximity.xml \
+    frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.opengles.aep.xml \
+    frameworks/native/data/etc/android.software.app_widgets.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.app_widgets.xml \
+    frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Power
 PRODUCT_PACKAGES += \
@@ -216,9 +216,9 @@ PRODUCT_PACKAGES += \
     libxml2
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/data/dsi_config.xml:$(TARGET_OUT_VENDOR_ETC)/data/dsi_config.xml \
-    $(LOCAL_PATH)/prebuilts/data/netmgr_config.xml:$(TARGET_OUT_VENDOR_ETC)/data/netmgr_config.xml \
-    $(LOCAL_PATH)/prebuilts/data/qmi_config.xml:$(TARGET_OUT_VENDOR_ETC)/data/qmi_config.xml
+    $(LOCAL_PATH)/prebuilts/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
+    $(LOCAL_PATH)/prebuilts/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
+    $(LOCAL_PATH)/prebuilts/data/qmi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/qmi_config.xml
 
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi xxhdpi
@@ -233,8 +233,8 @@ PRODUCT_PACKAGES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/sensors/hals.conf:$(TARGET_OUT_VENDOR_ETC)/sensors/hals.conf \
-    $(LOCAL_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:$(TARGET_OUT_VENDOR_ETC)/sensors/sensor_def_qcomdev.conf
+    $(LOCAL_PATH)/prebuilts/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    $(LOCAL_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
 PRODUCT_PACKAGES += \
     calmodule.cfg \
@@ -242,8 +242,8 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:$(TARGET_OUT_VENDOR_ETC)/thermal-engine.conf \
-    $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:$(TARGET_OUT_VENDOR_ETC)/thermal_sensor_config.xml
+    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
+    $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_sensor_config.xml
 
 # USB
 PRODUCT_PACKAGES += \
@@ -260,13 +260,13 @@ PRODUCT_PACKAGES += \
     wcnss_service
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/hostapd.accept:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd.accept \
-    $(LOCAL_PATH)/wifi/hostapd_default.conf:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd_default.conf \
-    $(LOCAL_PATH)/wifi/hostapd.deny:$(TARGET_OUT_VENDOR_ETC)/hostapd/hostapd.deny
+    $(LOCAL_PATH)/wifi/hostapd.accept:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.accept \
+    $(LOCAL_PATH)/wifi/hostapd_default.conf:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd_default.conf \
+    $(LOCAL_PATH)/wifi/hostapd.deny:$(TARGET_COPY_OUT_VENDOR)/etc/hostapd/hostapd.deny
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/wifi/fstman.ini:$(TARGET_OUT_VENDOR_ETC)/wifi/fstman.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_OUT_VENDOR_ETC)/wifi/WCNSS_qcom_cfg.ini \
-    $(LOCAL_PATH)/wifi/WCNSS_wlan_nv.bin:$(TARGET_OUT_VENDOR_ETC)/wifi/WCNSS_wlan_nv.bin \
-    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_OUT_VENDOR_ETC)/wifi/p2p_supplicant_overlay.conf \
-    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_OUT_VENDOR_ETC)/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/wifi/fstman.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/fstman.ini \
+    $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/wifi/WCNSS_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/WCNSS_wlan_nv.bin \
+    $(LOCAL_PATH)/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
+    $(LOCAL_PATH)/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
