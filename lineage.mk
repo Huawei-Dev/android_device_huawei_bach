@@ -30,6 +30,9 @@ TARGET_SCREEN_WIDTH := 1200
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
+# Vendor
+PRODUCT_RESTRICT_VENDOR_FILES := false
+
 PRODUCT_NAME := lineage_bach
 PRODUCT_DEVICE := bach
 PRODUCT_BRAND := Huawei
