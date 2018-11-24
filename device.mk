@@ -94,12 +94,12 @@ PRODUCT_PACKAGES += \
     libgnsspps
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/etc/flp.conf:$(TARGET_OUT_VENDOR_ETC)/flp.conf \
-    $(LOCAL_PATH)/gps/etc/gps.conf:$(TARGET_OUT_VENDOR_ETC)/gps.conf \
-    $(LOCAL_PATH)/gps/etc/izat.conf:$(TARGET_OUT_VENDOR_ETC)/izat.conf \
-    $(LOCAL_PATH)/gps/etc/lowi.conf:$(TARGET_OUT_VENDOR_ETC)/lowi.conf \
-    $(LOCAL_PATH)/gps/etc/sap.conf:$(TARGET_OUT_VENDOR_ETC)/sap.conf \
-    $(LOCAL_PATH)/gps/etc/xtwifi.conf:$(TARGET_OUT_VENDOR_ETC)/xtwifi.conf
+    $(LOCAL_PATH)/gps/flp.conf:$(TARGET_OUT_VENDOR_ETC)/flp.conf \
+    $(LOCAL_PATH)/gps/gps.conf:$(TARGET_OUT_VENDOR_ETC)/gps.conf \
+    $(LOCAL_PATH)/gps/izat.conf:$(TARGET_OUT_VENDOR_ETC)/izat.conf \
+    $(LOCAL_PATH)/gps/lowi.conf:$(TARGET_OUT_VENDOR_ETC)/lowi.conf \
+    $(LOCAL_PATH)/gps/sap.conf:$(TARGET_OUT_VENDOR_ETC)/sap.conf \
+    $(LOCAL_PATH)/gps/xtwifi.conf:$(TARGET_OUT_VENDOR_ETC)/xtwifi.conf
 
 # IRQ
 PRODUCT_COPY_FILES += \
