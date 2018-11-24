@@ -146,6 +146,7 @@ vendor/lib64/libperipheral_client.so
 
 # Thermal engine
 vendor/bin/thermal-engine
+vendor/etc/thermal-engine.conf
 vendor/lib64/libthermalioctl.so
 
 # Time services

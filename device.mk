@@ -242,7 +242,6 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     $(LOCAL_PATH)/prebuilts/thermal_sensor_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_sensor_config.xml
 
 # USB
