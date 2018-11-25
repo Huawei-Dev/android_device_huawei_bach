@@ -470,6 +470,7 @@ vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
 # Listen
+-vendor/app/HotwordEnrollment/HotwordEnrollment.apk
 vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
