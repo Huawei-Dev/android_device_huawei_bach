@@ -642,3 +642,7 @@ vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
 vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 
+# Wi-Fi
+vendor/bin/cnss-daemon
+vendor/bin/fstman
+
