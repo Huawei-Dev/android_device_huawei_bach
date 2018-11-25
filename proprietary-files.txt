@@ -84,6 +84,8 @@ vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
 vendor/bin/wcnss_filter
+vendor/lib/libaptX_encoder.so
+vendor/lib/libaptXScheduler.so
 vendor/lib/libbtaddr.so
 vendor/lib/libbtnv.so
 vendor/lib/libbtpower.so
