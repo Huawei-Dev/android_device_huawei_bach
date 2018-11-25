@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# Filesystem conf.
+PRODUCT_PACKAGES += \
+    fs_config_files
+
 # FPS
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/fingerprint.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fingerprint.idc
