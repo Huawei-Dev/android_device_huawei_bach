@@ -65,6 +65,10 @@ PRODUCT_PACKAGES += \
     libcurl \
     libgnsspps
 
+# HBTP
+PRODUCT_PACKAGES += \
+    libtinyxml2
+
 # IRQ
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf

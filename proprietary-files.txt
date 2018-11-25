@@ -450,6 +450,21 @@ vendor/etc/firmware/a530v3_gpmu.fw2
 vendor/etc/firmware/a530v3_seq.fw2
 vendor/etc/firmware/a540_gpmu.fw2
 
+# HBTP
+vendor/bin/hbtp_daemon
+vendor/lib/libfastrpc_aue_stub.so
+vendor/lib/libfastrpc_utf_stub.so
+vendor/lib/libhbtpclient.so
+vendor/lib/libhbtpdsp.so
+vendor/lib/libhbtpfrmwk.so
+vendor/lib/libhbtpjni.so
+vendor/lib64/libfastrpc_aue_stub.so
+vendor/lib64/libfastrpc_utf_stub.so
+vendor/lib64/libhbtpclient.so
+vendor/lib64/libhbtpdsp.so
+vendor/lib64/libhbtpfrmwk.so
+vendor/lib64/libhbtpjni.so
+
 # Keystore
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
