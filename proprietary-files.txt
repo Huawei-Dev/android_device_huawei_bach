@@ -240,6 +240,10 @@ vendor/etc/firmware/ice40.bin
 vendor/etc/firmware/leia_pfp_470.fw
 vendor/etc/firmware/leia_pm4_470.fw
 
+# Gatekeeper
+vendor/lib/hw/gatekeeper.msm8937.so
+vendor/lib64/hw/gatekeeper.msm8937.so
+
 # GPS
 -vendor/app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/DR_AP_Service
