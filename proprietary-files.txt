@@ -231,6 +231,15 @@ vendor/lib64/libFidoCryptoJNI.so
 vendor/lib64/libFIDOKeyProvisioning.so
 vendor/lib64/libFidoSuiJNI.so
 
+# Firmwares
+vendor/etc/firmware/hbtp/hbtpcfg.dat
+vendor/etc/firmware/hbtp/hbtpcfg_8917.dat
+vendor/etc/firmware/hbtp/qtc800s_dsp.bin
+vendor/etc/firmware/DE.o.msm8937
+vendor/etc/firmware/ice40.bin
+vendor/etc/firmware/leia_pfp_470.fw
+vendor/etc/firmware/leia_pm4_470.fw
+
 # GPS
 -vendor/app/com.qualcomm.location/com.qualcomm.location.apk
 vendor/bin/DR_AP_Service
