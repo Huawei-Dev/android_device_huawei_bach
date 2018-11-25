@@ -469,6 +469,11 @@ vendor/lib64/libhbtpjni.so
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
+# Listen
+vendor/lib/hw/sound_trigger.primary.msm8937.so
+vendor/lib/libadpcmdec.so
+vendor/lib/libsmwrapper.so
+
 # Perf
 vendor/bin/iop
 vendor/bin/msm_irqbalance
