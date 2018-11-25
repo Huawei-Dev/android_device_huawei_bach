@@ -1011,6 +1011,12 @@ service hcidump /system/bin/sh /system/etc/hcidump.sh
     disabled
     oneshot
 
+service hvdcp_opti /vendor/bin/hvdcp_opti
+    class main
+    user root
+    group root
+    seclabel u:r:hvdcp:s0
+
 service charger /charger
     class charger
     group system graphics
@@ -1159,6 +1165,7 @@ service seemp_healthd /system/vendor/bin/seemp_healthd
     group system
 
 on charger
+    start hvdcp_opti
     setprop persist.sys.usb.config charging
 
 #add poweroffhandler

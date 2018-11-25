@@ -1,2 +1,5 @@
 # Display
 ro.sf.lcd_density=240
+
+# Charger
+setprop persist.hvdcp.allow_opti 1

@@ -95,6 +95,9 @@ vendor/lib64/libbtpower.so
 vendor/lib/libc_secshared.so
 vendor/lib64/liboeminfo.so
 
+# Charger
+vendor/bin/hvdcp_opti
+
 # FIDO
 -vendor/app/FidoCryptoService/FidoCryptoService.apk
 -vendor/app/FidoSuiService/FidoSuiService.apk
