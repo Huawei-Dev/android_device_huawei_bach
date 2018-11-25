@@ -80,6 +80,21 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
+# BT
+vendor/bin/btnvtool
+vendor/bin/hci_qcomm_init
+vendor/bin/wcnss_filter
+vendor/lib/libbtaddr.so
+vendor/lib/libbtnv.so
+vendor/lib/libbtpower.so
+vendor/lib/libc_secshared.so
+vendor/lib/liboeminfo.so
+vendor/lib64/libbtaddr.so
+vendor/lib64/libbtnv.so
+vendor/lib64/libbtpower.so
+vendor/lib/libc_secshared.so
+vendor/lib64/liboeminfo.so
+
 # FIDO
 -vendor/app/FidoCryptoService/FidoCryptoService.apk
 -vendor/app/FidoSuiService/FidoSuiService.apk
