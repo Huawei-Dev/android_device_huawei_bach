@@ -44,11 +44,6 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 
-# DPM
-PRODUCT_PACKAGES += \
-    tcmiface \
-    tcmiface-hostdex
-
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
