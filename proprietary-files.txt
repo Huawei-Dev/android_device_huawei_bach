@@ -139,6 +139,13 @@ vendor/lib64/libwms.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
 
+# Display calibration
+vendor/etc/qdcm_calib_data_AUO_NT51021B_8P0_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_AUO_NT51021_8P0_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_BOE_NT51021_10P1_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_INX_NT51021_10P1_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_INX_NT51021_8P0_VIDEO_TFT_1200_x_1920.xml
+
 # DPM
 -vendor/app/dpmserviceapp/dpmserviceapp.apk
 vendor/bin/dpmd
