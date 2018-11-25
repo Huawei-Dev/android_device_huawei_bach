@@ -98,6 +98,45 @@ vendor/lib64/liboeminfo.so
 # Charger
 vendor/bin/hvdcp_opti
 
+# CNE
+-vendor/app/CNEService/CNEService.apk
+vendor/bin/cnd
+vendor/etc/cne/SwimConfig.xml
+vendor/etc/cne/andsfCne.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile1.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile2.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile3.xml
+vendor/etc/cne/wqeclient/ATT/ATT_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile1.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile2.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile3.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile4.xml
+vendor/etc/cne/wqeclient/ROW/ROW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile1.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile2.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile3.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml
+vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml
+vendor/etc/permissions/ConnectivityExt.xml
+vendor/etc/permissions/cneapiclient.xml
+vendor/etc/permissions/com.quicinc.cne.xml
+vendor/framework/ConnectivityExt.jar
+vendor/framework/cneapiclient.jar
+vendor/framework/com.quicinc.cne.jar
+vendor/lib/libcne.so
+vendor/lib/libcneapiclient.so
+vendor/lib/libcneqmiutils.so
+vendor/lib/libwms.so
+vendor/lib/libwqe.so
+vendor/lib/libxml.so
+vendor/lib64/libcne.so
+vendor/lib64/libcneapiclient.so
+vendor/lib64/libcneqmiutils.so
+vendor/lib64/libwms.so
+vendor/lib64/libwqe.so
+vendor/lib64/libxml.so
+
 # FIDO
 -vendor/app/FidoCryptoService/FidoCryptoService.apk
 -vendor/app/FidoSuiService/FidoSuiService.apk
