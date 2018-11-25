@@ -58,8 +58,8 @@ DEVICE_PACKAGE_OVERLAYS += hardware/qcom/audio-caf/msm8937/configs/common/overla
 
 PRODUCT_COPY_FILES +=\
 hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy.conf\
-hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf\
-hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf\
+hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf\
+hardware/qcom/audio-caf/msm8937/configs/msm8937/audio_effects.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.conf\
 hardware/qcom/audio-caf/msm8937/configs/msm8937/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
 hardware/qcom/audio-caf/msm8937/configs/msm8937/mixer_paths_qrd_skuh.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skuh.xml \
 hardware/qcom/audio-caf/msm8937/configs/msm8937/mixer_paths_qrd_skui.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_qrd_skui.xml \
