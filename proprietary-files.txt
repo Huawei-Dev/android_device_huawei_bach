@@ -474,6 +474,13 @@ vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
+# Network
+-vendor/app/QtiTetherService/QtiTetherService.apk
+vendor/lib/libconnctrl.so
+vendor/lib/libQtiTether.so
+vendor/lib64/libconnctrl.so
+vendor/lib64/libQtiTether.so
+
 # Perf
 vendor/bin/iop
 vendor/bin/msm_irqbalance
