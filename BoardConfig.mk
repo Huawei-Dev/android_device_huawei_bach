@@ -45,7 +45,7 @@ BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 TARGET_OTA_ASSERT_DEVICE := msm8937,bach
 
 # Audio
-include hardware/qcom/audio-caf/msm8937/configs/msm8937/msm8937.mk
+include $(LOCAL_PATH)/audio.mk
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
