@@ -450,6 +450,10 @@ vendor/etc/firmware/a530v3_gpmu.fw2
 vendor/etc/firmware/a530v3_seq.fw2
 vendor/etc/firmware/a540_gpmu.fw2
 
+# Keystore
+vendor/lib/hw/keystore.msm8937.so
+vendor/lib64/hw/keystore.msm8937.so
+
 # Perf
 vendor/bin/iop
 vendor/bin/msm_irqbalance
