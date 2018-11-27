@@ -80,6 +80,13 @@ vendor/etc/acdbdata/QRD/QRD_Hdmi_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Headset_cal.acdb
 vendor/etc/acdbdata/QRD/QRD_Speaker_cal.acdb
 
+# Audio - flac
+vendor/bin/audioflacapp
+vendor/lib/libFlacSwDec.so
+vendor/lib/libstagefright_soft_flacdec.so
+vendor/lib64/libFlacSwDec.so
+vendor/lib64/libstagefright_soft_flacdec.so
+
 # BT
 vendor/bin/btnvtool
 vendor/bin/hci_qcomm_init
