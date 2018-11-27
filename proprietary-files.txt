@@ -806,6 +806,7 @@ vendor/lib64/libTimeService.so
 
 # WFD
 vendor/bin/wfdservice
+vendor/framework/WfdCommon.jar
 vendor/lib/libwfdavenhancements.so
 vendor/lib/libwfdcommonutils.so
 vendor/lib/libwfdhdcpcp.so
