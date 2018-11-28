@@ -490,6 +490,10 @@ vendor/lib64/libhbtpjni.so
 vendor/lib/hw/keystore.msm8937.so
 vendor/lib64/hw/keystore.msm8937.so
 
+# Lights
+vendor/lib/hw/lights.msm8937.so
+vendor/lib64/hw/lights.msm8937.so
+
 # Listen
 -vendor/app/HotwordEnrollment/HotwordEnrollment.apk
 vendor/lib/hw/sound_trigger.primary.msm8937.so
