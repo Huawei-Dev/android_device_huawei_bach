@@ -899,3 +899,17 @@ vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
 vendor/bin/cnss-daemon
 vendor/bin/fstman
 
+# Huawei proprietary
+vendor/lib/lib_nve_operation.so
+vendor/lib/lib_oeminfo_interface.so
+vendor/lib/libnvme.so
+vendor/lib/libteec.so
+vendor/lib/libteeclientjni.so
+vendor/lib64/lib_nve_operation.so
+vendor/lib64/lib_oeminfo_interface.so
+vendor/lib64/libnvme.so
+vendor/lib64/libteec.so
+vendor/lib64/libteeclientjni.so
+root/sbin/libqmi_oem_main
+root/sbin/oeminfo_nvm_server
+root/sbin/teecd
