@@ -184,11 +184,6 @@ PRODUCT_PACKAGES += \
     libcnefeatureconfig \
     libxml2
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/data/dsi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/dsi_config.xml \
-    $(LOCAL_PATH)/prebuilts/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
-    $(LOCAL_PATH)/prebuilts/data/qmi_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/qmi_config.xml
-
 # Screen density
 PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi xxhdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
@@ -201,10 +196,6 @@ PRODUCT_PACKAGES += \
     init.qcom.post_boot.sh
 
 # Sensors
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
-    $(LOCAL_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
-
 PRODUCT_PACKAGES += \
     calmodule.cfg \
     sensors.msm8937
