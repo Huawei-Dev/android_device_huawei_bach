@@ -251,6 +251,16 @@ vendor/etc/firmware/ice40.bin
 vendor/etc/firmware/leia_pfp_470.fw
 vendor/etc/firmware/leia_pm4_470.fw
 
+# FPS
+vendor/lib/hw/fingerprint.msm8937.so
+vendor/lib/lib_fpc_tac_shared.so
+vendor/lib/libhwlog.so
+vendor/lib/libimonitor.so
+vendor/lib64/hw/fingerprint.msm8937.so
+vendor/lib64/lib_fpc_tac_shared.so
+vendor/lib64/libhwlog.so
+vendor/lib64/libimonitor.so
+
 # Gatekeeper
 vendor/lib/hw/gatekeeper.msm8937.so
 vendor/lib64/hw/gatekeeper.msm8937.so

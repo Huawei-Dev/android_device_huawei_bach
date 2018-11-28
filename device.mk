@@ -58,6 +58,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/fingerprint.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/fingerprint.idc
 
+PRODUCT_PACKAGES += \
+    fingerprintd
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8937 \
