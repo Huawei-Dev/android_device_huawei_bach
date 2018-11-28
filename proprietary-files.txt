@@ -23,6 +23,10 @@ vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so
 vendor/lib/rfsa/adsp/libscveT2T_skel.so
 vendor/lib/rfsa/adsp/libscveTextReco_skel.so
 
+# ATFWD
+vendor/bin/ATFWD-daemon
+-vendor/app/atfwd/atfwd.apk
+
 # Audio
 vendor/etc/drc/drc_cfg_5.1.txt
 vendor/etc/drc/drc_cfg_AZ.txt
