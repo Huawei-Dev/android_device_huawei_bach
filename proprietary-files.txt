@@ -626,6 +626,7 @@ vendor/lib64/libqmiservices.so
 vendor/lib64/libsmemlog.so
 
 # Radio
+system/global/ons/ons.bin
 -vendor/app/embms/embms.apk
 -vendor/app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/ipacm-diag
@@ -644,6 +645,8 @@ vendor/framework/QtiTelephonyServicelibrary.jar
 vendor/framework/embmslibrary.jar
 -vendor/framework/qcrilhook.jar
 vendor/lib/libconfigdb.so
+vendor/lib/libhuaweicust.so
+vendor/lib/libhw_hal.so
 vendor/lib/liblqe.so
 vendor/lib/libnetmgr.so
 vendor/lib/libqcmaputils.so
@@ -657,6 +660,8 @@ vendor/lib/libsettings.so
 vendor/lib/libsystem_health_mon.so
 vendor/lib/libvendorconn.so
 vendor/lib64/libconfigdb.so
+vendor/lib64/libhuaweicust.so
+vendor/lib64/libhw_hal.so
 vendor/lib64/liblqe.so
 vendor/lib64/libnetmgr.so
 vendor/lib64/libqcmaputils.so
