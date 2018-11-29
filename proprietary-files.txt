@@ -874,11 +874,7 @@ vendor/lib64/libwfduibcsrc.so
 vendor/lib64/libwfduibcsrcinterface.so
 
 # Widevine
-vendor/lib/qcdrm/playready/lib/drm/libdrmprplugin_customer.so
-vendor/lib/qcdrm/playready/lib/libprdrmdecrypt_customer.so
-vendor/lib/qcdrm/playready/lib/libtzplayready_customer.so
-vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmdecrypt_customer.so
-vendor/lib/qcdrm/playready/lib/mediadrm/libprmediadrmplugin_customer.so
+vendor/lib/mediadrm/libwvdrmengine.so
 
 # Wi-Fi
 vendor/bin/cnss-daemon
