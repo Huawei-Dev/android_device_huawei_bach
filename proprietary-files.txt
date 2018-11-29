@@ -1663,6 +1663,16 @@ vendor/lib/hw/sound_trigger.primary.msm8937.so
 vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
+# MDTP
+-vendor/app/MdtpService/MdtpService.apk
+vendor/bin/mdtpd
+vendor/lib/libmdtp.so
+vendor/lib/libmdtp_crypto.so
+vendor/lib/libmdtpdemojni.so
+vendor/lib64/libmdtp.so
+vendor/lib64/libmdtp_crypto.so
+vendor/lib64/libmdtpdemojni.so
+
 # Media
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
