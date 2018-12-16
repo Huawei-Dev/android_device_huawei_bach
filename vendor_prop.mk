@@ -24,7 +24,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicerec=true \
     persist.vendor.audio.speaker.prot.enable=false \
-    persist.vendor.bt.enable.splita2dp=false \
+    persist.vendor.btstack.enable.splita2dp=false \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
     vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.dolby.ds2.hardbypass=true \
@@ -116,7 +116,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.demo.hdmirotationlock=false \
     persist.hwc.enable_vds=1 \
     sdm.perf_hint_window=50 \
-    vendor.gralloc.enable_fb_ubwc=1 \
     sdm.debug.disable_rotator_split=1 \
     sdm.debug.disable_skip_validate=1 \
     vendor.gralloc.enable_fb_ubwc=1 \
@@ -132,8 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.thumbnail.prefer_hw_codecs=true \
-    persist.media.treble_omx=true \
-    mm.enable.qcom_parser=4176895 \
+    vendor.mm.enable.qcom_parser=4176895 \
     media.stagefright.audio.sink=280 \
     vendor.vidc.disable.split.mode=1 \
     vendor.vidc.enc.disable_bframes=1 \
@@ -147,6 +145,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
+    media.msm8956hw=0 \
     debug.media.codec2=2 \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0
@@ -154,6 +153,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Memory optimizations
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.bservice_enable=true
+
+# Netmgrd
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.use_data_netmgrd=true \
+    persist.data.netmgrd.qos.enable=true \
+    persist.vendor.data.mode=concurrent
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
