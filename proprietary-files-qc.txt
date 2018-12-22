@@ -178,15 +178,6 @@ vendor/lib64/libperfhub_client.so
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|1086e5dcda7aa2bed7ac015f7850095f6199a1c2
 
 # GPS - from LA.UM.8.6.r1-01900-89xx.0
-etc/permissions/com.qti.location.sdk.xml|cb68a566bd77dcc75bb7547199d528289fac01cb
-etc/permissions/com.qualcomm.location.xml|1d36e7cf8e16813aa13ee6b3fca8d8687b543828
-etc/permissions/izat.xt.srv.xml|a0f460056f27b5495a4d6e959eecf0e429c42a57
-etc/permissions/privapp-permissions-com.qualcomm.location.xml|2dc7fba818bdf582bfea849a74f4b312d90745c9
-framework/com.qti.location.sdk.jar|5dcbf27bd7709a111985e9660b5b61b5fb7a22b1
-framework/izat.xt.srv.jar|98ffd12c789af16d186a4a04c0703a23dc27e347
-lib64/liblocationservice_jni.so|4ba677d9e479e508299f5ebad543b6f09f03a671
-lib64/libxt_native.so|d023ae9678d7954285ad61903d73cac14a86e3ce
--priv-app/com.qualcomm.location/com.qualcomm.location.apk|2e8d1439d4f12288f929e5c46a64a01c2b40b8b0
 vendor/bin/loc_launcher|6fe9d0230143f4aa96ddb9c047abe3d003cc815a
 vendor/bin/lowi-server|73552d3effbeaf86f0a99549f176929aa2e368ff
 vendor/bin/slim_daemon|069be0e94389258ed9316e40a760d5e38317d05d
