@@ -272,6 +272,8 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     # CPE fw_name used by sound trigger HAL
     chown media audio /sys/kernel/wcd_cpe0/fw_name
+    chown system system /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
+    chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
 
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
