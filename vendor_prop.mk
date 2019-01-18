@@ -95,8 +95,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196610 \
     ro.qualcomm.cabl=2 \
-    ro.vendor.display.cabl=2 \
-    ro.sf.lcd_density=320
+    ro.vendor.display.cabl=2
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
