@@ -291,6 +291,9 @@ on property:sys.boot_completed=1
     chown system system /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
     chmod 0664 /sys/devices/soc/qpnp-smbcharger-18/power_supply/battery/subsystem/bms/hi_power
 
+on property:vendor.media.target.version=*
+    setprop vendor.sys.media.target.version ${vendor.media.target.version}
+
 on property:vold.decrypt=trigger_restart_framework
     restart vendor.camera-provider-2-4
 
