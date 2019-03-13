@@ -147,6 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-qcp=true \
     media.stagefright.enable-scan=true \
     mmp.enable.3g2=true \
+    debug.media.codec2=2 \
     media.aac_51_output_enabled=true \
     mm.sec.enable.smoothstreaming=true
 
