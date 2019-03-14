@@ -28,5 +28,3 @@ Colors 	      |Gold, white, space grey
 
 
 ![Huawei MediaPad M3 Lite 10](https://cdn2.gsmarena.com/vv/pics/huawei/huawei-mediapad-m3-10-lite-1.jpg "Huawei MediaPad M3 Lite 10")
-
-
