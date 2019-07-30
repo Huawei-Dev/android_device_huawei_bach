@@ -96,9 +96,6 @@ ro.vendor.display.cabl=2
 ro.sf.lcd_density=320
 vendor.display.enable_default_color_mode=1
 
-# Enforce privapp-permissions whitelist
-ro.control_privapp_permissions=enforce
-
 # GPS
 ro.gps.agps_provider=1
 
