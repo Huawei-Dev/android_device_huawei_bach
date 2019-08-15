@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/huawei/bach
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8937
@@ -131,7 +131,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/xiaomi/msm8937
+TARGET_KERNEL_SOURCE := kernel/huawei/bach
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
@@ -198,4 +198,4 @@ WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit the common proprietary files
--include vendor/xiaomi/msm8937-common/BoardConfigVendor.mk
+-include vendor/huawei/bach/BoardConfigVendor.mk

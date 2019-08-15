@@ -15,7 +15,7 @@
 # limitations under the License.
 #
 
-VENDOR_PATH := device/xiaomi/msm8937-common
+VENDOR_PATH := device/huawei/bach
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
@@ -406,4 +406,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit common proprietary files
-$(call inherit-product-if-exists, vendor/xiaomi/msm8937-common/msm8937-common-vendor.mk)
+$(call inherit-product, vendor/huawei/bach/bach-vendor.mk)

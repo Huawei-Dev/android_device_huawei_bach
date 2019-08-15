@@ -1,21 +1,32 @@
-# Common device configuration for Xiaomi MSM8937
+@Copyright 2018 - Surdu Petru
 
-## Copyright
+Huawei MediaPad M3 Lite 10
+==========================
 
-```
-#
-# Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+Basic         |Spec Sheet
+-------------:|:---------------------------------------------------------------------------------------------------------------------------
+Network	      | GSM / HSPA / LTE
+Launch	      |2017, June
+Body	      |241.3 x 171.5 x 7.1 mm (9.50 x 6.75 x 0.28 in); 310 g (10.93 oz); Nano-SIM
+Display	      |IPS LCD capacitive touchscreen, 16M colors; 10.1 inches; 1200 x 1920 pixels; 16:10 ratio (~224 ppi density)
+Platform      |Android 7.0 (Nougat)
+Chipset	      |Qualcomm MSM8940 Snapdragon 435
+CPU	      |Octa-core 1.4 GHz Cortex-A53
+GPU	      |Adreno 505
+Memory	      |16/64 GB, 4 GB RAM or 32 GB, 3 GB RAM; microSD, up to 256 GB
+Rear Camera   |8 MP, AF; 1080p@30fps
+Front Camera  |8 MP
+Sound	      |stereo speakers (4 speakers)
+WLAN	      |Wi-Fi 802.11 a/b/g/n/ac, hotspot
+Bluetooth     |4.0, A2DP
+GPS	      |Yes, with A-GPS
+Radio	      |No
+USB	      |microUSB 2.0, USB On-The-Go
+Sensors	      |Fingerprint (front-mounted), accelerometer, gyro, proximity
+Battery	      |Non-removable Li-Ion 6660 mAh battery
+Colors 	      |Gold, white, space grey
+
+
+![Huawei MediaPad M3 Lite 10](https://cdn2.gsmarena.com/vv/pics/huawei/huawei-mediapad-m3-10-lite-1.jpg "Huawei MediaPad M3 Lite 10")
+
+
