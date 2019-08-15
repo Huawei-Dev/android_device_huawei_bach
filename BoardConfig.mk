@@ -92,10 +92,6 @@ TARGET_HW_DISK_ENCRYPTION := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
 
-# FM
-BOARD_HAVE_QCOM_FM := true
-TARGET_QCOM_NO_FM_FIRMWARE := true
-
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := true
 USE_DEVICE_SPECIFIC_GPS := true
@@ -132,9 +128,6 @@ BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01000000 --tags_offset 0x00000100
 
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/huawei/bach
-
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
 
 # Malloc
 MALLOC_SVELTE := true
@@ -179,10 +172,6 @@ TARGET_USES_OLD_MNC_FORMAT := true
 include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
-
-# Treble
-BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
-PRODUCT_FULL_TREBLE_OVERRIDE := true
 
 # WiFi
 BOARD_HAS_QCOM_WLAN := true
