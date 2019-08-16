@@ -19,17 +19,16 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := \
-    system/core/base/include \
-    system/core/init
-LOCAL_CFLAGS := -Wall
-LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := init_msm8937.cpp
+	system/core/init \
+	system/core/base/include
+
 LOCAL_STATIC_LIBRARIES := \
     libbase
 
-ifneq ($(TARGET_LIBINIT_MSM8937_DEFINES_FILE),)
-    LOCAL_SRC_FILES += ../../../../$(TARGET_LIBINIT_MSM8937_DEFINES_FILE)
-endif
-LOCAL_MODULE := libinit_msm8937
+LOCAL_MODULE_TAGS := optional
+
+LOCAL_SRC_FILES := init_msm8937.cpp
+
+LOCAL_MODULE := libinit_bach
 
 include $(BUILD_STATIC_LIBRARY)

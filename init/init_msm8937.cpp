@@ -1,129 +1,134 @@
-/*
-   Copyright (c) 2016, The CyanogenMod Project
-   Copyright (c) 2017, The LineageOS Project
-
-   Redistribution and use in source and binary forms, with or without
-   modification, are permitted provided that the following conditions are
-   met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above
-      copyright notice, this list of conditions and the following
-      disclaimer in the documentation and/or other materials provided
-      with the distribution.
-    * Neither the name of The Linux Foundation nor the names of its
-      contributors may be used to endorse or promote products derived
-      from this software without specific prior written permission.
-
-   THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-   WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-   MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-   ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-   BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-   BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-   WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-   OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-   IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
-#include <cstdlib>
-#include <fstream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/sysinfo.h>
+#define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
+#include <sys/_system_properties.h>
 
 #include <android-base/file.h>
 #include <android-base/properties.h>
+#include <android-base/logging.h>
 #include <android-base/strings.h>
 
-#include "property_service.h"
-#include "vendor_init.h"
+#include <cstdlib>
+#include <stdlib.h>
+#include <stdio.h>
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <sys/sysinfo.h>
 
-#include "init_msm8937.h"
+#include "vendor_init.h"
+#include "property_service.h"
 
 using android::base::GetProperty;
 using android::init::property_set;
-using android::base::ReadFileToString;
-using android::base::Trim;
+using namespace std;
 
-char const *heapstartsize;
-char const *heapgrowthlimit;
-char const *heapsize;
-char const *heapminfree;
-char const *heapmaxfree;
+const char *APP_INFO = "/proc/app_info";
 
-__attribute__ ((weak))
-void init_target_properties() {}
-
-void check_device()
+void property_override(char const prop[], char const value[])
 {
-    struct sysinfo sys;
+    prop_info *pi;
 
-    sysinfo(&sys);
-
-    if (sys.totalram > 3072ull * 1024 * 1024) {
-        // from - phone-xxhdpi-4096-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "256m";
-        heapsize = "512m";
-        heapminfree = "4m";
-        heapmaxfree = "8m";
-    } else if (sys.totalram > 2048ull * 1024 * 1024) {
-        // from - phone-xxhdpi-3072-dalvik-heap.mk
-        heapstartsize = "8m";
-        heapgrowthlimit = "288m";
-        heapsize = "768m";
-        heapminfree = "512k";
-	heapmaxfree = "8m";
-    } else {
-        // from - phone-xxhdpi-2048-dalvik-heap.mk
-        heapstartsize = "16m";
-        heapgrowthlimit = "192m";
-        heapsize = "512m";
-        heapminfree = "2m";
-        heapmaxfree = "8m";
-   }
+    pi = (prop_info*) __system_property_find(prop);
+    if (pi)
+        __system_property_update(pi, value, strlen(value));
+    else
+        __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
-void set_zram_size(void)
+void property_override_dual(char const system_prop[], char const vendor_prop[], char const value[])
 {
-    FILE *f = fopen("/sys/block/zram0/disksize", "wb");
-    int MB = 1024 * 1024;
-    std::string zram_disksize;
-    struct sysinfo si;
+    property_override(system_prop, value);
+    property_override(vendor_prop, value);
+}
 
-    // Check if zram exist
-    if (f == NULL) {
-        return;
-    }
-
-    // Initialize system info
-    sysinfo(&si);
-
-    // Set zram disksize (divide RAM size by 3)
-    zram_disksize = std::to_string(si.totalram / MB / 3);
-
-    // Write disksize to sysfs
-    fprintf(f, "%sM", zram_disksize.c_str());
-
-    // Close opened file
-    fclose(f);
+static void set_model(const char *model) {
+    property_override("ro.hw.oemName", model);
+    property_override("ro.build.product", model);
+    property_override_dual("ro.product.model", "ro.product.vendor.model", model);
 }
 
 void vendor_load_properties()
 {
-    check_device();
-    set_zram_size();
+    ifstream fin;
+    string buf,hwsim;
 
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", heapmaxfree);
+    fin.open(APP_INFO, ios::in);
+    if (!fin) {
+        LOG(ERROR) << __func__ << ": Failed to open " << APP_INFO;
+        return;
+    }
 
-    init_target_properties();
+    while (getline(fin, buf))
+        if (buf.find("huawei_fac_product_name") != string::npos)
+		break;
+
+    fin.close();
+
+    hwsim = GetProperty("ro.boot.hwsim", "");
+    if (hwsim == "single") {
+	property_override_dual("persist.multisim.config", "persist.radio.multisim.config", "ssss");
+	property_override("ro.telephony.default_network", "12");
+	property_override("ro.telephony.lteOnCdmaDevice", "0");
+    } else {
+        property_override_dual("persist.multisim.config", "persist.radio.multisim.config", "dsds");
+	property_override("ro.telephony.default_network", "22,20");
+	property_override("ro.telephony.lteOnCdmaDevice", "1");
+    }
+
+    if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("BAH-W09") != string::npos)) {
+	property_override("ro.build.description", "BAH-L09-user 7.0 HUAWEIBAH-L09 C100B018 release-keys");
+	property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/BAH/HWBAH-Q:7.0/HUAWEIBAH-L09/C100B018:user/release-keys");
+	property_override_dual("ro.product.name", "ro.product.vendor.name", "BAH");
+	property_override_dual("ro.product.device", "ro.product.vendor.device", "HWBAH-Q");
+	property_override("ro.product.hardwareversion", "HL1TRTM");
+    }
+
+    if ((buf.find("CPN-AL00") != string::npos) || (buf.find("CPN-L0J") != string::npos) || (buf.find("CPN-L09") != string::npos) || (buf.find("CPN-W09") != string::npos)) {
+	property_override("ro.build.description", "CPN-L09-user 7.0 HUAWEICPN-L09 C904B280 release-keys");
+	property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/CPN/HWCPN-Q:7.0/HUAWEICPN-L09/C904B280:user/release-keys");
+	property_override_dual("ro.product.name", "ro.product.vendor.name", "CPN");
+	property_override_dual("ro.product.device", "ro.product.vendor.device", "HWCPN-Q");
+    }
+
+    property_override_dual("ro.product.manufacturer", "ro.product.vendor.manufacturer", "HUAWEI");
+    property_override_dual("ro.product.brand", "ro.product.vendor.brand", "Huawei");
+    property_override_dual("ro.build.tags", "ro.vendor.build.tags", "release-keys");
+    property_override("ro.hw.custPath", "/cust/hw/eu");
+    android::init::property_set("rild.libargs", "-d /dev/smd0");
+
+    /* BAH-AL00 */
+    if (buf.find("BAH-AL00") != string::npos) {
+        set_model("BAH-AL00");
+    }
+    /* BAH-L01 */
+    else if (buf.find("BAH-L01") != string::npos) {
+        set_model("BAH-L01");
+    }
+    /* BAH-L09 */
+    else if (buf.find("BAH-L09") != string::npos) {
+        set_model("BAH-L09");
+    }
+    /* BAH-W09 */
+    else if (buf.find("BAH-W09") != string::npos) {
+        set_model("BAH-W09");
+    }
+    /* CPN-AL00 */
+    else if (buf.find("CPN-AL00") != string::npos) {
+        set_model("CPN-AL00");
+    }
+    /* CPN-L0J */
+    else if (buf.find("CPN-L0J") != string::npos) {
+        set_model("CPN-L0J");
+    }
+    /* CPN-L09 */
+    else if (buf.find("CPN-L09") != string::npos) {
+        set_model("CPN-L09");
+    }
+    /* CPN-W09 */
+    else if (buf.find("CPN-W09") != string::npos) {
+        set_model("CPN-W09");
+    }
+    else {
+        LOG(ERROR) << __func__ << ": unexcepted huawei_fac_product_name!";
+    }
 }
