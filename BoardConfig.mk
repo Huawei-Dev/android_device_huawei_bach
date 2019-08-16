@@ -100,7 +100,7 @@ TARGET_ENABLE_MEDIADRM_64 := true
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/prebuilts/config.fs
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := true
@@ -118,10 +118,10 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # HIDL
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(VENDOR_PATH)/vendor_framework_compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(VENDOR_PATH)/framework_manifest.xml
-DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(VENDOR_PATH)/compatibility_matrix.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(VENDOR_PATH)/prebuilts/vendor_framework_compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(VENDOR_PATH)/prebuilts/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/prebuilts/manifest.xml
+DEVICE_MATRIX_FILE := $(VENDOR_PATH)/prebuilts/compatibility_matrix.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := libinit_bach
