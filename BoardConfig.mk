@@ -70,7 +70,6 @@ AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
 AUDIO_USE_LL_AS_PRIMARY_OUTPUT := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 BOARD_USES_ALSA_AUDIO := true
-USE_CUSTOM_AUDIO_POLICY := 1
 USE_XML_AUDIO_POLICY_CONF := 1
 
 # Bluetooth
@@ -137,9 +136,6 @@ TARGET_KERNEL_CONFIG := bach_defconfig
 # Malloc
 MALLOC_SVELTE := true
 
-# Media
-TARGET_USES_MEDIA_EXTENSIONS := true
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE     := 83886080
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
@@ -191,6 +187,8 @@ TARGET_DISABLE_WCNSS_CONFIG_COPY := true
 WIFI_DRIVER_FW_PATH_AP := "ap"
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WPA_SUPPLICANT_VERSION := VER_0_8_X
+
+include vendor/lineage/config/BoardConfigLineage.mk
 
 # Inherit the common proprietary files
 -include vendor/huawei/bach/BoardConfigVendor.mk
