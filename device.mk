@@ -310,6 +310,10 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(VENDOR_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
+# Shim
+PRODUCT_PACKAGES += \
+    libshim_cutils
+
 # Telephony
 PRODUCT_PACKAGES += \
     telephony-ext

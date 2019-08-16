@@ -39,6 +39,7 @@ on early-init
     chmod 0620 /dev/kmsg
 
 on init
+    export LD_PRELOAD libshim_cutils.so
     write /sys/module/qpnp_rtc/parameters/poweron_alarm 1
 
 on post-fs
