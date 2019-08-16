@@ -25,10 +25,10 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
-import /vendor/etc/init/hw/init.qcom.power.rc
-import /vendor/etc/init/hw/init.qcom.usb.rc
-import /vendor/etc/init/hw/init.target.rc
-import /vendor/etc/init/hw/init.device.rc
+import /init.qcom.power.rc
+import /init.qcom.usb.rc
+import /init.target.rc
+import /init.huawei.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
@@ -99,6 +99,8 @@ on boot
     chown system system /sys/module/radio_iris_transport/parameters/fmsmd_set
     chmod 0660 /sys/module/radio_iris_transport/parameters/fmsmd_set
 
+    #write /sys/touchscreen/wakeup_gesture_enable 1
+
     # Create QMUX deamon socket area
     mkdir /dev/socket/qmux_radio 2770 radio radio
     mkdir /dev/socket/qmux_audio 2770 media audio
@@ -133,30 +135,43 @@ on boot
     chown root system /sys/kernel/dload/emmc_dload
     chmod 0660 /sys/kernel/dload/emmc_dload
 
-    # Goodix Fingerprint
-    chown system system /dev/goodix_fp
-    chmod 0644 /dev/goodix_fp
-
-    setprop persist.sys.fp.vendor none
-    start gx_fpd
-
-    # IR blaster
-    chown root system /sys/class/leds/infrared/transmit
-    chown root system /sys/class/leds/infrared/brightness
-
-    # Notification LEDs
-    chown root system /sys/class/leds/red/blink
-    chown root system /sys/class/leds/green/blink
-    chown root system /sys/class/leds/blue/blink
-
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # Create hvdcp_opti directory
     mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
 
+    # Vibrator permissions
+    chown root system /sys/class/timed_output/vibrator/vtg_level
+    chmod 0660 /sys/class/timed_output/vibrator/vtg_level
+
+    # Kcal
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chown system system /sys/devices/platform/kcal_ctrl.0/kcal_invert
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_enable
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_cont
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_sat
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_hue
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_min
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_val
+    chmod 0660 /sys/devices/platform/kcal_ctrl.0/kcal_invert
+
+    # Sensors
+    chmod 0775 /persist/sensors
+    chmod 0664 /persist/sensors/sensors_settings
+    chown system root /persist/sensors/sensors_settings
+    mkdir /data/misc/sensors 0775 system root
+
 # msm specific files that need to be created on /data
 on post-fs-data
+    mkdir /data/misc/sensors 0755
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used by display clients
@@ -216,7 +231,7 @@ on post-fs-data
     # We chown/chmod /persist again so because mount is run as root + defaults
     chown root system /persist
     chmod 0771 /persist
-    chown system system /persist/WCNSS_qcom_wlan_nv.bin
+    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
     # Create directories for Location services
     mkdir /data/vendor/location 0770 gps gps
@@ -318,6 +333,11 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     group root
     writepid /dev/cpuset/system-background/tasks
 
+service sensors /vendor/bin/sensors.qcom
+    class core
+    user root
+    group root system
+
 # Adjust socket buffer to enlarge TCP receive window for high bandwidth
 # but only if ro.data.large_tcp_window_size property is set.
 on property:ro.data.large_tcp_window_size=true
@@ -361,6 +381,7 @@ service ril-daemon2 /vendor/bin/hw/rild -c 2
     user radio
     group radio cache inet misc audio log readproc wakelock
     capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    disabled
 
 service charger /charger
     class charger
@@ -372,24 +393,6 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     user root
     group root
     writepid /dev/cpuset/system-background/tasks
-
-service gx_fpd /vendor/bin/gx_fpd
-    class core
-    user root
-    group system system
-    disabled
-
-on property:persist.sys.fp.vendor=switchf
-    stop gx_fpd
-    setprop persist.sys.fp.vendor searchf
-    setprop ro.boot.fpsensor fpc
-    start fps_hal
-
-on property:persist.sys.fp.vendor=goodix
-    setprop persist.sys.fp.onstart 1
-    setprop ro.boot.fpsensor gdx
-    setprop ro.hardware.fingerprint goodix
-    start fps_hal
 
 service time_daemon /vendor/bin/time_daemon
     class main
@@ -403,6 +406,9 @@ service vendor.power_off_alarm /vendor/bin/power_off_alarm
     oneshot
 
 on property:init.svc.media=restarting
+    restart qcamerasvr
+
+on property:init.svc.cameraserver=restarting
     restart qcamerasvr
 
 on property:init.svc.servicemanager=restarting

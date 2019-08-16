@@ -26,7 +26,7 @@
 #
 
 # the DIAG device node is not world writable/readable.
-/dev/diag                 0660   system     oem_2901
+/dev/diag                 0666   system     oem_2901
 
 /dev/genlock              0666   system     system
 /dev/kgsl                 0666   system     system
@@ -277,3 +277,14 @@
 /sys/devices/soc/soc:fpc1020		irq	                        0660   system     system
 /sys/devices/soc/soc:fpc1020            wakeup_enable	                0220   system     system
 /sys/devices/soc/soc:fpc1020            compatible_all	                0220   system     system
+
+# Huawei
+/dev/dsm                  0660   system     system
+/dev/hwlog_exception      0662   root       log
+/dev/log/*                0666   root       log
+# tas2560 smartpa devices
+/dev/tas_calib            0644   media      media
+/dev/tas2560_pri_l        0644   media      media
+/dev/tas2560_pri_r        0644   media      media
+/dev/tas2560_sec_l        0644   media      media
+/dev/tas2560_sec_r        0644   media      media

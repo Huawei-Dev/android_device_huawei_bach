@@ -280,17 +280,16 @@ PRODUCT_PACKAGES += \
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.qcom \
+    init.huawei.rc \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.power.rc \
-    init.recovery.qcom.rc \
     init.target.rc \
     ueventd.qcom.rc
 
 PRODUCT_PACKAGES += \
     init.qcom.early_boot.sh \
-    init.qcom.sh \
-    init.qcom.usb.sh
+    init.qcom.sh
 
 # RenderScript
 PRODUCT_PACKAGES += \

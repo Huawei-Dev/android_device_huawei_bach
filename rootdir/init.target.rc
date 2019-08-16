@@ -27,11 +27,17 @@
 #
 #
 
+on early-init
+    mkdir /cust 
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all /vendor/etc/fstab.qcom
+    wait /dev/block/bootdevice/by-name/oeminfo
+    start oeminfo_nvm
+
+    mount_all /fstab.qcom
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 100
 
@@ -53,6 +59,10 @@ on post-fs-data
 
     # Create folder for mm-qcamera-daemon
     mkdir /data/vendor/qcam 0770 camera camera
+
+    mkdir /data/fpc 0770 system system
+    mkdir /data/log 0775 system system
+    restorecon_recursive /data/log
 
 # Start camera server as daemon
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
@@ -89,14 +99,14 @@ service wcnss-service /vendor/bin/wcnss_service
     oneshot
 
 ## imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
-service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
+service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
     class main
     user system
     socket ims_qmid stream 0660 system radio
     group radio log diag
 
 # imsdatadaemon starts with root and UID will be downgraded to SYSTEM.
-service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
+service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     class main
     user system
     socket ims_datad stream 0660 system radio
@@ -120,12 +130,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
-
-service ppd /vendor/bin/mm-pp-dpps
-    class hal
-    user system
-    group system graphics
-    socket pps stream 0660 system system
 
 on property:init.svc.surfaceflinger=restarting
     restart vendor.hwcomposer-2-1
@@ -166,5 +170,6 @@ service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     group root
 
 on property:sys.boot_completed=1
-   # Enable ZRAM on boot_complete
-   swapon_all /vendor/etc/fstab.qcom
+    # Enable ZRAM on boot_complete
+    swapon_all /fstab.qcom
+    start macaddr
