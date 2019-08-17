@@ -25,37 +25,17 @@
 <!-- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN -->
 <!-- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                          -->
 <audio_platform_info>
-    <backend_names>
-        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER_LVM" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_RINGTONE" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADSET_RINGTONE" backend="speaker-and-headphones"/>
-        <device name="SND_DEVICE_OUT_AUTOMMI_SPEAKER" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_MAINLEFT" backend="main-speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_MAINRIGHT" backend="main-speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_SECLEFT" backend="sec-speaker"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_SECRIGHT" backend="sec-speaker"/>
-        <device name="SND_DEVICE_OUT_AUTOMMI_SPEAKER_MAINLEFT" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_AUTOMMI_SPEAKER_MAINRIGHT" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_AUTOMMI_SPEAKER_SECLEFT" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_AUTOMMI_SPEAKER_SECRIGHT" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_FM_SPEAKER" backend="speaker"/>
-        <device name="SND_DEVICE_OUT_CVAA_SPEAKER_HEADSET" backend="speaker-and-headphones"/>
-        <device name="SND_DEVICE_OUT_HANDSET_AND_SPEAKER" backend="speaker-and-headphones"/>
-    </backend_names>
-
     <bit_width_configs>
         <device name="SND_DEVICE_OUT_SPEAKER" bit_width="24"/>
     </bit_width_configs>
+
     <interface_names>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="SLIMBUS_0" codec_type="external"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="SLIMBUS_0" codec_type="external"/>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="TERT_MI2S" codec_type="internal"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="TERT_MI2S" codec_type="internal"/>
     </interface_names>
+
     <pcm_ids>
         <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD2" type="out" id="24"/>
         <usecase name="USECASE_AUDIO_PLAYBACK_OFFLOAD3" type="out" id="27"/>
@@ -70,16 +50,29 @@
         <usecase name="USECASE_VOICEMMODE2_CALL" type="in" id="35"/>
         <usecase name="USECASE_VOICEMMODE2_CALL" type="out" id="35"/>
     </pcm_ids>
+
     <config_params>
         <param key="spkr_1_tz_name" value="wsa881x.0f"/>
         <param key="spkr_2_tz_name" value=""/>
     </config_params>
+
     <acdb_ids>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED" acdb_id="136"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="136"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="136"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED_VBAT" acdb_id="136"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="137"/>
+	<device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="136"/>
+	<device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="136"/>
+	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="137"/>
+	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="137"/>
     </acdb_ids>
+
+    <backend_names>
+        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="PRI_MI2S_RX"/>
+    </backend_names>
 </audio_platform_info>
 
