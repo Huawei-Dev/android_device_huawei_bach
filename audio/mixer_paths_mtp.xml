@@ -256,6 +256,7 @@
     <!-- TAS2560 Smartamp -->
     <ctl name="TAS2560 0 Enable" value="Disable" />
     <ctl name="TAS2560 1 Enable" value="Disable" />
+    <ctl name="TAS2560 SmartPA Num" value="Num_2" />
     <ctl name="TAS2560 2 Enable" value="Disable" />
     <ctl name="TAS2560 3 Enable" value="Disable" />
     <ctl name="TAS2560 Regdump" value="No" />
@@ -753,6 +754,7 @@
     </path>
 
     <path name="voice-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer CSVoice" value="1" />
         <ctl name="Voice_Tx Mixer TERT_MI2S_TX_Voice" value="1" />
     </path>
@@ -782,6 +784,7 @@
     </path>
 
     <path name="voice2-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer Voice2" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer Voice2" value="1" />
         <ctl name="Voice2_Tx Mixer TERT_MI2S_TX_Voice" value="1" />
     </path>
@@ -823,6 +826,7 @@
     </path>
 
     <path name="vowlan-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer VoWLAN" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoWLAN" value="1" />
         <ctl name="VoWLAN_Tx Mixer TERT_MI2S_TX_VoWLAN" value="1" />
     </path>
@@ -853,6 +857,7 @@
     </path>
 
     <path name="voicemmode1-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode1" value="1" />
         <ctl name="VoiceMMode1_Tx Mixer TERT_MI2S_TX_MMode1" value="1" />
     </path>
@@ -886,6 +891,7 @@
     </path>
 
     <path name="voicemmode2-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoiceMMode2" value="1" />
         <ctl name="VoiceMMode2_Tx Mixer TERT_MI2S_TX_MMode2" value="1" />
     </path>
@@ -1078,6 +1084,7 @@
    </path>
 
     <path name="volte-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer VoLTE" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer VoLTE" value="1" />
         <ctl name="VoLTE_Tx Mixer TERT_MI2S_TX_VoLTE" value="1" />
     </path>
@@ -1112,6 +1119,7 @@
     </path>
 
     <path name="compress-voip-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer Voip" value="1" />
         <ctl name="Voip_Tx Mixer TERT_MI2S_TX_Voip" value="1" />
     </path>
@@ -1142,7 +1150,8 @@
         <ctl name="QCHAT_Tx Mixer TERT_MI2S_TX_QCHAT" value="1" />
     </path>
 
-	<path name="qchat-call speaker">
+    <path name="qchat-call speaker">
+	<ctl name="QUIN_MI2S_RX_Voice Mixer QCHAT" value="1" />
         <ctl name="QUAT_MI2S_RX_Voice Mixer QCHAT" value="1" />
         <ctl name="QCHAT_Tx Mixer TERT_MI2S_TX_QCHAT" value="1" />
     </path>
@@ -1188,6 +1197,7 @@
     <path name="speaker">
         <ctl name="TAS2560 0 Enable" value="Enable" />
         <ctl name="TAS2560 1 Enable" value="Enable" />
+	<ctl name="TAS2560 SmartPA Num" value="Num_2" />
         <ctl name="TAS2560 2 Enable" value="Enable" />
         <ctl name="TAS2560 3 Enable" value="Enable" />
     </path>
@@ -1295,8 +1305,8 @@
     </path>
 
     <path name="voice-speaker">
-        <ctl name="TAS2560 0 Enable" value="Disable" />
-        <ctl name="TAS2560 1 Enable" value="Disable" />
+        <ctl name="TAS2560 0 Enable" value="Enable" />
+        <ctl name="TAS2560 1 Enable" value="Enable" />
         <ctl name="TAS2560 2 Enable" value="Enable" />
         <ctl name="TAS2560 3 Enable" value="Enable" />
     </path>
@@ -1404,11 +1414,13 @@
     </path>
 
     <path name="handset-stereo-dmic-ef">
-        <path name="speaker-mic" />
+        <path name="speaker-dmic-endfire" />
+        <ctl name="ADC1 Volume" value="8" />
+        <ctl name="ADC3 Volume" value="8" />
     </path>
 
     <path name="speaker-stereo-dmic-ef">
-        <path name="speaker-mic" />
+        <path name="speaker-dmic-endfire" />
     </path>
 
     <path name="speaker-dmic-broadside">
@@ -1513,15 +1525,15 @@
     </path>
 
     <path name="speaker-main-left">
-        <ctl name="TAS2560 0 Enable" value="Enable" />
-        <ctl name="TAS2560 1 Enable" value="Disable" />
+        <ctl name="TAS2560 0 Enable" value="Disable" />
+        <ctl name="TAS2560 1 Enable" value="Enable" />
         <ctl name="TAS2560 2 Enable" value="Disable" />
         <ctl name="TAS2560 3 Enable" value="Disable" />
     </path>
 
     <path name="speaker-main-right">
-        <ctl name="TAS2560 0 Enable" value="Disable" />
-        <ctl name="TAS2560 1 Enable" value="Enable" />
+        <ctl name="TAS2560 0 Enable" value="Enable" />
+        <ctl name="TAS2560 1 Enable" value="Disable" />
         <ctl name="TAS2560 2 Enable" value="Disable" />
         <ctl name="TAS2560 3 Enable" value="Disable" />
     </path>
@@ -1529,15 +1541,15 @@
     <path name="speaker-sec-left">
         <ctl name="TAS2560 0 Enable" value="Disable" />
         <ctl name="TAS2560 1 Enable" value="Disable" />
-        <ctl name="TAS2560 2 Enable" value="Enable" />
-        <ctl name="TAS2560 3 Enable" value="Disable" />
+        <ctl name="TAS2560 2 Enable" value="Disable" />
+        <ctl name="TAS2560 3 Enable" value="Enable" />
     </path>
 
     <path name="speaker-sec-right">
         <ctl name="TAS2560 0 Enable" value="Disable" />
         <ctl name="TAS2560 1 Enable" value="Disable" />
-        <ctl name="TAS2560 2 Enable" value="Disable" />
-        <ctl name="TAS2560 3 Enable" value="Enable" />
+        <ctl name="TAS2560 2 Enable" value="Enable" />
+        <ctl name="TAS2560 3 Enable" value="Disable" />
     </path>
 
     <path name="autommi-mastermic">
