@@ -77,8 +77,8 @@
         <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="PRI_MI2S_RX"/>
-	<device name="SND_DEVICE_OUT_BT_SCO_WB" interface="INT_BT_SCO_RX"/>
-	<device name="SND_DEVICE_OUT_BT_SCO" interface="INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="INT_BT_SCO_RX"/>
+	<device name="SND_DEVICE_OUT_BT_SCO" backend="bt-sco" interface="INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO" backend="wsa-speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
