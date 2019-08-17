@@ -40,10 +40,6 @@ lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 # Charger - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/bin/hvdcp_opti|7ee82dd264c7c349fb498111a61d5009ae9f0da2
 
-# Consumer IR - from santoni (Redmi 4X)
-lib/hw/consumerir.default.so:vendor/lib/hw/consumerir.default.so|53830d64d63d6cc405209d8d4cafea102dcd7b54
-lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.default.so|f7c90fd1d6a0c5e6cf620aa23a862e780feaaf6c
-
 # CNE - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 etc/permissions/cneapiclient.xml|15831adf0e80243042b90c734eea0a68eb8ae9c9
 etc/permissions/com.quicinc.cne.xml|e99e631d8b06ba4680529e9e4004d8d05baf6904
