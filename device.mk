@@ -22,9 +22,6 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(VENDOR_PATH)/overlay \
     $(VENDOR_PATH)/overlay-lineage
 
-# Properties
--include $(VENDOR_PATH)/vendor_prop.mk
-
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
