@@ -182,6 +182,10 @@ include device/qcom/sepolicy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 
+# Shims
+TARGET_LD_SHIM_LIBS += \
+    /vendor/lib64/hw/fingerprint.hw.ex.so|libshim_fps.so
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-08-01
 

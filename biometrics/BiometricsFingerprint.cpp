@@ -13,8 +13,8 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@1.0-service.kiwi"
-#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@1.0-service.kiwi"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.0-service_hw"
+#define LOG_VERBOSE "android.hardware.biometrics.fingerprint@2.0-service_hw"
 
 #include <hardware/hw_auth_token.h>
 
@@ -151,6 +151,7 @@ FingerprintAcquiredInfo BiometricsFingerprint::VendorAcquiredFilter(
 
 Return<uint64_t> BiometricsFingerprint::setNotify(
         const sp<IBiometricsFingerprintClientCallback>& clientCallback) {
+    std::lock_guard<std::mutex> lock(mClientCallbackMutex);
     mClientCallback = clientCallback;
     // This is here because HAL 2.1 doesn't have a way to propagate a
     // unique token for its driver. Subsequent versions should send a unique
@@ -288,6 +289,7 @@ fingerprint_device_t* BiometricsFingerprint::openHal() {
 void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
     BiometricsFingerprint* thisPtr = static_cast<BiometricsFingerprint*>(
             BiometricsFingerprint::getInstance());
+    std::lock_guard<std::mutex> lock(thisPtr->mClientCallbackMutex);
     if (thisPtr == nullptr || thisPtr->mClientCallback == nullptr) {
         ALOGE("Receiving callbacks before the client callback is registered.");
         return;

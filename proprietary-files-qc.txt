@@ -121,6 +121,13 @@ vendor/lib64/libdrmtime.so|4efeb1449809aa172e68fe5bf5aa68be0f21387d
 vendor/lib64/librpmb.so|ba775205529284dc5d2233f11462037538f763af
 vendor/lib64/libssd.so|0e988e6ef7b1d356f4b92a26a61b96a840de1d20
 
+# FPS - from stock Huawei Android N
+vendor/lib64/hw/fingerprint.hw.ex.so
+vendor/lib64/hw/fingerprint.msm8937.so
+vendor/lib64/lib_fpc_tac_shared.so
+vendor/lib64/libimonitor.so
+vendor/lib64/libperfhub_client.so
+
 # Gatekeeper - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 vendor/lib64/hw/gatekeeper.msm8953.so:vendor/lib64/hw/gatekeeper.msm8937.so|c1b386547234815a0d6116b5e4756de66075cd3f
 
@@ -433,7 +440,6 @@ vendor/lib64/libtime_genoff.so|8f4c1f9ace6af463b241b130d6872b5d39cc7b2a
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine|9743c4ecd0fb8773795bcbfbb406f25616c04129
 vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc|5a01d337c1d375ee24a6c8992ba91f54afb7637e
 vendor/lib64/libwvhidl.so|a3444ac0deb8144a08ba2ed1dad2f2369096c7af
-
 
 # WiFi Display - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 bin/wfdservice|edeb291221024401cbae69c2fa4e58733b7efc4c

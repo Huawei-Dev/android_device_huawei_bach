@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@1.0-service.kiwi"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service_hw"
 
 #include <android/log.h>
 #include <hidl/HidlSupport.h>
@@ -50,7 +50,9 @@ int main(int, char** argv) {
     configureRpcThreadpool(1, true /*callerWillJoin*/);
 
     if (bio != nullptr) {
-        bio->registerAsService();
+        if (::android::OK != bio->registerAsService()) {
+            return 1;
+        }
     } else {
         ALOGE("Can't create instance of BiometricsFingerprint, nullptr");
     }

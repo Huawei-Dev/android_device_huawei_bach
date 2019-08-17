@@ -121,6 +121,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-service \
     android.hardware.drm@1.1-service.clearkey
 
+# Fingerprint sensor
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.0-service_hw
+
 # For config.fs
 PRODUCT_PACKAGES += \
     fs_config_files
@@ -311,7 +315,8 @@ PRODUCT_COPY_FILES += \
 
 # Shim
 PRODUCT_PACKAGES += \
-    libshim_cutils
+    libshim_cutils \
+    libshim_fps
 
 # Telephony
 PRODUCT_PACKAGES += \
