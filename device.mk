@@ -23,9 +23,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(VENDOR_PATH)/overlay-lineage
 
 # AAPT
-PRODUCT_AAPT_CONFIG := normal
-PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_CHARACTERISTICS := tablet
+PRODUCT_AAPT_CONFIG := normal large xlarge hdpi xhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_PREBUILT_DPI := hdpi
 
 # Additional native libraries
 PRODUCT_COPY_FILES += \
@@ -60,7 +61,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@4.0-impl \
     android.hardware.soundtrigger@2.1-impl
 
-
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
     $(VENDOR_PATH)/audio/audio_output_policy.conf:$(TARGET_COPY_OUT_VENDOR)/etc/audio_output_policy.conf \
@@ -79,7 +79,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/config/usb_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_policy_configuration.xml
 
-
 # Camera
 PRODUCT_PACKAGES += \
     Snap
@@ -91,6 +90,10 @@ PRODUCT_PACKAGES += \
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
+
+# Configstore
+PRODUCT_PACKAGES += \
+    android.hardware.configstore@1.1-service
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -114,15 +117,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
-
-# Doze mode
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
-# XiaomiParts
-PRODUCT_PACKAGES += \
-    HuaweiDoze \
-    HuaweiParts
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -165,6 +159,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.health@2.0-impl \
     android.hardware.health@2.0-service
+
+# HuaweiParts
+PRODUCT_PACKAGES += \
+    HuaweiDoze \
+    HuaweiParts
 
 # IMS
 PRODUCT_PACKAGES += \
@@ -230,6 +229,9 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0-service
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -338,8 +340,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# TextClassifier
+PRODUCT_PACKAGES += \
+    textclassifier.bundle1
+
 # Thermal
 PRODUCT_PACKAGES += \
+    thermal.msm8937 \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 
@@ -352,7 +359,8 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.basic
+    android.hardware.usb@1.0-service.basic \
+    com.android.future.usb.accessory
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -387,6 +395,8 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
+
+PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
 # Inherit common proprietary files
 $(call inherit-product, vendor/huawei/bach/bach-vendor.mk)
