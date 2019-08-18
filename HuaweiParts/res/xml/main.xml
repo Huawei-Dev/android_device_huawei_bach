@@ -22,33 +22,12 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/category_torch">
-        <com.lineageos.settings.device.YellowTorchBrightnessPreference
-            android:key="yellow_torch_brightness"
-            android:title="@string/yellow_torch_brightness_title_head" />
-        <com.lineageos.settings.device.WhiteTorchBrightnessPreference
-            android:key="white_torch_brightness"
-            android:title="@string/white_torch_brightness_title_head" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
         android:title="@string/graphics_title">
         <PreferenceScreen
             android:key="kcal"
             android:fragment="com.lineageos.settings.device.DisplayCalibration"
             android:summary="@string/kcal_summary"
             android:title="@string/kcal_title" />
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/touchscreen_title">
-        <SwitchPreference
-            android:key="glove_mode"
-            android:title="@string/glove_mode_title"
-            android:summary="@string/glove_mode_summary"
-            android:icon="@null"
-            android:paddingLeft="0dp"
-            android:persistent="false" />
     </PreferenceCategory>
 
 </PreferenceScreen>

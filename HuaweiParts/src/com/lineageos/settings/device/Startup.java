@@ -48,9 +48,6 @@ public class Startup extends BroadcastReceiver {
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
 
         VibratorStrengthPreference.restore(context);
-        WhiteTorchBrightnessPreference.restore(context);
-        YellowTorchBrightnessPreference.restore(context);
-        DeviceSettings.restore(context);
         DisplayCalibration.restore(context);
     }
 }

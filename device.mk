@@ -121,7 +121,8 @@ PRODUCT_PACKAGES += \
 
 # XiaomiParts
 PRODUCT_PACKAGES += \
-    XiaomiParts
+    HuaweiDoze \
+    HuaweiParts
 
 # DRM
 PRODUCT_PACKAGES += \

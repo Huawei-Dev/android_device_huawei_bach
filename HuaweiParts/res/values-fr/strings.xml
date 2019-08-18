@@ -14,15 +14,10 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">XiaomiParts</string>
-    <string name="advanced_settings">Part Xiaomi</string>
-    <string name="advanced_settings_summary">Vibreur et Torche</string>
+    <string name="app_name">HuaweiParts</string>
+    <string name="advanced_settings">Huawei Xiaomi</string>
+    <string name="advanced_settings_summary">Vibreur</string>
     <string name="category_vibrator">Vibreur</string>
     <string name="vib_strength_title_head">Intensité</string>
     <string name="vib_strength_summary_head">Définir l intensité du vibreur</string>
-    <string name="category_torch">Torche</string>
-    <string name="yellow_torch_brightness_title_head">Luminosité maximale de la led jaune</string>
-    <string name="yellow_torch_brightness_summary_head">Définir la luminosité maximale de la led jaune</string>
-    <string name="white_torch_brightness_title_head">Luminosité maximale de la led blanche</string>
-    <string name="white_torch_brightness_summary_head">Définir la luminosité maximale de la led blanche</string>
 </resources>

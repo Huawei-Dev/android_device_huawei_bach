@@ -14,15 +14,10 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">XiaomiParts</string>
-    <string name="advanced_settings">XiaomiParts</string>
-    <string name="advanced_settings_summary">Rezgés és Zseblámpa</string>
+    <string name="app_name">HuaweiParts</string>
+    <string name="advanced_settings">HuaweiParts</string>
+    <string name="advanced_settings_summary">Rezgés</string>
     <string name="category_vibrator">Rezgés</string>
     <string name="vib_strength_title_head">Erősség</string>
     <string name="vib_strength_summary_head">A rezgés erősségének beállítása</string>
-    <string name="category_torch">Zseblámpa</string>
-    <string name="yellow_torch_brightness_title_head">Sárga LED maximális fényerő</string>
-    <string name="yellow_torch_brightness_summary_head">A sárga LED maximális fényerejének beállítása</string>
-    <string name="white_torch_brightness_title_head">Fehér LED maximális fényerő</string>
-    <string name="white_torch_brightness_summary_head">A fehér LED maximális fényerejének beállítása</string>
 </resources>

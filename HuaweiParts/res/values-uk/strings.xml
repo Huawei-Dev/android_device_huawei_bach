@@ -14,16 +14,10 @@
      limitations under the License.
 -->
 <resources>
-    <string name="app_name">Xiaomi</string>
+    <string name="app_name">Huawei</string>
     <string name="advanced_settings">Налаштування пристрою</string>
     <string name="category_vibrator">Вібрація</string>
     <string name="vib_strength_title_head">Сила вібрації</string>
-    <string name="category_torch">Ліхтарик</string>
-    <string name="yellow_torch_brightness_title_head">Максимальна яскравість жовтого світлодіода</string>
-    <string name="white_torch_brightness_title_head">Максимальна яскравість білого світлодіода</string>
-    <string name="touchscreen_title">Сенсорна панель</string>
-    <string name="glove_mode_title">Режим \"У рукавичках\"</string>
-    <string name="glove_mode_summary">Підвищує чутливість до торкань (може вплинути на витрату батареї)</string>
     <string name="graphics_title">Графіка</string>
     <string name="kcal_title">Колір екрану</string>
     <string name="kcal_summary">Калібровка кольору екрану за допомогою KCAL</string>

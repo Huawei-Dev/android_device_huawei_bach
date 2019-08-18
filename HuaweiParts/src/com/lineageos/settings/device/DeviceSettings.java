@@ -45,16 +45,8 @@ public class DeviceSettings extends PreferenceFragment implements
         Preference.OnPreferenceChangeListener {
 
     public static final String KEY_VIBSTRENGTH = "vib_strength";
-    public static final String KEY_YELLOW_TORCH_BRIGHTNESS = "yellow_torch_brightness";
-    public static final String KEY_WHITE_TORCH_BRIGHTNESS = "white_torch_brightness";
-    public static final String KEY_GLOVE_MODE = "glove_mode";
 
     private VibratorStrengthPreference mVibratorStrength;
-    private YellowTorchBrightnessPreference mYellowTorchBrightness;
-    private WhiteTorchBrightnessPreference mWhiteTorchBrightness;
-    private TwoStatePreference mGloveMode;
-
-    private static final String GLOVE_MODE_FILE = "/sys/devices/virtual/tp_glove/device/glove_enable";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -74,25 +66,6 @@ public class DeviceSettings extends PreferenceFragment implements
         if (mVibratorStrength != null) {
             mVibratorStrength.setEnabled(VibratorStrengthPreference.isSupported());
         }
-
-        mYellowTorchBrightness = (YellowTorchBrightnessPreference) findPreference(KEY_YELLOW_TORCH_BRIGHTNESS);
-        if (mYellowTorchBrightness != null) {
-            mYellowTorchBrightness.setEnabled(YellowTorchBrightnessPreference.isSupported());
-        }
-
-        mWhiteTorchBrightness = (WhiteTorchBrightnessPreference) findPreference(KEY_WHITE_TORCH_BRIGHTNESS);
-        if (mWhiteTorchBrightness != null) {
-            mWhiteTorchBrightness.setEnabled(WhiteTorchBrightnessPreference.isSupported());
-        }
-
-        mGloveMode = (TwoStatePreference) findPreference(KEY_GLOVE_MODE);
-        mGloveMode.setChecked(PreferenceManager.getDefaultSharedPreferences(getContext()).getBoolean(DeviceSettings.KEY_GLOVE_MODE, false));
-        mGloveMode.setOnPreferenceChangeListener(this);
-    }
-
-    public static void restore(Context context) {
-        boolean gloveModeData = PreferenceManager.getDefaultSharedPreferences(context).getBoolean(DeviceSettings.KEY_GLOVE_MODE, false);
-        Utils.writeValue(GLOVE_MODE_FILE, gloveModeData ? "1" : "0");
     }
 
     @Override
@@ -102,12 +75,6 @@ public class DeviceSettings extends PreferenceFragment implements
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference == mGloveMode) {
-            Boolean enabled = (Boolean) newValue;
-            SharedPreferences.Editor prefChange = PreferenceManager.getDefaultSharedPreferences(getContext()).edit();
-            prefChange.putBoolean(KEY_GLOVE_MODE, enabled).commit();
-            Utils.writeValue(GLOVE_MODE_FILE, enabled ? "1" : "0");
-        }
         return true;
     }
 }
