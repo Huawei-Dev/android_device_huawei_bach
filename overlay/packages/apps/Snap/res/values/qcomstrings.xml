@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2012 The Android Open Source Project
                    2015-2016 The CyanogenMod Project
-                   2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,13 +15,7 @@
      limitations under the License.
 -->
 
-<!-- Camera app resources that may need to be customized
-     for different hardware or product builds. -->
 <resources>
-    <!-- Opens back camera using openLegacy() and forces api v1 -->
-    <bool name="back_camera_open_legacy">true</bool>
-
-    <!-- Opens front camera using openLegacy() and forces api v1 -->
-    <bool name="front_camera_open_legacy">true</bool>
+    <!-- HDR needs 1x frame -->
+    <string name="pref_camera_hdr_need_1x_default" translatable="false">false</string>
 </resources>
-
