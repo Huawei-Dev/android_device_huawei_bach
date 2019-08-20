@@ -1,0 +1,5 @@
+allow wcnss_service hwoeminfo:unix_stream_socket connectto;
+
+allow wcnss_service hwoeminfo_device:dir { remove_name write search };
+allow wcnss_service hwoeminfo_device:file { getattr open read unlink };
+allow wcnss_service hwoeminfo_socket:sock_file write;

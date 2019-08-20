@@ -1,0 +1,2 @@
+genfscon proc /app_info                                         u:object_r:proc_appinfo:s0
+genfscon sysfs /touchscreen/touch_glove        			u:object_r:sysfs_touchscreen:s0

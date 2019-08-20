@@ -1,0 +1,20 @@
+type hwoeminfo, domain;
+type hwoeminfo_exec, exec_type, vendor_file_type, file_type;
+type hwoem_device, dev_type;
+type hwoeminfo_device, dev_type;
+type hwoeminfo_socket, file_type;
+type_transition hwoeminfo socket_device:sock_file hwoeminfo_socket;
+type_transition hwoeminfo device:{ file dir } hwoeminfo_device;
+init_daemon_domain(hwoeminfo)
+
+allow hwoeminfo hwoem_device:blk_file rw_file_perms;
+allow hwoeminfo self:capability { chown fowner fsetid };
+allow hwoeminfo block_device:dir search;
+
+allow hwoeminfo socket_device:dir { add_name write };
+allow hwoeminfo socket_device:sock_file { create setattr };
+
+allow hwoeminfo hwoeminfo_device:dir { add_name create setattr write search };
+allow hwoeminfo hwoeminfo_device:file { create open setattr write };
+allow hwoeminfo hwoeminfo_socket:sock_file { create setattr };
+

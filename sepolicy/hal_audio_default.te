@@ -1,0 +1,2 @@
+allow hal_audio_default hwaudio_sysfs:dir search;
+allow hal_audio_default hwaudio_sysfs:file { read open getattr };

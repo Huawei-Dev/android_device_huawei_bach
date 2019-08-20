@@ -1,0 +1,11 @@
+type hwmac, domain;
+type hwmac_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hwmac)
+
+allow hwmac bluetooth_data_file:dir { search write add_name };
+allow hwmac self:capability { chown fowner };
+allow hwmac bluetooth_data_file:file { create read write open getattr setattr };
+allow hwmac bluetooth_prop:file { read open getattr };
+
+allow hwmac wifi_data_file:dir { search write add_name };
+allow hwmac wifi_data_file:file { create read write open getattr setattr };

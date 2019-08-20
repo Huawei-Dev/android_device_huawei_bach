@@ -1,0 +1,10 @@
+allow hal_fingerprint_default fps_data_file:dir write;
+
+allow hal_fingerprint_default fps_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default sysfs_fps_attr:file rw_file_perms;
+allow hal_fingerprint_default sysfs_fps_attr:dir r_dir_perms;
+
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+
+allow hal_fingerprint_default init:unix_stream_socket connectto;

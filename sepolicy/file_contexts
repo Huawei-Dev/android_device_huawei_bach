@@ -1,0 +1,25 @@
+# FPS Fingerprint
+/data/fpc(/.*)?                                          					u:object_r:fps_data_file:s0
+/dev/fingerprint                                         					u:object_r:fps_device:s0
+/sys/devices/platform/fingerprint(/.*)?                  					u:object_r:sysfs_fps_attr:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service_hw	u:object_r:hal_fingerprint_default_exec:s0
+
+# Vibration control
+/sys/class/timed_output/vibrator/vtg_level							u:object_r:sysfs_vibrator:s0
+
+# Kcal
+/sys/devices/platform/kcal_ctrl.0(/.*)?								u:object_r:sysfs_kcal:s0
+
+# Huawei
+/vendor/bin/teecd										u:object_r:tee_exec:s0
+/vendor/bin/oeminfo_nvm_server									u:object_r:hwoeminfo_exec:s0
+/vendor/bin/mac_addr_normalization								u:object_r:hwmac_exec:s0
+
+/dev/oinv(/.*)?											u:object_r:hwoeminfo_device:s0
+/dev/socket/oeminfo_nvm										u:object_r:hwoeminfo_socket:s0
+
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.huawei_msm8937		u:object_r:hal_lineage_touch_default_exec:s0
+
+/dev/block/platform/soc/7824900.sdhci/by-name/oeminfo						u:object_r:hwoem_device:s0
+
+/sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0

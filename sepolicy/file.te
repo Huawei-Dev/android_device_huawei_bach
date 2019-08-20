@@ -1,0 +1,9 @@
+type fps_data_file, file_type, data_file_type, core_data_file_type;
+
+type sysfs_kcal, fs_type, sysfs_type;
+
+type sysfs_touchscreen, sysfs_type, fs_type;
+
+type proc_appinfo, proc_type, fs_type;
+
+type hwaudio_sysfs, sysfs_type, fs_type;

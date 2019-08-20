@@ -1,0 +1,1 @@
+allow mm-qcamerad proc_appinfo:file r_file_perms;
