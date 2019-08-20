@@ -1,7 +1,7 @@
 # FPS Fingerprint
 /data/fpc(/.*)?                                          					u:object_r:fps_data_file:s0
 /dev/fingerprint                                         					u:object_r:fps_device:s0
-/sys/devices/platform/fingerprint(/.*)?                  					u:object_r:sysfs_fps_attr:s0
+/sys/devices/platform/fingerprint(/.*)?                  					u:object_r:fps_sysfs:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service_hw	u:object_r:hal_fingerprint_default_exec:s0
 
 # Vibration control
@@ -23,3 +23,7 @@
 /dev/block/platform/soc/7824900.sdhci/by-name/oeminfo						u:object_r:hwoem_device:s0
 
 /sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0
+
+
+# Rild
+/(vendor|system/vendor)/radio/qcril_database/qcril.db						u:object_r:rild_file:s0
