@@ -162,7 +162,6 @@ PRODUCT_PACKAGES += \
 
 # HuaweiParts
 PRODUCT_PACKAGES += \
-    HuaweiDoze \
     HuaweiParts
 
 # IMS
