@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,13 +16,28 @@
 
 #include <string>
 
-extern "C" void _ZN7android13GraphicBufferC1EjjijNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE(
-    uint32_t inWidth, uint32_t inHeight, int inFormat, uint32_t inUsage,
-    std::string requestorName);
+#include <utils/Errors.h>
 
-extern "C" void _ZN7android13GraphicBufferC1Ejjij(
-    uint32_t inWidth, uint32_t inHeight, int inFormat, uint32_t inUsage) {
-  std::string requestorName = "<Unknown>";
-  _ZN7android13GraphicBufferC1EjjijNSt3__112basic_stringIcNS1_11char_traitsIcEENS1_9allocatorIcEEEE(
-      inWidth, inHeight, inFormat, inUsage, requestorName);
+#include "gui/DisplayEventReceiver.h"
+#include <gui/IDisplayEventConnection.h>
+#include <gui/ISurfaceComposer.h>
+
+#include <private/gui/ComposerService.h>
+
+#include <private/gui/BitTube.h>
+
+namespace android {
+
+DisplayEventReceiver::DisplayEventReceiver() {
+    status_t err;
+    sp<ISurfaceComposer> sf(ComposerService::getComposerService());
+    if (sf != NULL) {
+        mEventConnection = sf->createDisplayEventConnection(ISurfaceComposer::eVsyncSourceApp);
+        if (mEventConnection != NULL) {
+            mDataChannel = std::make_unique<gui::BitTube>();
+            err = mEventConnection->stealReceiveChannel(mDataChannel.get());
+        }
+    }
 }
+
+}; // namespace android

@@ -202,7 +202,7 @@ TARGET_LD_SHIM_LIBS += \
 # Shims camera
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib/hw/camera.msm8937.so|libshims_sensorlistener.so \
-    /vendor/lib/hw/camera.msm8937.so|libshim_camera.so \
+    /vendor/lib/hw/camera.msm8937.so|libshim_camera_hal.so \
     /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
 
 # Vendor Security patch level
