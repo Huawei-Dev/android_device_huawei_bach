@@ -23,6 +23,7 @@ TARGET_NO_BOOTLOADER := true
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8937
+TARGET_BOARD_PLATFORM_GPU := qcom-adreno505
 
 # Architecture
 TARGET_ARCH := arm64
@@ -85,12 +86,12 @@ BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-    /vendor/bin/mm-qcamera-daemon=23
+USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_ENABLE_SUSPEND := true
+BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_HEALTHD_CUSTOM_CHARGER_RES := $(VENDOR_PATH)/charger/images
 
 # Cne
@@ -157,10 +158,6 @@ BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_CACHEIMAGE_PARTITION_SIZE    := 268435456
 BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 83886080
-BOARD_ROOT_EXTRA_SYMLINKS := \
-    /vendor/dsp:/dsp \
-    /vendor/firmware_mnt:/firmware \
-    /mnt/vendor/persist:/persist
 BOARD_SYSTEMIMAGE_PARTITION_SIZE   := 3154116608
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 25732037632
 BOARD_VENDORIMAGE_PARTITION_SIZE   := 771751936
@@ -189,6 +186,10 @@ TARGET_USES_OLD_MNC_FORMAT := true
 
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := persist
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /vendor/firmware_mnt:/firmware \
+    /mnt/vendor/persist:/persist \
+    /vendor/dsp:/dsp
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
@@ -200,6 +201,9 @@ TARGET_LD_SHIM_LIBS += \
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-08-01
+
+# Vold
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/78db000.usb/msm_hsusb/gadget/lun%d/file
 
 # WiFi
 ENABLE_VENDOR_IMAGE := true
