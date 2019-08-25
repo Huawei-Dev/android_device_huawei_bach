@@ -86,6 +86,7 @@ BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
+USE_CAMERA_STUB := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
 # Charger
