@@ -86,6 +86,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.camera.device@1.0
 
 PRODUCT_PACKAGES += \
+    libshim_exif \
     libshim_camera \
     libshim_camera_hal \
     libshims_sensorlistener
