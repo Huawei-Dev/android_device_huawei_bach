@@ -91,6 +91,9 @@ PRODUCT_PACKAGES += \
     libshim_camera_hal \
     libshims_sensorlistener
 
+PRODUCT_PACKAGES += \
+    libFaceDetection
+
 # CNE
 PRODUCT_PACKAGES += \
     libcnefeatureconfig

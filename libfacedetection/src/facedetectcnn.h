@@ -38,7 +38,7 @@ the use of this software, even if advised of the possibility of such damage.
 
 #pragma once
 
-#define _ENABLE_AVX2 //Please enable it if X64 CPU
+//#define _ENABLE_AVX2 //Please enable it if X64 CPU
 //#define _ENABLE_NEON //Please enable it if ARM CPU
 
 
@@ -46,6 +46,9 @@ int * facedetect_cnn(unsigned char * result_buffer, //buffer memory for storing 
                     unsigned char * rgb_image_data, int width, int height, int step); //input image, it must be BGR (three channels) insteed of RGB image!
 
 
+#define _ENABLE_NEON
+#define _ENABLE_INT8
+#define _CMAKE_BUILD_TYPE=RELEASE
 
                     
 //DO NOT EDIT the following code if you don't really understand it.
