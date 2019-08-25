@@ -48,4 +48,6 @@ LOCAL_SHARED_LIBRARIES := \
     liblog \
     libbase \
     libsensor
+LOCAL_MULTILIB := 32
+LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
