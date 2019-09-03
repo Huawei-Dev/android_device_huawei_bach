@@ -111,6 +111,9 @@ TARGET_ENABLE_MEDIADRM_64 := true
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
 
+# Exclude AudioFX
+TARGET_EXCLUDES_AUDIOFX := true
+
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(VENDOR_PATH)/prebuilts/config.fs
 
