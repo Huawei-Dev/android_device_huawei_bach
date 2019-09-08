@@ -226,6 +226,10 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libhwlog.so|libshim_hwlog.so \
     /vendor/lib64/libhwlog.so|libshim_hwlog.so
 
+TARGET_LD_SHIM_LIBS := \
+    /system/lib/libui.so|libshim_ui.so \
+    /system/lib64/libui.so|libshim_ui.so
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-11-05
 

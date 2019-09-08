@@ -365,11 +365,14 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     $(VENDOR_PATH)/prebuilts/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf
 
-# Shim
+# Shims
 PRODUCT_PACKAGES += \
     libshim_cutils \
     libshim_fps \
     libshim_hwlog
+
+PRODUCT_PACKAGES += \
+    libshim_ui
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
