@@ -180,6 +180,7 @@ ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # Usb
 persist.sys.usb.config.extra=none
+vendor.usb.rps_mask=0
 
 # Wifi
 wifi.interface=wlan0
