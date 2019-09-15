@@ -18,7 +18,6 @@
 /dev/block/bootdevice/by-name/modem          /vendor/firmware_mnt       vfat    ro,context=u:object_r:firmware_file:s0,shortname=lower,uid=1000,gid=1000,dmask=227,fmask=337	wait
 /dev/block/bootdevice/by-name/misc           /misc                      emmc    defaults                                            						defaults
 
-/mnt/vendor/persist			     /persist			none	bind						    						wait
 /dev/block/bootdevice/by-name/cust	     /cust			ext4	ro,nosuid,nodev,noauto_da_alloc									wait
 /dev/block/bootdevice/by-name/log	     /log			vfat	nosuid,nodev,uid=1000,gid=1007,fmask=0007,dmask=0007						wait
 /dev/block/bootdevice/by-name/product	     /product			ext4	ro												defaults
