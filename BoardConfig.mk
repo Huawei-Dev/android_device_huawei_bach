@@ -209,7 +209,7 @@ TARGET_LD_SHIM_LIBS += \
     /system/lib/libexif.so|libshim_exif.so
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2019-08-01
+VENDOR_SECURITY_PATCH := 2019-09-05
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/78db000.usb/msm_hsusb/gadget/lun%d/file
