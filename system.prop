@@ -94,26 +94,24 @@ dalvik.vm.heapminfree=4m
 ro.opengles.version=196610
 ro.vendor.display.cabl=2
 ro.sf.lcd_density=320
-vendor.display.enable_default_color_mode=1
 
 # GPS
 ro.gps.agps_provider=1
 
 # Graphics
 debug.egl.hw=1
-debug.gralloc.enable_fb_ubwc=1
+debug.gralloc.gfx_ubwc_disable=0
 debug.sf.enable_hwc_vds=1
-vendor.gralloc.enable_fb_ubwc=1
 debug.sf.hw=1
 debug.sf.latch_unsignaled=1
-debug.sf.recomputecrop=0
 dev.pm.dyn_samplingrate=1
 persist.demo.hdmirotationlock=false
 persist.hwc.enable_vds=1
-persist.sys.wfd.virtual=0
-sdm.debug.disable_rotator_split=1
+vendor.display.disable_rotator_split=1
 vendor.display.disable_skip_validate=1
-sdm.perf_hint_window=50
+vendor.display.enable_default_color_mode=1
+vendor.display.perf_hint_window=50
+vendor.gralloc.enable_fb_ubwc=1
 
 # IMS
 persist.dbg.volte_avail_ovr=1
@@ -139,12 +137,14 @@ ro.oem_unlock_supported=1
 ro.vendor.qti.am.reschedule_service=true
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.qti.sys.fw.bg_apps_limit=60
-ro.sys.fw.dex2oat_thread_count=8
 ro.vendor.qti.core_ctl_min_cpu=2
 ro.vendor.qti.core_ctl_max_cpu=4
 
 # Radio
+DEVICE_PROVISIONED=1
 rild.libpath=/vendor/lib64/libril-qc-qmi-1.so
+ril.subscription.types=NV,RUIM
+persist.data.qmi.adb_logmask=0
 ro.telephony.call_ring.multiple=false
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
@@ -163,7 +163,7 @@ ro.vendor.qti.sys.fw.trim_cache_percent=100
 ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
 # Usb
-persist.sys.usb.config.extra=none
+persist.vendor.usb.config.extra=none
 vendor.usb.rps_mask=0
 
 # Wifi
