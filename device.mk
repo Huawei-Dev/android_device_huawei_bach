@@ -176,10 +176,6 @@ PRODUCT_PACKAGES += \
 #PRODUCT_PACKAGES += \
 #    HuaweiParts
 
-# IMS
-PRODUCT_PACKAGES += \
-    ims-ext-common
-
 # IRQ balance
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf
@@ -347,9 +343,11 @@ PRODUCT_PACKAGES += \
 
 # Telephony
 PRODUCT_PACKAGES += \
+    ims-ext-common_system \
     telephony-ext
 
 PRODUCT_BOOT_JARS += \
+    ims-ext-common_system \
     telephony-ext
 
 # TextClassifier
