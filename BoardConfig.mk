@@ -136,7 +136,7 @@ DEVICE_MANIFEST_FILE := $(VENDOR_PATH)/prebuilts/manifest.xml
 DEVICE_MATRIX_FILE := $(VENDOR_PATH)/prebuilts/compatibility_matrix.xml
 
 # Init
-TARGET_INIT_VENDOR_LIB := libinit_bach
+TARGET_INIT_VENDOR_LIB := //$(VENDOR_PATH):libinit_bach
 TARGET_RECOVERY_DEVICE_MODULES := libinit_bach
 
 # Kernel
