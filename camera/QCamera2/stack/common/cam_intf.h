@@ -767,6 +767,9 @@ typedef struct {
         uint8_t         is_reqd[CAM_CUSTOM_PARM_MAX];
     };
     custom_parm_data_t data;
+    volatile char huawei_reserved0[255];
+    volatile char huawei_reserved1[255];
+    volatile char huawei_reserved2[2];
 } custom_parm_buffer_t;
 
 
@@ -803,6 +806,9 @@ typedef struct {
     INCLUDE(CAM_INTF_META_CHROMATIX_LITE_AF,            cam_chromatix_lite_af_stats_t,  1);
     INCLUDE(CAM_INTF_META_CHROMATIX_LITE_ASD,           cam_chromatix_lite_asd_stats_t, 1);
     INCLUDE(CAM_INTF_BUF_DIVERT_INFO,                   cam_buf_divert_info_t,          1);
+
+    INCLUDE(CAM_INTF_PARM_HUAWEI_10,                    uint8_t,                     4);
+    INCLUDE(CAM_INTF_PARM_HUAWEI_11,                    uint8_t,                     4);
 
     /* Specific to HAL3 */
     INCLUDE(CAM_INTF_META_FRAME_NUMBER_VALID,           int32_t,                     1);
@@ -957,6 +963,8 @@ typedef struct {
     INCLUDE(CAM_INTF_META_RAW,                          cam_dimension_t,             1);
     INCLUDE(CAM_INTF_META_STREAM_INFO_FOR_PIC_RES,      cam_stream_size_info_t,      1);
 
+    volatile char huawei_reserved00[255];
+    volatile char huawei_reserved01[17];
 
     /* HAL3 specific */
     INCLUDE(CAM_INTF_META_STREAM_INFO,                  cam_stream_size_info_t,      1);
@@ -1006,17 +1014,15 @@ typedef struct {
     INCLUDE(CAM_INTF_PARM_MANUAL_CAPTURE_TYPE,          cam_manual_capture_type,     1);
     INCLUDE(CAM_INTF_AF_STATE_TRANSITION,               uint8_t,                     1);
     INCLUDE(CAM_INTF_PARM_INITIAL_EXPOSURE_INDEX,       uint32_t,                    1);
+    INCLUDE(CAM_INTF_PARM_HUAWEI_07,               	uint8_t,                     20);
+    INCLUDE(CAM_INTF_PARM_HUAWEI_08,                    uint8_t,                     8);
+    INCLUDE(CAM_INTF_PARM_HUAWEI_09,                    uint8_t,                     8);
+    INCLUDE(CAM_INTF_PARM_HUAWEI_12,                    uint8_t,                     12);
     INCLUDE(CAM_INTF_PARM_INSTANT_AEC,                  uint8_t,                     1);
     INCLUDE(CAM_INTF_META_REPROCESS_FLAGS,              uint8_t,                     1);
     INCLUDE(CAM_INTF_PARM_JPEG_ENCODE_CROP,             cam_stream_crop_info_t,      1);
     INCLUDE(CAM_INTF_PARM_JPEG_SCALE_DIMENSION,         cam_dimension_t,             1);
     INCLUDE(CAM_INTF_META_FOCUS_DEPTH_INFO,             uint8_t,                     1);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_07,                    uint8_t,                     1);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_08,                    uint8_t,                     4);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_09,                    uint8_t,                     1);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_10,                    uint8_t,                     4);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_11,                    uint8_t,                     4);
-    INCLUDE(CAM_INTF_PARM_HUAWEI_12,                    uint8_t,                     1);
 } metadata_data_t;
 
 /* Update clear_metadata_buffer() function when a new is_xxx_valid is added to
