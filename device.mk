@@ -173,8 +173,8 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.0-service
 
 # HuaweiParts
-PRODUCT_PACKAGES += \
-    HuaweiParts
+#PRODUCT_PACKAGES += \
+#    HuaweiParts
 
 # IMS
 PRODUCT_PACKAGES += \
