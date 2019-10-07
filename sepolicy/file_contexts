@@ -8,30 +8,34 @@
 /sys/class/timed_output/vibrator/vtg_level							u:object_r:sysfs_vibrator:s0
 
 # Kcal
-/sys/devices/platform/kcal_ctrl.0(/.*)?								u:object_r:sysfs_kcal:s0
+/sys/devices/platform/kcal_ctrl.0(/.*)?							u:object_r:sysfs_kcal:s0
 
 # Huawei
 /vendor/bin/teecd										u:object_r:tee_exec:s0
-/vendor/bin/oeminfo_nvm_server									u:object_r:hwoeminfo_exec:s0
+/vendor/bin/oeminfo_nvm_server								u:object_r:hwoeminfo_exec:s0
 /vendor/bin/mac_addr_normalization								u:object_r:hwmac_exec:s0
 
-/dev/oinv(/.*)?											u:object_r:hwoeminfo_device:s0
-/dev/socket/oeminfo_nvm										u:object_r:hwoeminfo_socket:s0
+/dev/oinv(/.*)?										u:object_r:hwoeminfo_device:s0
+/dev/socket/oeminfo_nvm									u:object_r:hwoeminfo_socket:s0
 
-/dev/block/platform/soc/7824900.sdhci/by-name/oeminfo						u:object_r:hwoem_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/oeminfo					u:object_r:hwoem_device:s0
 
 /sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0
 
 
 # Rild
-/(vendor|system/vendor)/radio/qcril_database/qcril.db						u:object_r:rild_file:s0
+/(vendor|system/vendor)/radio/qcril_database/qcril.db					u:object_r:rild_file:s0
 
 # Firmware
-/firmware	                                                     				u:object_r:firmware_file:s0
-/persist	                                                     				u:object_r:persist_file:s0
-/dsp		                                                     				u:object_r:dsp_file:s0
+/firmware	                                                     			u:object_r:firmware_file:s0
+/persist	                                                     			u:object_r:persist_file:s0
+/dsp		                                                     			u:object_r:dsp_file:s0
 /produce											u:object_r:produce_file:s0
 /version											u:object_r:version_file:s0
-/cust		                                                     				u:object_r:cust_file:s0
-/log		                                                     				u:object_r:log_file:s0
+/cust		                                                     			u:object_r:cust_file:s0
+/log		                                                     			u:object_r:log_file:s0
+
+
+# Widevine
+/(vendor|system/vendor)/bin/hw/android\.hardware\.drm@1\.1-service.widevine			u:object_r:hal_drm_widevine_exec:s0
 
