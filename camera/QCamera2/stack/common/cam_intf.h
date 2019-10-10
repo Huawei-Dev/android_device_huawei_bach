@@ -557,6 +557,7 @@ typedef struct{
     cam_format_t supported_meta_raw_fmts[CAM_FORMAT_MAX];
     cam_dimension_t raw_meta_dim[MAX_SIZES_CNT];
     cam_sub_format_type_t sub_fmt[CAM_FORMAT_SUBTYPE_MAX];
+    volatile char huawei_reserved[40];
 } cam_capability_t;
 
 typedef enum {
