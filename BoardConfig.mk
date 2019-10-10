@@ -86,11 +86,11 @@ BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
 # Camera
-USE_CAMERA_STUB := true
+BOARD_QTI_CAMERA_32BIT_ONLY := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 TARGET_USES_QTI_CAMERA_DEVICE := true
+TARGET_TS_MAKEUP := true
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
-	/system/bin/mediaserver=24 \
 	/vendor/bin/mm-qcamera-daemon=24
 
 # Charger
@@ -201,14 +201,8 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
-    /vendor/lib64/hw/fingerprint.hw.ex.so|libshim_fps.so
-
-# Shims camera
-TARGET_LD_SHIM_LIBS += \
-    /vendor/lib/hw/camera.msm8937.so|libshims_sensorlistener.so \
-    /vendor/lib/hw/camera.msm8937.so|libshim_camera_hal.so \
-    /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so \
-    /system/lib/libexif.so|libshim_exif.so
+    /vendor/lib64/hw/fingerprint.hw.ex.so|libshim_fps.so \
+    /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-09-05
