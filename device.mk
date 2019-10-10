@@ -84,14 +84,17 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.device@1.0-impl \
+    camera.msm8937 \
+    libmmcamera_interface \
+    libmmjpeg_interface \
+    libqomx_core \
+    libmm-qcamera
+
+PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl
 
 PRODUCT_PACKAGES += \
-    libshim_exif \
-    libshim_camera \
-    libshim_camera_hal \
-    libshims_sensorlistener
+    libshim_camera
 
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml

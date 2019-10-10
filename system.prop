@@ -64,22 +64,6 @@ persist.camera.pip_disable=1
 camera.lowpower.record.enable=1
 vidc.enc.dcvs.extra-buff-count=2
 
-# Camera Huawei
-ro.config.camera_target_track=true
-ro.config.hw_camera_bestShot=true
-ro.config.hw_camera_davinci=true
-ro.config.hw_camera_qcom_HAL3=1
-ro.config.hw_camera_refocus=true
-ro.config.hw_camera_zsl=true
-ro.hwcamera.effect=false
-ro.hwcamera.fastcapture=false
-ro.hwcamera.lowmemory.crop=false
-ro.hwcamera.portrait_mode=on
-ro.hwcamera.previeweffects=true
-ro.hwcamera.servicehost=false
-ro.hwcamera.sound.muteable=1
-ro.hwcamera.use.videosize.1080p=false
-
 # CNE
 persist.vendor.cne.feature=1
 
