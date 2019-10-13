@@ -403,10 +403,6 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/wifi/WCNSS_qcom_wlan_nv.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     $(VENDOR_PATH)/wifi/WCNSS_wlan_dictionary.dat:$(TARGET_COPY_OUT_VENDOR)/firmware/wlan/prima/WCNSS_wlan_dictionary.dat
 
-# WiFi Display
-PRODUCT_BOOT_JARS += \
-    WfdCommon
-
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
 # Inherit common proprietary files
