@@ -18,8 +18,6 @@
 /dev/oinv(/.*)?											u:object_r:hwoeminfo_device:s0
 /dev/socket/oeminfo_nvm										u:object_r:hwoeminfo_socket:s0
 
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.huawei_msm8937		u:object_r:hal_lineage_touch_default_exec:s0
-
 /dev/block/platform/soc/7824900.sdhci/by-name/oeminfo						u:object_r:hwoem_device:s0
 
 /sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0
@@ -36,3 +34,4 @@
 /version											u:object_r:version_file:s0
 /cust		                                                     				u:object_r:cust_file:s0
 /log		                                                     				u:object_r:log_file:s0
+
