@@ -131,9 +131,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
 
-on property:init.svc.surfaceflinger=restarting
-    restart vendor.hwcomposer-2-1
-
 on charger
     setprop sys.usb.configfs 0
     start vendor.hvdcp_opti
