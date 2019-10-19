@@ -19,3 +19,8 @@ void android_log_printLogLine()
     return;
 }
 
+void android_log_shouldPrintLine()
+{
+    return;
+}
+
