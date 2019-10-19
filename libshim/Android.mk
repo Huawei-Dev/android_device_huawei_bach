@@ -27,6 +27,13 @@ include $(CLEAR_VARS)
 LOCAL_SRC_FILES := log.c
 LOCAL_MODULE := libshim_cutils
 LOCAL_MODULE_TAGS := optional
+LOCAL_VENDOR_MODULE := false
+include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES := hwlog.c
+LOCAL_MODULE := libshim_hwlog
+LOCAL_MODULE_TAGS := optional
 LOCAL_VENDOR_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
 

@@ -210,7 +210,11 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 # Shims
 TARGET_LD_SHIM_LIBS += \
     /vendor/lib64/hw/fingerprint.hw.ex.so|libshim_fps.so \
-    /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
+    /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so \
+    /system/lib/libcutils.so|libshim_cutils.so \
+    /system/lib64/libcutils.so|libshim_cutils.so \
+    /vendor/lib/libhwlog.so|libshim_hwlog.so \
+    /vendor/lib64/libhwlog.so|libshim_hwlog.so
 
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-09-05

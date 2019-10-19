@@ -340,7 +340,8 @@ PRODUCT_COPY_FILES += \
 # Shim
 PRODUCT_PACKAGES += \
     libshim_cutils \
-    libshim_fps
+    libshim_fps \
+    libshim_hwlog
 
 # Telephony
 PRODUCT_PACKAGES += \
