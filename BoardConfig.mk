@@ -185,7 +185,11 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := persist
+BOARD_ROOT_EXTRA_FOLDERS := cust \
+	log \
+	persist \
+	produce \
+	version
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist \

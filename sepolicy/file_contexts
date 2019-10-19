@@ -27,3 +27,12 @@
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db						u:object_r:rild_file:s0
+
+# Firmware
+/firmware	                                                     				u:object_r:firmware_file:s0
+/persist	                                                     				u:object_r:persist_file:s0
+/dsp		                                                     				u:object_r:dsp_file:s0
+/produce											u:object_r:produce_file:s0
+/version											u:object_r:version_file:s0
+/cust		                                                     				u:object_r:cust_file:s0
+/log		                                                     				u:object_r:log_file:s0
