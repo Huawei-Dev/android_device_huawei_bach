@@ -175,8 +175,7 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
-    android.hidl.manager@1.0-java
+    android.hidl.base@1.0
 
 # HuaweiParts
 #PRODUCT_PACKAGES += \
@@ -363,6 +362,7 @@ PRODUCT_PACKAGES += \
 
 # Thermal
 PRODUCT_PACKAGES += \
+    thermal.msm8937 \
     android.hardware.thermal@1.0-impl \
     android.hardware.thermal@1.0-service
 

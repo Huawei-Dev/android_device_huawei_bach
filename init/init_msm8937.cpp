@@ -98,7 +98,7 @@ void vendor_load_properties()
 
     /* BAH-AL00 */
     if (buf.find("BAH-AL00") != string::npos) {
-        set_model("BAH-AL00");
+        set_model("BAH-L09");
     }
     /* BAH-L01 */
     else if (buf.find("BAH-L01") != string::npos) {
@@ -114,7 +114,7 @@ void vendor_load_properties()
     }
     /* CPN-AL00 */
     else if (buf.find("CPN-AL00") != string::npos) {
-        set_model("CPN-AL00");
+        set_model("CPN-L09");
     }
     /* CPN-L0J */
     else if (buf.find("CPN-L0J") != string::npos) {
