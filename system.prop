@@ -142,6 +142,7 @@ persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 persist.vendor.data.mode=concurrent
 persist.data.iwlan.enable=true
+persist.sys.fflag.override.settings_network_and_internet_v2=true
 
 # SurfaceFlinger
 ro.surface_flinger.protected_contents=true
