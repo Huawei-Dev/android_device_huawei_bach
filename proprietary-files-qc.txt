@@ -438,13 +438,14 @@ vendor/lib64/libqmiservices.so|842a1b61fad7dd34753e945ee2ada0fdc9589c09
 vendor/lib/libqmi_cci.so|5a48201e565516a2fdff11c228162d2eda733fe5
 vendor/lib64/libqmi_cci.so|d5c4f4ad1a484fd00066b8f054877fc7dae77f8b
 
-# RIL - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
+# Radio - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
 -app/datastatusnotification/datastatusnotification.apk|ceafcce87298531a3adb13a87709a1fd65291625
 -app/QtiTelephonyService/QtiTelephonyService.apk|420b39e20a5166940c1e2e55e8d9c92ec910cebb
 etc/permissions/qcrilhook.xml|9fc58a3d54d20ac1d53bab14608815121aefbce5
 framework/qcrilhook.jar|784df5e6aa9df0127700b9a6f1083440ebfac057
 framework/qti-telephony-common.jar|b1953a3599255f08f1785c677d22810f65e0167b
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|d1d3adfe6eff32a3013e146317324029181e3c4a
+vendor/bin/adpl
 vendor/bin/ATFWD-daemon|390c764ab1b425e836f2b98cf039086d6729d751
 vendor/bin/netmgrd|48d3b006b85cf3b30ec5c4b972e64f2003c52e60
 vendor/bin/qti|28c5da423ba2e0c7873c24e6eca4bb4db7f41fe8
