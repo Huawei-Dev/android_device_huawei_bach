@@ -302,19 +302,6 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service vendor.rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    shutdown critical
-    ioprio rt 0
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.tftp_server /vendor/bin/tftp_server
-    class main
-    user root
-    group root system
-    writepid /dev/cpuset/system-background/tasks
-
 # FM
 on property:vendor.hw.fm.init=0
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 0
