@@ -71,7 +71,7 @@ void vendor_load_properties()
 
     fin.close();
 
-    if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos)) {
+    if ((buf.find("BAH-W09") != string::npos) || (buf.find("CPN-W09") != string::npos)) {
         android::init::property_set("persist.radio.noril", "1");
     }
 
