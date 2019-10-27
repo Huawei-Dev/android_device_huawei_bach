@@ -78,7 +78,7 @@ void vendor_load_properties()
     if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("CPN-AL00") != string::npos) || (buf.find("CPN-L0J") != string::npos) || (buf.find("CPN-L09") != string::npos)) {
 	property_override_dual("persist.multisim.config", "persist.radio.multisim.config", "ssss");
 	property_override("ro.telephony.default_network", "9");
-	property_override("ro.telephony.lteOnCdmaDevice", "0");
+	property_override("ro.telephony.lteOnCdmaDevice", "1");
 	android::init::property_set("rild.libargs", "-d /dev/smd0");
     }
 
