@@ -50,7 +50,7 @@ static void set_model(const char *model) {
 void vendor_load_properties()
 {
     ifstream fin;
-    string buf,hwsim;
+    string buf;
 
     fin.open(APP_INFO, ios::in);
     if (!fin) {
@@ -64,15 +64,15 @@ void vendor_load_properties()
 
     fin.close();
 
-    hwsim = GetProperty("ro.boot.hwsim", "");
-    if (hwsim == "single") {
+    if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos)) {
+        android::init::property_set("persist.radio.noril", "1");
+    }
+
+    if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("CPN-AL00") != string::npos) || (buf.find("CPN-L0J") != string::npos) || (buf.find("CPN-L09") != string::npos)) {
 	property_override_dual("persist.multisim.config", "persist.radio.multisim.config", "ssss");
-	property_override("ro.telephony.default_network", "12");
+	property_override("ro.telephony.default_network", "9");
 	property_override("ro.telephony.lteOnCdmaDevice", "0");
-    } else {
-        property_override_dual("persist.multisim.config", "persist.radio.multisim.config", "dsds");
-	property_override("ro.telephony.default_network", "22,20");
-	property_override("ro.telephony.lteOnCdmaDevice", "1");
+	android::init::property_set("rild.libargs", "-d /dev/smd0");
     }
 
     if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("BAH-W09") != string::npos)) {
@@ -80,7 +80,6 @@ void vendor_load_properties()
 	property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/BAH/HWBAH-Q:7.0/HUAWEIBAH-L09/C100B018:user/release-keys");
 	property_override_dual("ro.product.name", "ro.product.vendor.name", "BAH");
 	property_override_dual("ro.product.device", "ro.product.vendor.device", "HWBAH-Q");
-	property_override("ro.product.hardwareversion", "HL1TRTM");
     }
 
     if ((buf.find("CPN-AL00") != string::npos) || (buf.find("CPN-L0J") != string::npos) || (buf.find("CPN-L09") != string::npos) || (buf.find("CPN-W09") != string::npos)) {
@@ -94,7 +93,6 @@ void vendor_load_properties()
     property_override_dual("ro.product.brand", "ro.product.vendor.brand", "Huawei");
     property_override_dual("ro.build.tags", "ro.vendor.build.tags", "release-keys");
     property_override("ro.hw.custPath", "/cust/hw/eu");
-    android::init::property_set("rild.libargs", "-d /dev/smd0");
 
     /* BAH-AL00 */
     if (buf.find("BAH-AL00") != string::npos) {
