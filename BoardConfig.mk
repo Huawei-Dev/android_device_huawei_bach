@@ -205,7 +205,7 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libmmcamera_ppeiscore.so|libshim_camera.so
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2019-09-05
+VENDOR_SECURITY_PATCH := 2019-10-05
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/78db000.usb/msm_hsusb/gadget/lun%d/file
