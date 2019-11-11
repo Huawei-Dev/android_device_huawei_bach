@@ -21,9 +21,7 @@
 <resources>
 
     <!-- Rectangular parameters (config_deviceCoverType == 3) -->
-    <dimen name="rectangular_window_top">0px</dimen>
-    <dimen name="rectangular_window_left">0px</dimen>
-    <dimen name="rectangular_window_width">1080px</dimen>
-    <dimen name="rectangular_window_height">720px</dimen>
+    <dimen name="rectangular_window_width">1920px</dimen>
+    <dimen name="rectangular_window_height">1200px</dimen>
 
 </resources>
