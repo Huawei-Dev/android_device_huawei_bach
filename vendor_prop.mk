@@ -110,7 +110,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.gralloc.gfx_ubwc_disable=0 \
     debug.sf.enable_hwc_vds=1 \
     debug.sf.hw=1 \
-    debug.sf.latch_unsignaled=1 \
+    debug.sf.latch_unsignaled=0 \
     debug.sf.enable_gl_backpressure=1 \
     dev.pm.dyn_samplingrate=1 \
     persist.demo.hdmirotationlock=false \
@@ -201,6 +201,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.trim_empty_percent=100 \
     ro.vendor.qti.sys.fw.trim_cache_percent=100 \
     ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
+
+# UI
+PRODUCT_PROPERTY_OVERRIDES += \
+sys.use_fifo_ui=0
 
 # Usb
 PRODUCT_PROPERTY_OVERRIDES += \
