@@ -218,7 +218,7 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib64/libhwlog.so|libshim_hwlog.so
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2019-10-05
+VENDOR_SECURITY_PATCH := 2019-11-05
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/78db000.usb/msm_hsusb/gadget/lun%d/file
