@@ -92,10 +92,14 @@ PRODUCT_PACKAGES += \
     libmm-qcamera
 
 PRODUCT_PACKAGES += \
+    android.frameworks.displayservice@1.0_32 \
     android.hardware.camera.provider@2.4-impl
 
 PRODUCT_PACKAGES += \
     libshim_camera
+
+PRODUCT_PACKAGES += \
+    Snap
 
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
