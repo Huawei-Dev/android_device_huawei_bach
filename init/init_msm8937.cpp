@@ -84,14 +84,14 @@ void vendor_load_properties()
 
     if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("BAH-W09") != string::npos)) {
 	property_override("ro.build.description", "BAH-L09-user 7.0 HUAWEIBAH-L09 C100B018 release-keys");
-	property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/BAH/HWBAH-Q:7.0/HUAWEIBAH-L09/C100B018:user/release-keys");
+	property_override_dual("ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/BAH/HWBAH-Q:7.0/HUAWEIBAH-L09/C100B018:user/release-keys");
 	property_override_3x("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "BAH");
 	property_override_3x("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "HWBAH-Q");
     }
 
     if ((buf.find("CPN-AL00") != string::npos) || (buf.find("CPN-L0J") != string::npos) || (buf.find("CPN-L09") != string::npos) || (buf.find("CPN-W09") != string::npos)) {
 	property_override("ro.build.description", "CPN-L09-user 7.0 HUAWEICPN-L09 C904B280 release-keys");
-	property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/CPN/HWCPN-Q:7.0/HUAWEICPN-L09/C904B280:user/release-keys");
+	property_override_dual("ro.system.build.fingerprint", "ro.vendor.build.fingerprint", "HUAWEI/CPN/HWCPN-Q:7.0/HUAWEICPN-L09/C904B280:user/release-keys");
 	property_override_3x("ro.product.name", "ro.product.system.name", "ro.product.vendor.name", "CPN");
 	property_override_3x("ro.product.device", "ro.product.system.device", "ro.product.vendor.device", "HWCPN-Q");
     }
