@@ -429,7 +429,6 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>ICryptfsHw</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ICryptfsHw/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.qti.hardware.data.latency</name>
