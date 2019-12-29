@@ -360,6 +360,9 @@ PRODUCT_PACKAGES += \
     libshim_fps \
     libshim_hwlog
 
+PRODUCT_PACKAGES += \
+    libshim_imsvit
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common_system \

@@ -217,6 +217,9 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libhwlog.so|libshim_hwlog.so \
     /vendor/lib64/libhwlog.so|libshim_hwlog.so
 
+TARGET_LD_SHIM_LIBS += \
+    /system/lib64/lib-imsvideocodec.so|libshim_imsvit.so
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2019-11-05
 
