@@ -237,6 +237,10 @@ PRODUCT_PACKAGES += \
     libnl \
     netutils-wrapper-1.0
 
+# OEM Unlock reporting
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+    ro.oem_unlock_supported=1
+
 # OMX
 PRODUCT_PACKAGES += \
     libc2dcolorconvert \
