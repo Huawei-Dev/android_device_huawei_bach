@@ -48,6 +48,32 @@ start_msm_irqbalance_8939()
 	fi
 }
 
+start_msm_irqbalance_msmnile()
+{
+         if [ -f /vendor/bin/msm_irqbalance ]; then
+                start vendor.msm_irqbalance
+         fi
+}
+
+start_msm_irqbalance660()
+{
+	if [ -f /vendor/bin/msm_irqbalance ]; then
+		case "$platformid" in
+		    "317" | "324" | "325" | "326" | "345" | "346")
+			start vendor.msm_irqbalance;;
+		    "318" | "327" | "385")
+			start vendor.msm_irqbl_sdm630;;
+		esac
+	fi
+}
+
+start_msm_irqbalance()
+{
+	if [ -f /vendor/bin/msm_irqbalance ]; then
+		start vendor.msm_irqbalance
+	fi
+}
+
 case "$baseband" in
         "svlte2a")
         start bridgemgrd
@@ -330,8 +356,8 @@ echo 1 > /data/vendor/radio/db_check_done
 #
 # Make modem config folder and copy firmware config to that folder for RIL
 #
-if [ -f /data/vendor/radio/ver_info.txt ]; then
-    prev_version_info=`cat /data/vendor/radio/ver_info.txt`
+if [ -f /data/vendor/modem_config/ver_info.txt ]; then
+    prev_version_info=`cat /data/vendor/modem_config/ver_info.txt`
 else
     prev_version_info=""
 fi
