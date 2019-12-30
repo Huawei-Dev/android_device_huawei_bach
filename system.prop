@@ -53,7 +53,8 @@ persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxada
 vendor.qcom.bluetooth.soc=smd
 
 # Camera
-camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+vendor.camera.hal1.packagelist=com.skype.raider,com.google.android.talk,com.whatsapp
+vendor.camera.aux.packagelist=org.lineageos.snap
 persist.vendor.camera.display.umax=1920x1080
 persist.vendor.camera.display.lmax=1280x720
 persist.vendor.qti.telephony.vt_cam_interface=1
@@ -103,6 +104,8 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 
 # Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+persist.media.treble_omx=true
 mm.enable.qcom_parser=4176895
 media.stagefright.audio.sink=280
 vendor.vidc.disable.split.mode=1
