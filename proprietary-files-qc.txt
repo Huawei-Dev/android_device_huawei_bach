@@ -21,6 +21,9 @@ vendor/lib/rfsa/adsp/libFastRPC_UTF_Forward_Qtc2_skel.so|b9f68e320d24e9c51871a20
 vendor/lib/rfsa/adsp/libscveBlobDescriptor_skel.so|3e9c52069ff07e50191d3b3afb33b30409241ab6
 vendor/lib/rfsa/adsp/libscveT2T_skel.so|91b9200dbb982abf0d6b440668252d892a616f66
 
+# ANT+ (vendor) - from LA.UM.8.6.r1-02600-89xx.0
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|1a7bee1627309c8eee55dab22b9f25c2302219ae
+
 # Audio - from LA.UM.8.6.r1-02600-89xx.0
 vendor/lib/libacdb-fts.so|6bbcdd34b8344964c54d0a072e63feec71673b7c
 vendor/lib/libacdbloader.so
@@ -62,7 +65,6 @@ vendor/lib64/libbtnv.so
 vendor/lib64/libbt-hidlclient.so
 
 # Bluetooth (shared dependencies) - from LA.UM.8.6.2.r1-03700-89xx.0
-vendor/lib64/com.qualcomm.qti.ant@1.0.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Bluetooth (aptX) - from crosshatch - QP1A.190711.020
