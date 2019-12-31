@@ -81,6 +81,9 @@ ro.qualcomm.cabl=2
 ro.vendor.display.cabl=2
 ro.sf.lcd_density=320
 
+# DRM
+drm.service.enabled=1
+
 # GPS
 ro.gps.agps_provider=1
 
