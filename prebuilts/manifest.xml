@@ -113,8 +113,8 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         </interface>
         <fqname>@1.2::ICryptoFactory/clearkey</fqname>
         <fqname>@1.2::IDrmFactory/clearkey</fqname>
-        <fqname>@1.1::ICryptoFactory/widevine</fqname>
-        <fqname>@1.1::IDrmFactory/widevine</fqname>
+        <fqname>@1.2::ICryptoFactory/widevine</fqname>
+        <fqname>@1.2::IDrmFactory/widevine</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.gatekeeper</name>
@@ -567,6 +567,15 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             <name>IUimRemoteServiceServer</name>
             <instance>uimRemoteServer0</instance>
             <instance>uimRemoteServer1</instance>
+        </interface>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.qti.hardware.tui_comm</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ITuiComm</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="hidl">
