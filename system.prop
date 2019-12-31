@@ -143,6 +143,7 @@ persist.data.iwlan.enable=true
 
 # Time Services
 persist.timed.enable=true
+persist.delta_time.enable=true
 persist.vendor.delta_time.enable=true
 
 # Trim properties
