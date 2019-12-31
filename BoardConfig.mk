@@ -194,19 +194,22 @@ TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := cust \
-	log \
-	persist \
-	produce \
-	version
-BOARD_ROOT_EXTRA_SYMLINKS := \
+BOARD_ROOT_EXTRA_FOLDERS += \
+    cust \
+    log \
+    persist \
+    produce \
+    version
+BOARD_ROOT_EXTRA_SYMLINKS += \
     /vendor/firmware_mnt:/firmware \
     /mnt/vendor/persist:/persist \
     /vendor/dsp:/dsp
 
 # SELinux
+SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
+BOARD_SEPOLICY_DIRS += \
+    $(VENDOR_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS += \
