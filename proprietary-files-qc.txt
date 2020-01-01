@@ -240,7 +240,7 @@ vendor/lib64/libgps.utils.so|a7aad6023fffc563ee67ae88d839baf11d64eda1
 vendor/lib64/libizat_client_api.so|cdfbe6f95d5946b3304e3ded021cb761c7a6269e
 vendor/lib64/libizat_core.so|45dc31f45a11bae62f50f98e9011f5bc3109bf92
 vendor/lib64/liblbs_core.so|2b05f206604f6a70cb3532c743f555e7658ceb98
--vendor/lib64/libloc_api_v02.so|8926317e5ca96c72284d359f6b503cb8d0fd0d4c
+vendor/lib64/libloc_api_v02.so|8926317e5ca96c72284d359f6b503cb8d0fd0d4c
 vendor/lib64/liblocation_api.so|cc402e50c2bd2f7fe350823d408efeac9cc79814
 vendor/lib64/liblocationservice_glue.so|351bcaa1c2726383c95155ff4aca818d2a9e9150
 vendor/lib64/liblocationservice.so|41694048101d243e8b6148004026634026a1f13c
@@ -591,11 +591,11 @@ vendor/lib64/sensor_calibrate.so
 vendor/lib64/sensors.nosensorhub.so
 vendor/lib64/sensors.ssc.so
 
-# Thermal - from LA.UM.8.6.r1-01900-89xx.0
-vendor/bin/thermal-engine|2d14a781f9738708a1b8cee4ddf833218ed97e23
-vendor/lib64/libthermalclient.so|61a8dfc6132836e7ed27b044ddc8a078b5c7299e
-vendor/lib64/libthermalioctl.so|3f0b6e48f673ce9f40140ba23ed227f9d1e2420b
-vendor/lib/libthermalclient.so|28fde51ddd79ebd811efe27fc93cb054e60339e4
+# Thermal - from LA.UM.8.6.r1-02600-89xx.0
+vendor/bin/thermal-engine|37ef9d9d7180d1508096668047e7fd98b8a25b39
+vendor/lib/libthermalclient.so|5366dedac700727f05ed1729bf00c855d0777de4
+vendor/lib64/libthermalclient.so|fead3fb780b175ef478c7ab120639dea5b37a802
+vendor/lib64/libthermalioctl.so|1d6587245c7e7148638f14254e2f61f6b5552857
 
 # Time services - from LA.UM.8.6.r1-01900-89xx.0
 -vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|4a37afd1395758d946580af184a738e3c657b1e2
