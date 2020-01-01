@@ -143,7 +143,7 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
     group radio diag inet log
     writepid /dev/cpuset/system-background/tasks
 
-on property:vendor.ims.DATA_DAEMON_STATUS=1bfad6c45d5fb1b753991a67cdf91f1f0ba16b067
+on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
 
 on charger
