@@ -408,10 +408,11 @@ vendor/etc/perf/targetresourceconfigs.xml|d9f9815764725df55e748bf4af4829e609dac8
 vendor/etc/perf/perf-profile0.conf
 vendor/etc/perf/perf-profile1.conf
 
-# Peripheral manager - from tissot - PKQ1.180917.001.V10.0.4.0.PDHMIXM
-vendor/bin/pm-proxy|56e9bdaa39270aa4456c9995a8a9e4618ba616a6
-vendor/bin/pm-service|7cbca1671529a805177f11f3f72defdbbe48a61c
-vendor/lib64/libperipheral_client.so|e2fbf94c589dbf8ae6c544a34441783ae9db3a08
+# Peripheral manager - from LA.UM.8.6.r1-02600-89xx.0
+vendor/bin/pm-proxy|1f216a6f54e9b97c026f3f3bc4d7d441d58d90a7
+vendor/bin/pm-service|8a521f14576d0d2edf03b4500a54379d37e15d4e
+vendor/lib/libperipheral_client.so|b75a6adac094ddcd6ded9415cae83e18d1e7e5d0
+vendor/lib64/libperipheral_client.so|20c8ab21fe28e41f60b59af0ba72de9f6b1996d2
 
 # Postprocessing - from LA.UM.8.6.r1-01900-89xx.0
 vendor/bin/hw/vendor.display.color@1.0-service|dd461fbbbdc7175b8e1e37eba19bc1c48111b5b6
