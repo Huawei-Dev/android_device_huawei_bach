@@ -1,6 +1,3 @@
-on early-init
-    mkdir /log 0775 system log
-
 on init
     #for ois test
     chown camera camera /sys/devices/virtual/camerafs/ois/ois_pixel
