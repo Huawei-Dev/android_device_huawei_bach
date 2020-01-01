@@ -70,7 +70,7 @@ service qcamerasvr /vendor/bin/mm-qcamera-daemon
     class main
     user camera
     group camera system inet input graphics
-    writepid /dev/cpuset/system-background/tasks
+    writepid /dev/cpuset/camera-daemon/tasks /dev/stune/top-app/tasks
 
 # Allow usb charging to be disabled peristently
 on property:persist.usb.chgdisabled=1
@@ -126,6 +126,7 @@ service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
     class main
     user system
     group radio diag inet log
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.imsrcsservice /vendor/bin/imsrcsd
     class main
@@ -145,6 +146,7 @@ service adsprpcd /vendor/bin/adsprpcd
     class main
     user media
     group media
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.per_mgr /vendor/bin/pm-service
     class core

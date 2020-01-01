@@ -290,6 +290,7 @@ service dpmQmiMgr /vendor/bin/dpmQmiMgr
     class main
     user system
     group radio system
+    writepid /dev/cpuset/system-background/tasks
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
@@ -373,6 +374,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
+    writepid /dev/cpuset/system-background/tasks
 
 service ril-daemon2 /vendor/bin/hw/rild -c 2
     class main
@@ -397,6 +399,7 @@ service time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
