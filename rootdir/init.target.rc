@@ -96,6 +96,7 @@ service thermal-engine /vendor/bin/thermal-engine -c ${sys.qcom.thermalcfg:-/ven
     socket thermal-recv-passive-client stream 0666 system system
     socket thermal-send-rule stream 0660 system system
     group root
+    writepid /dev/cpuset/system-background/tasks
 
 service wcnss-service /vendor/bin/wcnss_service
     class late_start
