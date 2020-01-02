@@ -51,6 +51,6 @@ LOCAL_SRC_FILES := imsvit.cpp
 LOCAL_SHARED_LIBRARIES := libui libutils
 LOCAL_MODULE := libshim_imsvit
 LOCAL_MODULE_TAGS := optional
-LOCAL_MULTILIB := 32
+LOCAL_MULTILIB := 64
 LOCAL_VENDOR_MODULE := false
 include $(BUILD_SHARED_LIBRARY)
