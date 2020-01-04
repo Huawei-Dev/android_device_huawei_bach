@@ -362,6 +362,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libshim_imsvit
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    device/huawei/bach
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common_system \
