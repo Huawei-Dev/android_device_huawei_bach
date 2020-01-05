@@ -300,9 +300,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti
 
-PRODUCT_COPY_FILES += \
-    $(VENDOR_PATH)/prebuilts/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
-
 # QCOM
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
