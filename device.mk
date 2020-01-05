@@ -362,9 +362,6 @@ PRODUCT_PACKAGES += \
     libshim_fps \
     libshim_hwlog
 
-PRODUCT_PACKAGES += \
-    libshim_imsvit
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     device/huawei/bach
