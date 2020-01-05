@@ -305,6 +305,10 @@ PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(VENDOR_PATH)/prebuilts/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
+# QMI
+PRODUCT_PACKAGES += \
+    libjson
+
 # RCS
 PRODUCT_PACKAGES += \
     rcs_service_aidl \
