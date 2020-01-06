@@ -213,6 +213,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.huawei_msm8937
 
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # LiveDisplay
 #PRODUCT_PACKAGES += \
 #    vendor.lineage.livedisplay@2.0-service-sdm
