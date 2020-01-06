@@ -226,7 +226,7 @@ TARGET_LD_SHIM_LIBS += \
     /vendor/lib/libhwlog.so|libshim_hwlog.so \
     /vendor/lib64/libhwlog.so|libshim_hwlog.so
 
-TARGET_LD_SHIM_LIBS := \
+TARGET_LD_SHIM_LIBS += \
     /system/lib/libui.so|libshim_ui.so \
     /system/lib64/libui.so|libshim_ui.so
 
