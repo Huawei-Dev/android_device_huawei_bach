@@ -80,6 +80,9 @@ void vendor_load_properties()
 	property_override("ro.telephony.default_network", "9");
 	property_override("ro.telephony.lteOnCdmaDevice", "1");
 	android::init::property_set("rild.libargs", "-d /dev/smd0");
+	android::init::property_set("persist.vendor.data.mode", "concurrent");
+	android::init::property_set("persist.data.netmgrd.qos.enable", "true");
+	android::init::property_set("ro.vendor.use_data_netmgrd", "true");
     }
 
     if ((buf.find("BAH-AL00") != string::npos) || (buf.find("BAH-L01") != string::npos) || (buf.find("BAH-L09") != string::npos) || (buf.find("BAH-W09") != string::npos)) {
