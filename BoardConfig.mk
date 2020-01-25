@@ -212,7 +212,6 @@ BOARD_ROOT_EXTRA_SYMLINKS += \
     /vendor/dsp:/dsp
 
 # SELinux
-SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/sepolicy.mk
 BOARD_SEPOLICY_DIRS += \
     $(VENDOR_PATH)/sepolicy

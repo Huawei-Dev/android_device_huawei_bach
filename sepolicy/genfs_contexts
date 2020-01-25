@@ -1,4 +1,10 @@
-genfscon proc /app_info                                         u:object_r:proc_appinfo:s0
-genfscon sysfs /touchscreen/touch_glove        			u:object_r:sysfs_touchscreen:s0
+genfscon proc /app_info                                       		u:object_r:proc_appinfo:s0
+genfscon sysfs /touchscreen/touch_glove        				u:object_r:sysfs_touchscreen:s0
 
-genfscon debugfs /rmt_storage 					u:object_r:debugfs_rmt:s0
+genfscon sysfs /devices/soc/qpnp-fg-19/power_supply/bms                  	u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/qpnp-smbcharger-18/power_supply/battery     	u:object_r:sysfs_battery_supply:s0
+genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply/bcl/type          	u:object_r:sysfs_batteryinfo:s0
+
+genfscon debugfs /rmt_storage 						u:object_r:debugfs_rmt:s0
+
+

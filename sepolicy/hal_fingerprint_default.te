@@ -1,4 +1,6 @@
-allow hal_fingerprint_default fps_data_file:dir write;
+allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default fingerprintd_data_file:sock_file { create unlink };
 
 allow hal_fingerprint_default fps_device:chr_file rw_file_perms;
 

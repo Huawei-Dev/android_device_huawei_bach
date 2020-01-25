@@ -1,5 +1,5 @@
 # FPS Fingerprint
-/data/fpc(/.*)?                                          					u:object_r:fps_data_file:s0
+/data/fpc(/.*)?                                          					u:object_r:fingerprintd_data_file:s0
 /dev/fingerprint                                         					u:object_r:fps_device:s0
 /sys/devices/platform/fingerprint(/.*)?                  					u:object_r:fps_sysfs:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service_hw	u:object_r:hal_fingerprint_default_exec:s0

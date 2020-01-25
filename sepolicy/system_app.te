@@ -1,2 +1,2 @@
-# Allow binder calls to fingerprintd
-binder_call(system_app, fingerprintd)
+allow system_app fps_sysfs:dir search;
+allow system_app fps_sysfs:file rw_file_perms;
