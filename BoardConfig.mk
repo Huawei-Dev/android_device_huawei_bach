@@ -229,6 +229,9 @@ TARGET_LD_SHIM_LIBS += \
     /system/lib/libui.so|libshim_ui.so \
     /system/lib64/libui.so|libshim_ui.so
 
+# Thermal
+TARGET_USES_CUSTOM_THERMAL := true
+
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-01-01
 
