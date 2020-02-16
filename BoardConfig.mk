@@ -233,7 +233,7 @@ TARGET_LD_SHIM_LIBS += \
 TARGET_USES_CUSTOM_THERMAL := true
 
 # Vendor Security patch level
-VENDOR_SECURITY_PATCH := 2020-01-01
+VENDOR_SECURITY_PATCH := 2020-02-05
 
 # Vold
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/soc/78db000.usb/msm_hsusb/gadget/lun%d/file
