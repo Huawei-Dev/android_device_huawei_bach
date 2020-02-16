@@ -315,6 +315,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+# Properties
+-include $(VENDOR_PATH)/vendor_prop.mk
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
