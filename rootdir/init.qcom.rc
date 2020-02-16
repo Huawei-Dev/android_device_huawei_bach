@@ -374,12 +374,6 @@ service charger /system/bin/charger
     seclabel u:r:charger:s0
     writepid /dev/cpuset/system-background/tasks
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    class late_start
-    user root
-    group root
-    writepid /dev/cpuset/system-background/tasks
-
 service time_daemon /vendor/bin/time_daemon
     class main
     user system
