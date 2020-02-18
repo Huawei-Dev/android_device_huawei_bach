@@ -22,6 +22,8 @@
 
 /sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0
 
+# Touch
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.huawei_msm8937          u:object_r:hal_lineage_touch_default_exec:s0
 
 # Rild
 /(vendor|system/vendor)/radio/qcril_database/qcril.db					u:object_r:rild_file:s0
