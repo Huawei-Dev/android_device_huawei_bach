@@ -1,4 +1,6 @@
 allow mm-qcamerad proc_appinfo:file r_file_perms;
 allow mm-qcamerad camera_data_file:sock_file { create unlink };
 allow mm-qcamerad camera_data_file:dir rw_dir_perms;
+allow mm-qcamerad sensorservice_service:service_manager { find };
+
 set_prop(mm-qcamerad, vendor_default_prop)
