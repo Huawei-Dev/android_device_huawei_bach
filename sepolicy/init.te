@@ -1,2 +1,4 @@
 allow init proc_appinfo:file r_file_perms;
 allow init fingerprintd:binder { transfer call };
+allow init hal_lineage_touch_hwservice:hwservice_manager { add };
+allow init hidl_base_hwservice:hwservice_manager { add };
