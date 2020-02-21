@@ -1,0 +1,6 @@
+allow cameraserver hal_perf_hwservice:hwservice_manager { find };
+allow cameraserver camera_data_file:dir { search };
+
+allow cameraserver mm-qcamerad:unix_dgram_socket { sendto };
+
+binder_call(cameraserver, hal_perf_default)

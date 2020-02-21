@@ -1,0 +1,2 @@
+allow rmt_storage vendor_file:dir { read };
+

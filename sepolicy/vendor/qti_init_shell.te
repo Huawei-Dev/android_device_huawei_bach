@@ -1,0 +1,8 @@
+allow qti_init_shell default_prop:property_service { set };
+
+allow qti_init_shell vendor_file:dir { read };
+
+allow qti_init_shell vendor_radio_data_file:dir { search write add_name };
+allow qti_init_shell vendor_radio_data_file:file { create write open };
+
+allow qti_init_shell self:capability { dac_override };

@@ -1,0 +1,17 @@
+allow mm-qcamerad proc_appinfo:file r_file_perms;
+allow mm-qcamerad camera_data_file:sock_file { create unlink };
+allow mm-qcamerad camera_data_file:dir rw_dir_perms;
+allow mm-qcamerad sensorservice_service:service_manager { find };
+allow mm-qcamerad default_prop:property_service { set };
+
+allow mm-qcamerad device:chr_file { open write };
+
+allow mm-qcamerad camera_data_file:file { read write open create getattr };
+
+allow mm-qcamerad system_server:unix_stream_socket { read write };
+
+set_prop(mm-qcamerad, vendor_default_prop)
+binder_call(mm-qcamerad, servicemanager)
+
+allow mm-qcamerad camera_socket:dir rw_dir_perms;
+allow mm-qcamerad camera_socket:sock_file { create unlink };

@@ -1,0 +1,11 @@
+allow system_server vendor_file:file r_file_perms;
+allow system_server vendor_file:dir { search };
+
+allow system_server mnt_vendor_file:dir { search };
+
+allow system_server sensors_persist_file:dir { search read };
+allow system_server sensors_persist_file:file { read open };
+
+allow system_server hwoeminfo_socket:sock_file { write };
+
+get_prop(system_server, persist_camera_prop);

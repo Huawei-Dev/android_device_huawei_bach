@@ -8,6 +8,7 @@ type_transition hwoeminfo device:{ file dir } hwoeminfo_device;
 init_daemon_domain(hwoeminfo)
 
 allow hwoeminfo hwoem_device:blk_file rw_file_perms;
+allow hwoeminfo hwoem_device:blk_file { create ioctl };
 allow hwoeminfo self:capability { chown fowner fsetid };
 allow hwoeminfo block_device:dir search;
 
@@ -17,4 +18,6 @@ allow hwoeminfo socket_device:sock_file { create setattr };
 allow hwoeminfo hwoeminfo_device:dir { add_name create setattr write search };
 allow hwoeminfo hwoeminfo_device:file { create open setattr write };
 allow hwoeminfo hwoeminfo_socket:sock_file { create setattr };
+
+allow hwoeminfo device:dir { write add_name };
 

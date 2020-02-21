@@ -9,3 +9,10 @@ allow hwmac bluetooth_prop:file { read open getattr };
 
 allow hwmac wifi_data_file:dir { search write add_name };
 allow hwmac wifi_data_file:file { create read write open getattr setattr };
+
+allow hwmac vendor_file:dir { read };
+allow hwmac hwoeminfo_socket:sock_file { write };
+
+allow hwmac self:capability { dac_override dac_read_search };
+
+allow hwmac hwoeminfo:unix_stream_socket { connectto };

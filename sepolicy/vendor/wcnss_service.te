@@ -5,3 +5,7 @@ allow wcnss_service hwoeminfo_device:file { getattr open read unlink };
 allow wcnss_service hwoeminfo_socket:sock_file write;
 
 allow wcnss_service vendor_default_prop:property_service { set };
+
+allow wcnss_service property_socket:sock_file { write };
+
+allow wcnss_service init:unix_stream_socket { connectto };

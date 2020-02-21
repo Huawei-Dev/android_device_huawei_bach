@@ -21,3 +21,5 @@ type version_file, file_type, contextmount_type, vendor_file_type;
 type cust_file, file_type, contextmount_type, vendor_file_type;
 
 type log_file, file_type, contextmount_type, vendor_file_type;
+
+type camera_socket, file_type, data_file_type;

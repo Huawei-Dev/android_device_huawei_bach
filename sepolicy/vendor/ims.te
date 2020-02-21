@@ -1,1 +1,2 @@
 allow ims self:capability { net_raw net_admin };
+allow ims vendor_file:dir { read };
