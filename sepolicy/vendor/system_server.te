@@ -6,6 +6,11 @@ allow system_server mnt_vendor_file:dir { search };
 allow system_server sensors_persist_file:dir { search read };
 allow system_server sensors_persist_file:file { read open };
 
-allow system_server hwoeminfo_socket:sock_file { write };
+allow system_server hwoeminfo_socket:sock_file write;
+allow system_server hwoeminfo:unix_stream_socket connectto;
+ 
+allow system_server proc_appinfo:file r_file_perms;
+allow system_server hwoeminfo_device:dir { search write remove_name };
+allow system_server hwoeminfo_device:file { open read getattr unlink };
 
 get_prop(system_server, persist_camera_prop);

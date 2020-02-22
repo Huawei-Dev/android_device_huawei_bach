@@ -20,7 +20,7 @@
 /dev/oinv(/.*)?										u:object_r:hwoeminfo_device:s0
 /dev/socket/oeminfo_nvm									u:object_r:hwoeminfo_socket:s0
 
-/dev/block/platform/soc/7824900.sdhci/by-name/oeminfo					u:object_r:hwoem_device:s0
+/dev/block/platform/soc/7824900.sdhci/by-name/oeminfo					u:object_r:hwoem_partition_device:s0
 
 /sys/bus/platform/drivers/hw_audio_info(/.*)?              					u:object_r:hwaudio_sysfs:s0
 

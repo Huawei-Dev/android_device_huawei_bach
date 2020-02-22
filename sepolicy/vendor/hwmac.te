@@ -12,6 +12,8 @@ allow hwmac wifi_data_file:file { create read write open getattr setattr };
 
 allow hwmac vendor_file:dir { read };
 allow hwmac hwoeminfo_socket:sock_file { write };
+allow hwmac hwoeminfo_device:dir { search write remove_name };
+allow hwmac hwoeminfo_device:file { open read getattr unlink };
 
 allow hwmac self:capability { dac_override dac_read_search };
 

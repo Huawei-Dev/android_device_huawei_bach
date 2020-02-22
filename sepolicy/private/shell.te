@@ -1,0 +1,9 @@
+allow shell kernel:system { syslog_read };
+
+allow shell adbroot_exec:file { getattr };
+allow shell apexd_exec:file { getattr };
+allow shell art_apex_boot_integrity_exec:file { getattr };
+allow shell ashmemd_exec:file { getattr };
+allow shell audioserver_exec:file { getattr };
+allow shell auditctl_exec:file { getattr };
+allow shell blank_screen_exec:file { getattr };
