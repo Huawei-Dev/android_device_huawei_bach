@@ -16,9 +16,11 @@ allow hal_fingerprint_default system_data_file:file { create read write open };
 
 allow hal_fingerprint_default tee:unix_stream_socket { connectto };
 
-allow hal_fingerprint_default device:chr_file { open write };
+allow hal_fingerprint_default device:chr_file { open write lock };
 
 allow hal_fingerprint_default proc_appinfo:file { getattr open read };
 
 allow hal_fingerprint_default vfat:dir { search };
 allow hal_fingerprint_default vfat:file { open read };
+
+allow hal_fingerprint_default sysfs_kgsl:file { read write };

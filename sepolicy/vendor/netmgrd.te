@@ -1,1 +1,2 @@
 allow netmgrd vendor_file:dir { read };
+allow netmgrd system_file:file { execute_no_trans };
