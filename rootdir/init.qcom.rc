@@ -395,6 +395,10 @@ on property:init.svc.cameraserver=restarting
 on property:init.svc.servicemanager=restarting
     restart qcamerasvr
 
+# Set min gpu freq to 300mhz
+on property:sys.boot_completed=1
+    write /sys/class/kgsl/kgsl-3d0/devfreq/min_freq 300000000
+
 service vendor.audio-hal-2-0 /vendor/bin/hw/android.hardware.audio@2.0-service
     override
     class hal
