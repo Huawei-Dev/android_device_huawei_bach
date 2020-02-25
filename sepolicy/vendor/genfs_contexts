@@ -6,9 +6,3 @@ genfscon sysfs /devices/soc/qpnp-smbcharger-18/power_supply/battery     	u:objec
 genfscon sysfs /devices/soc/soc:qcom,bcl/power_supply/bcl/type          	u:object_r:sysfs_batteryinfo:s0
 
 genfscon debugfs /rmt_storage 						u:object_r:debugfs_rmt:s0
-
-# SSR
-genfscon sysfs /devices/soc/1de0000.qcom,venus/subsys0/name  		u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/c200000.qcom,lpass/subsys1/name  		u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/a21b000.qcom,pronto/subsys2/name 		u:object_r:sysfs_ssr:s0
-genfscon sysfs /devices/soc/4080000.qcom,mss/subsys3/name    		u:object_r:sysfs_ssr:s0
