@@ -136,9 +136,9 @@ on boot
     chown system system /proc/wifi_built_in/mac_addr_hw
     chown system system /proc/wifi_built_in/debug_level_hw
 
-    chmod 0660 /sys/touchscreen/touch_glove
-    chmod 0660 /sys/touchscreen/easy_wakeup_gesture
-    chmod 0660 /sys/touchscreen/wakeup_gesture_enable
+    chmod 0664 /sys/touchscreen/touch_glove
+    chmod 0664 /sys/touchscreen/easy_wakeup_gesture
+    chmod 0664 /sys/touchscreen/wakeup_gesture_enable
 
     chown root system /dev/hwlog_jank
     chmod 0662 /dev/hwlog_jank
