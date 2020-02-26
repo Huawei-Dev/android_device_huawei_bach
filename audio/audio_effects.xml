@@ -44,6 +44,7 @@
         <library name="dirac" path="libdirac.so"/>
         <library name="jdsp" path="libjamesdsp.so"/>
         <library name="audiosphere" path="libasphere.so"/>
+	<library name="dtsaudio" path="libdtsaudio.so"/>
     </libraries>
     <effects>
         <effectProxy name="bassboost" library="proxy" uuid="14804144-a5ee-4d24-aa88-0002a5d5c51b">
@@ -87,6 +88,7 @@
         <effect name="dirac" library="dirac" uuid="e069d9e0-8329-11df-9168-0002a5d5c51b"/>
         <effect name="jamesdsp" library="jdsp" uuid="f27317f4-c984-4de6-9a90-545759495bf2"/>
         <effect name="audiosphere" library="audiosphere" uuid="184e62ab-2d19-4364-9d1b-c0a40733866c"/>
+	<effect name="dtsaudio" library="dtsaudio" uuid="146edfc0-7ed2-11e4-80eb-0002a5d5c51b"/>
     </effects>
     <preprocess>
         <stream type="voice_communication">
