@@ -48,11 +48,12 @@ vendor/lib64/libqtigef.so|e7f0dfa3cd7252310c9a01f2bc0e4074e6e78871
 vendor/lib64/soundfx/libqcbassboost.so|0d2afd6f2c5b9aa2397f3e1cb3287bf906cf8fb6
 vendor/lib64/soundfx/libqcvirt.so|bb046694512d412d6a04bd95ccb2b573454d9717
 
-# Audiosphere - from Xiaomi
+# Audio effects
+# Audiosphere
 lib/soundfx/libasphere.so
 lib64/soundfx/libasphere.so
 
-# Audio - Dirac - from Xiaomi
+# Audio - Dirac
 vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
@@ -66,8 +67,8 @@ vendor/lib64/libdtsdsec.so
 vendor/lib64/libdts-eagle-shared.so
 
 # Bluetooth - from LA.UM.8.6.r1-02600-89xx.0
--lib/libbtconfigstore.so|c1d1f2f8b8f2b09fde907c2025c7dccb4d38648e
--lib64/libbtconfigstore.so|5cd51822cb9330a16d098b57c916b630cefd531c
+lib/libbtconfigstore.so|c1d1f2f8b8f2b09fde907c2025c7dccb4d38648e
+lib64/libbtconfigstore.so|5cd51822cb9330a16d098b57c916b630cefd531c
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|365c3de57a8a655da6b0882bf5411558025883e1
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|b965b1786fa4bffaf08a4513f92963681df59b08
