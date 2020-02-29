@@ -175,6 +175,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ril.subscription.types=NV,RUIM \
     persist.data.qmi.adb_logmask=0 \
     ro.telephony.call_ring.multiple=false \
+    ro.telephony.use_old_mnc_mcc_format=true \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.rat_on=combine \
