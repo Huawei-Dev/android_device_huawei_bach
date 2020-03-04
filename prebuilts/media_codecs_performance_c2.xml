@@ -61,11 +61,13 @@
             <Limit name="measured-frame-rate-640x360" range="402-402" />
             <Limit name="measured-frame-rate-1920x1080" range="36-36" />
         </MediaCodec>
-        <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" update="true">
+        <MediaCodec name="c2.android.vp9.decoder" type="video/x-vnd.on2.vp9" variant="slow-cpu" update="true">
+	<Variant name="slow-cpu">
             <Limit name="measured-frame-rate-320x180" range="855-855" />
             <Limit name="measured-frame-rate-640x360" range="321-333" />
             <Limit name="measured-frame-rate-1280x720" range="121-121" />
             <Limit name="measured-frame-rate-1920x1080" range="67-67" />
+	</Variant>
         </MediaCodec>
     </Decoders>
 </MediaCodecs>
