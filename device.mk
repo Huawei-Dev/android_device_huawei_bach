@@ -174,10 +174,6 @@ PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service
 
 # GPS
-PRODUCT_PACKAGES += \
-    libsensorndkbridge \
-    libwifi-hal-ctrl
-
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/gps/flp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/flp.conf \
     $(VENDOR_PATH)/prebuilts/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf \
