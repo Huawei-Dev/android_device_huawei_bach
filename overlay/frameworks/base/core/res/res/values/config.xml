@@ -107,11 +107,6 @@
          capability can provide power savings when wifi needs to be always kept on. -->
     <bool name="config_wifi_background_scan_support">true</bool>
 
-    <!-- When true, the tethering upstream network follows the current default
-	Internet network (except when the current default network is mobile,
-	in which case a DUN network will be used if required). -->
-    <bool translatable="false" name="config_tether_upstream_automatic">true</bool>
-
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
