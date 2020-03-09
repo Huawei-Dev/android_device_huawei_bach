@@ -383,7 +383,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
-    sensors.nosensorhub.wrapper
+    android.hardware.sensors@1.0-service
 
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/prebuilts/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \

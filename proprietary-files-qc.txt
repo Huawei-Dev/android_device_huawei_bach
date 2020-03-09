@@ -584,20 +584,18 @@ product/lib64/libimsmedia_jni.so|448795a73bbf72fc0c9876f86a13769139ea8022
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|936011dbcfd05ea9350f7410bb6f4d69ddd3fb61
 -product/priv-app/ims/ims.apk|a3d6918dfe1abbcce807abb5f74cfd642485559f
 
-# Sensors - from stock Huawei Android N
-vendor/bin/sensors.qti
+# Sensors - AUM_OREO_EMUI8.0
+vendor/bin/sensors.qcom:vendor/bin/sensors.qti
 vendor/etc/calmodule.cfg
 vendor/lib/libsensor1.so
 vendor/lib64/hw/activity_recognition.msm8937.so
 vendor/lib64/libcalmodule_common.so
 vendor/lib64/libproprietary_sensors.ssc.so
 vendor/lib64/libsensor1.so
+vendor/lib64/lib_sensor_fac_interface.so
 vendor/lib64/libsensor_reg.so
 vendor/lib64/libsensors.huawei.so
-vendor/lib64/libsensor_test.so
-vendor/lib64/libsensor_thresh.so
 vendor/lib64/sensor_calibrate.so
-vendor/lib64/sensors.nosensorhub.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal - from LA.UM.8.6.r1-02600-89xx.0
