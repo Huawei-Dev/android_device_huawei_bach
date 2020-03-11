@@ -216,7 +216,44 @@ vendor/firmware/widevine.b05
 vendor/firmware/widevine.b06
 vendor/firmware/widevine.mdt
 
-# FPS - from stock Huawei Android N
+# Firmware - from stock Huawei Android N
+vendor/firmware/hbtp/hbtpcfg_8917.dat
+vendor/firmware/hbtp/hbtpcfg.dat
+vendor/firmware/hbtp/qtc800s_dsp.bin
+vendor/firmware/ts/bach_parade_BACH39000_ofilm.bin
+vendor/firmware/ts/bach_parade_BACH39000_ofilm_limits.csv
+vendor/firmware/ts/bach_parade_BACH39050_junda.bin
+vendor/firmware/ts/bach_parade_BACH39050_junda_limits.csv
+vendor/firmware/ts/bach_parade_BACH39050_original.bin
+vendor/firmware/ts/CHOPIN_auo_threshold.csv
+vendor/firmware/ts/chopin_hx8529f_CHOP41170_auo.bin
+vendor/firmware/ts/chopin_novatek_CHOP42120_cmi.bin
+vendor/firmware/ts/cpn_CtrlRAM_Open_Mutual.csv
+vendor/firmware/ts/cpn_CtrlRAM_Short_RXRX1.csv
+vendor/firmware/ts/cpn_CtrlRAM_Short_RXRX.csv
+vendor/firmware/ts/cpn_CtrlRAM_Short_TXRX.csv
+vendor/firmware/ts/cpn_CtrlRAM_Short_TXTX.csv
+vendor/firmware/ts/cpn_MP_Criteria_Golden.csv
+vendor/firmware/bach_parade_BACH39000_ofilm.bin
+vendor/firmware/bach_parade_BACH39000_ofilm_limits.csv
+vendor/firmware/bach_parade_BACH39050_junda.bin
+vendor/firmware/bach_parade_BACH39050_junda_limits.csv
+vendor/firmware/bach_parade_BACH39050_original.bin
+vendor/firmware/CHOPIN_auo_threshold.csv
+vendor/firmware/chopin_hx8529f_CHOP41170_auo.bin
+vendor/firmware/chopin_novatek_CHOP42120_cmi.bin
+vendor/firmware/cpn_CtrlRAM_Open_Mutual.csv
+vendor/firmware/cpn_CtrlRAM_Short_RXRX1.csv
+vendor/firmware/cpn_CtrlRAM_Short_RXRX.csv
+vendor/firmware/cpn_CtrlRAM_Short_TXRX.csv
+vendor/firmware/cpn_CtrlRAM_Short_TXTX.csv
+vendor/firmware/cpn_MP_Criteria_Golden.csv
+vendor/firmware/ice40.bin
+vendor/firmware/leia_pfp_470.fw
+vendor/firmware/leia_pm4_470.fw
+
+# Fingerprint - from stock Huawei Android N
+sbin/teecd:vendor/bin/teecd
 vendor/lib64/hw/fingerprint.hw.ex.so
 vendor/lib64/hw/fingerprint.msm8937.so
 vendor/lib64/lib_fpc_tac_shared.so
@@ -353,6 +390,32 @@ vendor/firmware/a530v2_seq.fw2|63b6d25594a5c1f4217d996a2b636e17a29fc840
 vendor/firmware/a530v3_gpmu.fw2|0a2f6f450231673d75ba39e5d28776db3becf810
 vendor/firmware/a530v3_seq.fw2|8963a53acc689725dee4b22881a4dd4b80e5def8
 vendor/firmware/a540_gpmu.fw2|11cac8bfe163fb9180976620d9ec52705b47ed45
+
+# Huawei Misc - from AUM_OREO_EMUI8.0
+vendor/bin/mac_addr_normalization
+sbin/oeminfo_nvm_server:vendor/bin/oeminfo_nvm_server
+vendor/etc/qdcm_calib_data_AUO_NT51021_8P0_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_AUO_NT51021B_8P0_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_BOE_NT51021_10P1_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_INX_NT51021_10P1_VIDEO_TFT_1200_x_1920.xml
+vendor/etc/qdcm_calib_data_INX_NT51021_8P0_VIDEO_TFT_1200_x_1920.xml
+vendor/lib/libc_secshared.so
+vendor/lib/libhuaweicust.so
+vendor/lib/libhwlog.so
+vendor/lib64/libbtaddr.so
+vendor/lib64/libc_secshared.so
+vendor/lib64/libhuaweicust.so
+vendor/lib64/libhwlog.so
+vendor/lib64/lib_hw_wifi_chipset_qcom.so
+vendor/lib64/liboeminfo.so
+vendor/lib64/libqmi_nv_api.so
+vendor/lib64/libqmi_oem_api.so
+vendor/usr/idc/fingerprint.idc
+vendor/usr/keylayout/fingerprint.kl
+vendor/usr/keylayout/ft5x06_ts.kl
+vendor/usr/keylayout/gpio-keys.kl
+vendor/usr/keylayout/synaptics_dsx.kl
+vendor/usr/keylayout/synaptics_rmi4_i2c.kl
 
 # Keystore - from LA.UM.8.6.r1-02600-89xx.0
 vendor/lib64/hw/keystore.msm8953.so:vendor/lib64/hw/keystore.msm8937.so|9660e1c13a3589114cf18db58e5b3c3c9e14059b
@@ -584,7 +647,7 @@ product/lib64/libimsmedia_jni.so|448795a73bbf72fc0c9876f86a13769139ea8022
 vendor/lib64/vendor.qti.ims.rcsconfig@1.1.so|936011dbcfd05ea9350f7410bb6f4d69ddd3fb61
 -product/priv-app/ims/ims.apk|a3d6918dfe1abbcce807abb5f74cfd642485559f
 
-# Sensors - AUM_OREO_EMUI8.0
+# Sensors - from AUM_OREO_EMUI8.0
 vendor/bin/sensors.qcom:vendor/bin/sensors.qti
 vendor/etc/calmodule.cfg
 vendor/lib/libsensor1.so
