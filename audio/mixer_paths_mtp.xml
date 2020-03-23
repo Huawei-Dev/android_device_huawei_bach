@@ -246,6 +246,22 @@
     <ctl name="TAS2560 2 Enable" value="Disable" />
     <ctl name="TAS2560 3 Enable" value="Disable" />
     <ctl name="TAS2560 Regdump" value="No" />
+    <ctl name="TAS2560 0 Powerctl" value="Off" />
+    <ctl name="TAS2560 1 Powerctl" value="Off" />
+    <ctl name="TAS2560 2 Powerctl" value="Off" />
+    <ctl name="TAS2560 3 Powerctl" value="Off" />
+    <ctl name="TAS2560 0 Boostload" value="4_Ohm" />
+    <ctl name="TAS2560 1 Boostload" value="4_Ohm" />
+    <ctl name="TAS2560 2 Boostload" value="4_Ohm" />
+    <ctl name="TAS2560 3 Boostload" value="4_Ohm" />
+    <ctl name="TAS2560 0 Mute" value="Unmute" />
+    <ctl name="TAS2560 1 Mute" value="Unmute" />
+    <ctl name="TAS2560 2 Mute" value="Unmute" />
+    <ctl name="TAS2560 3 Mute" value="Unmute" />
+    <ctl name="TAS2560 0 Channel" value="L" />
+    <ctl name="TAS2560 1 Channel" value="L" />
+    <ctl name="TAS2560 2 Channel" value="L" />
+    <ctl name="TAS2560 3 Channel" value="L" />
 
     <!-- LVM Wakelock -->
     <ctl name="LVM Wakelock" value="Release" />
@@ -1366,9 +1382,29 @@
 
     <path name="speaker">
         <ctl name="TAS2560 0 Enable" value="Enable" />
+        <ctl name="TAS2560 0 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 0 Powerctl" value="On" />
+        <ctl name="TAS2560 0 Channel" value="R" />
+        
         <ctl name="TAS2560 1 Enable" value="Enable" />
+        <ctl name="TAS2560 1 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 1 Powerctl" value="On" />
+        <ctl name="TAS2560 1 Channel" value="L" />
+        
         <ctl name="TAS2560 2 Enable" value="Enable" />
+        <ctl name="TAS2560 2 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 2 Powerctl" value="On" />
+        <ctl name="TAS2560 2 Channel" value="R" />
+        
         <ctl name="TAS2560 3 Enable" value="Enable" />
+        <ctl name="TAS2560 3 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 3 Powerctl" value="On" />
+        <ctl name="TAS2560 3 Channel" value="L" />
+        
+        <ctl name="MI2S_RX Channels" value="One" />
+        <ctl name="RX2 MIX1 INP1" value="RX2" />
+        <ctl name="RDAC2 MUX" value="RX2" />
+        <ctl name="HPHR" value="Switch" />
     </path>
 
     <path name="speaker-and-hdmi">
@@ -1471,10 +1507,7 @@
     </path>
 
     <path name="voice-speaker">
-        <ctl name="TAS2560 0 Enable" value="Enable" />
-        <ctl name="TAS2560 1 Enable" value="Enable" />
-        <ctl name="TAS2560 2 Enable" value="Enable" />
-        <ctl name="TAS2560 3 Enable" value="Enable" />
+        <path name="speaker" />  
     </path>
 
     <path name="wsa-voice-speaker">
@@ -1695,30 +1728,54 @@
 
     <path name="speaker-main-left">
         <ctl name="TAS2560 0 Enable" value="Disable" />
+        <ctl name="TAS2560 0 Powerctl" value="Off" />
         <ctl name="TAS2560 1 Enable" value="Enable" />
+        <ctl name="TAS2560 1 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 1 Powerctl" value="On" />
+        <ctl name="TAS2560 1 Channel" value="L" />
         <ctl name="TAS2560 2 Enable" value="Disable" />
+        <ctl name="TAS2560 2 Powerctl" value="Off" />
         <ctl name="TAS2560 3 Enable" value="Disable" />
+        <ctl name="TAS2560 3 Powerctl" value="Off" />
     </path>
 
     <path name="speaker-main-right">
         <ctl name="TAS2560 0 Enable" value="Enable" />
+        <ctl name="TAS2560 0 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 0 Powerctl" value="On" />
+        <ctl name="TAS2560 0 Channel" value="R" />
         <ctl name="TAS2560 1 Enable" value="Disable" />
+        <ctl name="TAS2560 1 Powerctl" value="Off" />
         <ctl name="TAS2560 2 Enable" value="Disable" />
+        <ctl name="TAS2560 2 Powerctl" value="Off" />
         <ctl name="TAS2560 3 Enable" value="Disable" />
+        <ctl name="TAS2560 3 Powerctl" value="Off" />
     </path>
 
     <path name="speaker-sec-left">
         <ctl name="TAS2560 0 Enable" value="Disable" />
+        <ctl name="TAS2560 0 Powerctl" value="Off" />
         <ctl name="TAS2560 1 Enable" value="Disable" />
+        <ctl name="TAS2560 1 Powerctl" value="Off" />
         <ctl name="TAS2560 2 Enable" value="Disable" />
+        <ctl name="TAS2560 2 Powerctl" value="Off" />
         <ctl name="TAS2560 3 Enable" value="Enable" />
+        <ctl name="TAS2560 3 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 3 Powerctl" value="On" />
+        <ctl name="TAS2560 3 Channel" value="L" />
     </path>
 
     <path name="speaker-sec-right">
         <ctl name="TAS2560 0 Enable" value="Disable" />
+        <ctl name="TAS2560 0 Powerctl" value="Off" />
         <ctl name="TAS2560 1 Enable" value="Disable" />
+        <ctl name="TAS2560 1 Powerctl" value="Off" />
         <ctl name="TAS2560 2 Enable" value="Enable" />
+        <ctl name="TAS2560 2 Boostload" value="8_Ohm" />
+        <ctl name="TAS2560 2 Powerctl" value="On" />
+        <ctl name="TAS2560 2 Channel" value="R" />
         <ctl name="TAS2560 3 Enable" value="Disable" />
+        <ctl name="TAS2560 3 Powerctl" value="Off" />
     </path>
 
     <path name="autommi-mastermic">
