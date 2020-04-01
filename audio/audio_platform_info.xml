@@ -30,8 +30,6 @@
     </bit_width_configs>
 
     <interface_names>
-        <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="SLIMBUS_0" codec_type="external"/>
-        <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="SLIMBUS_0" codec_type="external"/>
         <device name="AUDIO_DEVICE_IN_BUILTIN_MIC" interface="TERT_MI2S" codec_type="internal"/>
         <device name="AUDIO_DEVICE_IN_BACK_MIC" interface="TERT_MI2S" codec_type="internal"/>
     </interface_names>
@@ -61,24 +59,17 @@
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED" acdb_id="136"/>
         <device name="SND_DEVICE_OUT_SPEAKER_PROTECTED_VBAT" acdb_id="136"/>
         <device name="SND_DEVICE_OUT_VOICE_SPEAKER_PROTECTED_VBAT" acdb_id="136"/>
-        <device name="SND_DEVICE_IN_HANDSET_MIC" acdb_id="0"/>
-        <device name="SND_DEVICE_IN_HANDSET_MIC_EXTERNAL" acdb_id="0"/>
-        <device name="SND_DEVICE_IN_CAMCORDER_MIC" acdb_id="0"/>
-        <device name="SND_DEVICE_IN_HANDSET_STEREO_DMIC" acdb_id="0"/>
         <device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK" acdb_id="137"/>
-	<device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED" acdb_id="136"/>
-	<device name="SND_DEVICE_OUT_VOICE_SPEAKER_2_PROTECTED_VBAT" acdb_id="136"/>
-	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_1" acdb_id="137"/>
-	<device name="SND_DEVICE_IN_CAPTURE_VI_FEEDBACK_MONO_2" acdb_id="137"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" acdb_id="201"/>
     </acdb_ids>
 
     <backend_names>
-        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="PRI_MI2S_RX"/>
-        <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_SPEAKER" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_REVERSE" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_VOICE_SPEAKER" backend="speaker"/>
+        <device name="SND_DEVICE_OUT_SPEAKER_AND_HEADPHONES" backend="speaker-and-headphones" interface="SLIMBUS_0_RX"/>
 	<device name="SND_DEVICE_OUT_BT_SCO" backend="bt-sco" interface="INT_BT_SCO_RX"/>
+        <device name="SND_DEVICE_OUT_BT_SCO_WB" backend="bt-sco-wb" interface="INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO" backend="speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_AND_BT_SCO_WB" backend="speaker-and-bt-sco-wb" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>
         <device name="SND_DEVICE_OUT_SPEAKER_WSA_AND_BT_SCO" backend="wsa-speaker-and-bt-sco" interface="PRI_MI2S_RX-and-INT_BT_SCO_RX"/>

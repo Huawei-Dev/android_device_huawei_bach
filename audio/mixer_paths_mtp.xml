@@ -1400,11 +1400,6 @@
         <ctl name="TAS2560 3 Boostload" value="8_Ohm" />
         <ctl name="TAS2560 3 Powerctl" value="On" />
         <ctl name="TAS2560 3 Channel" value="L" />
-        
-        <ctl name="MI2S_RX Channels" value="One" />
-        <ctl name="RX2 MIX1 INP1" value="RX2" />
-        <ctl name="RDAC2 MUX" value="RX2" />
-        <ctl name="HPHR" value="Switch" />
     </path>
 
     <path name="speaker-and-hdmi">
