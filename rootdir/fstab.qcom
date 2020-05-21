@@ -24,6 +24,6 @@
 /dev/block/bootdevice/by-name/product		/produce		ext4	ro													defaults
 /dev/block/bootdevice/by-name/version		/version		ext4	ro													defaults
 
-/devices/soc/7864900.sdhci/mmc_host*		auto			auto    nosuid,nodev                                        							wait,voldmanaged=sdcard1:auto,encryptable=footer
-/devices/soc/78db000.usb/msm_hsusb_host*	auto			auto    nosuid,nodev                                        							wait,voldmanaged=usbotg:auto
+/devices/soc/7864900.sdhci/mmc_host*		auto			auto    defaults                                        							voldmanaged=sdcard1:auto,encryptable=footer
+/devices/soc/78db000.usb/msm_hsusb_host*	auto			auto    defaults                                        							voldmanaged=usbotg:auto
 /dev/block/zram0				none			swap    defaults                                            							zramsize=1536000000,max_comp_streams=4
