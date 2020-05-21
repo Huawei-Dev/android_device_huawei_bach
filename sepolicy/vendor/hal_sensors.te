@@ -1,2 +1,0 @@
-allow hal_sensors_default hwoeminfo_socket:sock_file write;
-allow hal_sensors_default hwoeminfo:unix_stream_socket { connectto };
