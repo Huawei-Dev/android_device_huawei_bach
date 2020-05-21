@@ -1,6 +1,9 @@
 [AID_VENDOR_QTI_DIAG]
 value:2901
 
+[AID_VENDOR_QDSS]
+value:2902
+
 [AID_VENDOR_RFS]
 value:2903
 
@@ -52,12 +55,6 @@ user: AID_SYSTEM
 group: AID_SYSTEM
 caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
 
-[system/vendor/bin/cnd]
-mode: 0755
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: NET_BIND_SERVICE BLOCK_SUSPEND NET_ADMIN
-
 [vendor/bin/loc_launcher]
 mode: 0755
 user:  AID_GPS
@@ -74,4 +71,28 @@ caps: NET_BIND_SERVICE
 mode: 0771
 user: AID_SYSTEM
 group: AID_SYSTEM
+caps: 0
+
+[firmware/]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
+[firmware/image/*]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
+[persist/]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
+[dsp/]
+mode: 0771
+user: AID_MEDIA
+group: AID_MEDIA
 caps: 0
