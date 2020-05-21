@@ -74,9 +74,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.ts.postmakeup=false \
     persist.ts.rtmakeup=false
 
-# CNE
+# CNE/DPM
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.cne.feature=1
+    persist.vendor.cne.feature=1 \
+    persist.vendor.dpm.feature=0 \
+    persist.vendor.sys.cnd.iwlan=1
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -190,7 +192,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # SurfaceFlinger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=2 \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
     ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
@@ -210,6 +212,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.qti.sys.fw.trim_empty_percent=100 \
     ro.vendor.qti.sys.fw.trim_cache_percent=100 \
     ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
+    
+# Tcp
+PRODUCT_PROPERTY_OVERRIDES += \
+    net.tcp.2g_init_rwnd=10
 
 # UI
 PRODUCT_PROPERTY_OVERRIDES += \
