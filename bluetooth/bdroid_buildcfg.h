@@ -20,38 +20,26 @@
 #define _BDROID_BUILDCFG_H
 
 #include <stdint.h>
+
+#pragma push_macro("PROPERTY_VALUE_MAX")
+
+#include <cutils/properties.h>
 #include <string.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-int property_get(const char *key, char *value, const char *default_value);
-#ifdef __cplusplus
-}
-#endif
+#include "osi/include/osi.h"
 
 static inline const char* BtmGetDefaultName()
 {
-    char product_model[20];
-    property_get("ro.product.model", product_model, "");
+    char product_model[PROPERTY_VALUE_MAX];
+    property_get("ro.product.model", product_model, " ");
 
-
-    switch (product_model) {
-    case "BAH-AL00":
-    case "BAH-L01":
-    case "BAH-L09":
-    case "BAH-W09":
+    if ((strcmp(product_model, "BAH-AL00") == 0) || (strcmp(product_model, "BAH-L01") == 0) || (strcmp(product_model, "BAH-L09") == 0) || (strcmp(product_model, "BAH-W09") == 0))
         return "BACH";
-    case "CPN-AL00":
-    case "CPN-L0J":
-    case "CPN-L09":
-    case "CPN-W09":
+    if ((strcmp(product_model, "CPN-AL00") == 0) || (strcmp(product_model, "CPN-L0J") == 0) || (strcmp(product_model, "CPN-L09") == 0) || (strcmp(product_model, "CPN-W09") == 0))
         return "CHOPIN";
-    }
 
     return "";
 }
-
 
 #define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 
@@ -69,5 +57,9 @@ static inline const char* BtmGetDefaultName()
 
 /* Increasing SEPs to 12 from 6 to support SHO/MCast i.e. two streams per codec */
 #define AVDT_NUM_SEPS                  12
+
+#undef PROPERTY_VALUE_MAX
+
+#pragma pop_macro("PROPERTY_VALUE_MAX")
 
 #endif
