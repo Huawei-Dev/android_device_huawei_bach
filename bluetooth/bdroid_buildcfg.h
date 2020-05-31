@@ -1,6 +1,7 @@
 /**
  * Copyright (C) 2012 The Android Open Source Project
  * Copyright (C) 2016 The CyanogenMod Project
+ * Copyright (C) 2017 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +19,41 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#define BTM_DEF_LOCAL_NAME   "BACH"
+#include <stdint.h>
+#include <string.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+int property_get(const char *key, char *value, const char *default_value);
+#ifdef __cplusplus
+}
+#endif
+
+static inline const char* BtmGetDefaultName()
+{
+    char product_model[20];
+    property_get("ro.product.model", product_model, "");
+
+
+    switch (product_model) {
+    case "BAH-AL00":
+    case "BAH-L01":
+    case "BAH-L09":
+    case "BAH-W09":
+        return "BACH";
+    case "CPN-AL00":
+    case "CPN-L0J":
+    case "CPN-L09":
+    case "CPN-W09":
+        return "CHOPIN";
+    }
+
+    return "";
+}
+
+
+#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
 
 #define BTA_SKIP_BLE_READ_REMOTE_FEAT FALSE
 #define MAX_ACL_CONNECTIONS    7
