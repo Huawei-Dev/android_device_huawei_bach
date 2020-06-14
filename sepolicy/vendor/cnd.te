@@ -1,1 +1,3 @@
 allow cnd vendor_file:dir { read };
+
+allow cnd wifi_prop:file { open read getattr };

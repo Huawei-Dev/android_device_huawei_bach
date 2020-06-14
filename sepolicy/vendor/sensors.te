@@ -1,3 +1,5 @@
 allow sensors vendor_file:dir { read };
 
 allow sensors persist_file:dir { search getattr };
+
+allow sensors sysfs:file { open read getattr };
