@@ -38,11 +38,15 @@ on post-fs-data
     chmod 0644 /dev/tfa98xx_calibrate
     chown audioserver audioserver /dev/tfa98xx_calibrate
 
-on boot
     chown system system /sys/set_app_info/set_app_info_node
 
-    chown system system /sys/devices/8789.huawei_hall_sensor/enable_hall_sensor
+    chown system system /sys/devices/8789.huawei_hall_sensor/camera_overturn_num
+    chown system system /sys/devices/8789.huawei_hall_sensor/get_camera_status
     chown system system /sys/devices/8789.huawei_hall_sensor/get_hall_status
+
+    chown system system /sys/devices/8789.huawei_hall_sensor/enable_hall_sensor
+    chmod 000 /sys/devices/8789.huawei_hall_sensor/enable_hall_sensor
+
     chown system system /sys/class/graphics/fb0/inversion_mode
     chown system system /sys/class/graphics/fb0/panel_status
     chown system system /sys/class/graphics/fb0/panel_info
@@ -167,14 +171,12 @@ on boot
     chown  system  system  /sys/devices/platform/fingerprint/nav
 
     # change the limition below for sensor-hub
-    chown system system /sys/devices/soc0/huawei_product
-    chmod 0664 /sys/devices/soc0/huawei_product
-    chown system system /sys/devices/platform/huawei_tp_color/tp_color_info
-    chmod 0664 /sys/devices/platform/huawei_tp_color/tp_color_info
+    chown root system /sys/devices/soc0/huawei_product
+    chmod 0666 /sys/devices/soc0/huawei_product
+    chown root system /sys/devices/platform/huawei_tp_color/tp_color_info
+    chmod 0666 /sys/devices/platform/huawei_tp_color/tp_color_info
 
-    chown system system /sys/devices/platform/huawei_ts_kit_color/ts_kit_color_info
-
-    chown system system /sys/devices/12c.hw-dev-detect/dev_flag
+    chown root system /sys/devices/platform/huawei_ts_kit_color/ts_kit_color_info
 
     chown system system /dev/deviceboxID
     chmod 0660 /dev/deviceboxID
