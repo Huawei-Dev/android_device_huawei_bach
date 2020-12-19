@@ -481,6 +481,9 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_BOOT_JARS += \
     WfdCommon
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+    lockscreen.rot_override=true
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
