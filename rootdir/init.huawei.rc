@@ -180,8 +180,6 @@ on post-fs-data
 
     chown system system /dev/deviceboxID
     chmod 0660 /dev/deviceboxID
-    chown system system /dev/tas_calib
-    chmod 0660 /dev/tas_calib
 
     chown system system /sys/class/leds/torch-light0/brightness
     chown system system /sys/class/leds/torch-light1/brightness
