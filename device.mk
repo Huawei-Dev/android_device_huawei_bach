@@ -227,7 +227,7 @@ PRODUCT_PACKAGES += \
 
 # Lineage hardware
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.huawei_msm8937
+    vendor.lineage.touch@1.0-service.msm8937
 
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service

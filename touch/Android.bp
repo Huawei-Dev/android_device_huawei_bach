@@ -14,8 +14,8 @@
 // limitations under the License.
 
 cc_binary {
-    name: "vendor.lineage.touch@1.0-service.huawei_msm8937",
-    init_rc: ["vendor.lineage.touch@1.0-service.huawei_msm8937.rc"],
+    name: "vendor.lineage.touch@1.0-service.msm8937",
+    init_rc: ["vendor.lineage.touch@1.0-service.msm8937.rc"],
     defaults: ["hidl_defaults"],
     relative_install_path: "hw",
     vendor: true,
